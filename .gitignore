@@ -1,3 +1,5 @@
 docs/javadoc/
+/tool/
+/site/
 
 .vscode/
