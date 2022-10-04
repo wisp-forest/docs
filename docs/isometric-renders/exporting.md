@@ -2,6 +2,12 @@
 title: Exporting
 project: isometric-renders
 ---
+
+!!! tip ""
+    **:octicons-clock-16: The Isometric Renders documentation is currently being rewritten - it is not accurate for versions >=0.3.0**
+
+<br>
+
 # Exporting
 
 All exporting operations (including batches) use the parameters defined in the "Export" section of every render screen. This page details each option in what is does and what values are acceptable.

@@ -2,6 +2,12 @@
 title: Home
 project: isometric-renders
 ---
+
+!!! tip ""
+    **:octicons-clock-16: The Isometric Renders documentation is currently being rewritten - it is not accurate for versions >=0.3.0**
+
+<br>
+
 # Isometric Renders
 To get started, check out [/isorender](slash_isorender.md) for some general information on how to use this mod
 

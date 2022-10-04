@@ -2,6 +2,12 @@
 title: /isorender
 project: isometric-renders
 ---
+
+!!! tip ""
+    **:octicons-clock-16: The Isometric Renders documentation is currently being rewritten - it is not accurate for versions >=0.3.0**
+
+<br>
+
 # /isorender
 
 The `/isorender` command is the core of this mod. It is used
