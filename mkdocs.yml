@@ -1,0 +1,121 @@
+site_name: Wisp Forest Docs 
+site_url: https://docs.wispforest.io
+theme:
+    name: null
+    custom_dir: mkdocs-material/material
+    palette:
+        - scheme: slate
+          primary: indigo
+          accent: blue  
+          toggle:
+            icon: material/brightness-4
+            name: Switch to light mode
+
+        - scheme: default
+          primary: indigo
+          accent: blue
+          toggle:
+            icon: material/brightness-7 
+            name: Switch to dark mode
+    features:
+        navigation.tabs
+        navigation.indexes
+        navigation.expand
+        search.suggest
+        search.share
+        navigation.top
+        content.code.annotate
+    favicon: assets/favicon.png
+    icon:
+      logo: octicons/flame-16 
+    language: en
+    font:
+        text: Fira Sans
+        code: Fira Mono
+
+copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/gliscowo\">glisco</a>, with assistance from the Wisp Forest team"
+extra:          
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/xrwHKktV2d
+    - icon: fontawesome/brands/github
+      link: https://github.com/wisp-forest/
+  projects:
+      isometric-renders:
+          repo: https://github.com/gliscowo/isometric-renders
+          name: Isometric Renders
+      owo:
+          repo: https://github.com/wisp-forest/owo-lib
+          name: oωo
+          icon: owo.png
+      scatter:
+          repo: https://github.com/gliscowo/scatter-dart
+          name: scatter
+
+extra_css:
+    - overrides.css
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.details
+    - pymdownx.keys
+    - pymdownx.highlight:
+        anchor_linenums: true
+    - pymdownx.inlinehilite
+    - pymdownx.snippets
+    - footnotes
+    - pymdownx.superfences:
+        custom_fences:
+          - name: mermaid
+            class: mermaid
+            format: !!python/name:pymdownx.superfences.fence_code_format
+    - pymdownx.tabbed:
+        alternate_style: true
+    - toc:
+        permalink: true
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tilde
+    - pymdownx.critic
+
+nav:
+    - Home: 
+        - index.md
+        - faq.md
+        - fabric-events.md
+    - Isometric Renders:
+        - isometric-renders/home.md
+        - isometric-renders/slash_isorender.md
+        - isometric-renders/exporting.md
+    - oωo:
+        - owo/setup.md
+        - owo/features.md
+        - owo/registration.md
+        - owo/item-groups.md
+        - owo/networking.md
+        - owo/rich-translations.md
+        - owo/system-properties.md
+        - owo/renderdoc.md
+        - Config:
+            - owo/config/index.md
+            - owo/config/getting-started.md
+            - owo/config/constraints.md
+            - owo/config/annotations.md
+            - owo/config/synchronization.md
+            - owo/config/options.md
+        - UI:
+          - owo/ui/index.md
+          - owo/ui/getting-started.md
+          - owo/ui/academy.md
+          - owo/ui/component-basics.md
+          - owo/ui/layout-basics.md
+          - owo/ui/utility-components.md
+    - scatter:
+        - scatter/home.md
+        - scatter/upload.md
+        - scatter/config.md
+
