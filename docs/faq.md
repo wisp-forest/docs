@@ -32,7 +32,7 @@ The Shop cannot buy items for a single reason - it would almost certainly not be
 ## How do I reset my area selection 
 :octicons-file-submodule-24: Isometric Renders
 
-Hold ++shift++ while pressing the select hotkey
+Sneak while pressing the select hotkey
 
 ***
 
