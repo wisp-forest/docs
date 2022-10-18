@@ -12,9 +12,13 @@ project: isometric-renders
 To get started, check out [/isorender](slash_isorender.md) - that page contains documentation for the primary command you use to launch Isometric Renders
 
 !!! abstract ""
+    #### Performance Warning
     By nature, working with large images can be a very intense task for your processor to deal with. Starting at roughly 6000x6000, you may notice considerable slowdown when creating renders - especially when doing multiple at the same time. For this reason, be carefuly when starting a long batch render or exporting an animation at high resolution - your system might not like it.
 
-## Convenience Features
+    #### Unsafe Mode
+    For the very reasons outlined above, the export resolution is usually capped at 16384x16384. If you're confident your hardware can take it, you can enable **Unsafe Mode** with the `/isorender unsafe` subcommand
+
+### Convenience Features
  - #### Inventory-based batches
 
     You might want to perform batch operations like rendering an atlas or a block/item batch on sets of items that don't necessarily form a creative tab, tag or namespace. To do this, you can simply press ++ctrl+f12++ while in any inventory. You will get a preview of which items will be rendered and can choose which batch operation to start.

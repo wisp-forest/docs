@@ -10,50 +10,112 @@ project: isometric-renders
 
 # /isorender
 
-The `/isorender` command is the core of this mod. It is used
-
-This page lists the basic subcommands and what they do.
+The `/isorender` command sits at the very core of Isometric Renders. It is your primary interface for launching all rendering operations and is also used to enter [Unsafe Mode](home.md#unsafe-mode).
 
 ***
-### :material-console: `/isorender item`
-Opens the rendering screen for the item you provide as argument (supports NBT). You can omit this argument to render the item you're currently holding.
 
-???+ examples
-    `/isorender item minecraft:diamond`
+## Single Render Operations
 
-    `/isorender item minecraft:diamond_sword{Enchantments:[{id:"sharpness",lvl:10}]}`
+### :octicons-command-palette-16: `/isorender item`
+Render the given item, including NBT. If the item is omitted, render the player's current item instead
 
-### :material-console: `/isorender block`
-Opens the rendering screen for the block you provide as argument (supports both NBT and BlockState data). You can omit this argument to render the block you're currently looking at.
+!!! examples
+    ```mcfunction
+    # render your current item
+    /isorender item 
 
-???+ examples
-    `/isorender block minecraft:cobblestone`
+    # render a diamond
+    /isorender item minecraft:diamond 
 
-    `/isorender block minecraft:furnace[lit=true]`
+    # render an enchanted diamond sword
+    /isorender item minecraft:diamond_sword{Enchantments:[{id:"sharpness",lvl:10}]}
+    ```
 
-    `/isorender block minecraft:furnace[facing=west]{Items:[{Slot:0b, Count: 1b, id: "minecraft:coal"}]}`
+### :octicons-command-palette-16: `/isorender block`
+Render the given block, including NBT and block state data. If the block is omitted, render whichever block the player is currently looking at
 
-### :material-console: `/isorender entity`
-Opens the rendering screen for the entity you provide as argument. You can specify an NBT tag as a second argument.
+!!! examples
+    ```mcfunction
+    # render the block you're looking at
+    /isorender block
 
-???+ examples
-    `/isorender entity minecraft:blaze`
+    # render cobblestone
+    /isorender block minecraft:cobblestone
 
-    `/isorender entity minecraft:zombie {IsBaby:1b}`
+    # render a burning furnace with coal inside it
+    /isorender block minecraft:furnace[lit=true]{Items:[{Slot:0b, Count: 1b, id: "minecraft:coal"}]}
+    ```
 
-### :material-console: `/isorender area`
-Takes two coordinate arguments and renders the area between those. This does currently not support either block entities renderers or entities and just renders the blocks as they are in the world.
+### :octicons-command-palette-16: `/isorender entity`
+Render the given entity, including NBT as an optional second argument. If the entity is omitted, render whichever entity the player is currently looking at
 
-???+ example
-    `/isorender area 3 63 -120 8 66 -123`
+!!! examples
+    ```mcfunction
+    # render the entity you're looking at
+    /isorender entity
 
-### :material-console: `/isorender creative_tab`
-This is used to render all the items or blocks contained in a creative tab. The first argument will the name of that tab, the second will be either `atlas` or `batch`
+    # render a blaze
+    /isorender entity minecraft:blaze
 
-- `atlas` will render an atlas (or overview if you will) of all items in that tab
-- `batch` takes another argument `blocks` or `items`, and will automagically export all blocks or items in that tab into separate images
+    # render a baby zombie
+    /isorender entity minecraft:zombie {IsBaby:1b}
+    ```
 
-???+ examples
-    `/isorender creative_tab brewing atlas`
+### :octicons-command-palette-16: `/isorender area`
+Render the area of the world between the two given block coordinate triples. If coordinates are omitted, render the current [Area Selection](home.md#visual-area-selection) instead.
 
-    `/isorender creative_tab redstone batch blocks`
+!!! examples
+    ```mcfunction
+    # render the current area selection
+    /isorender area
+
+    # render the area between the given coodinate triples
+    /isorender area 3 63 -120 8 66 -123`
+    ```
+   
+## Batch Render Operations
+
+All batch render commands first select some set of items and end with a **render task argument**. This can be one of three things:
+
+ - `atlas`, which renders an atlas (or overview if you will) of the item set
+ - `batch items`, which renders each item in the set individually
+ - `batch blocks`, which renders the corresponding block of each item in the set individually
+
+### :octicons-command-palette-16: `/isorender creative_tab`
+
+Select all items from the given creative inventory tab
+
+!!! examples
+    ```mcfunction
+    # render an atlas of all items in the brewing creative tab
+    /isorender creative_tab brewing atlas
+
+    # render each block in the redstone creative tab individually
+    /isorender creative_tab redstone batch blocks
+    ```
+
+### :octicons-command-palette-16: `/isorender tag`
+
+Select all items from the given item tag
+
+!!! examples
+    ```mcfunction
+    # render an atlas of all iron ores
+    /isorender tag #minecraft:iron_ores atlas
+
+    # render each anvil state individually
+    /isorender tag #minecraft:anvil batch blocks
+    ```
+
+### :octicons-command-palette-16: `/isorender namespace`
+
+Select all items from the given namespace
+
+!!! examples
+    ```mcfunction
+    # render an atlas of every single item in minecraft
+    /isorender namespace minecraft atlas
+
+    # render each block in minecraft individually
+    /isorender namespace minecraft batch blocks
+    ```
