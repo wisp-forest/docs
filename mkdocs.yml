@@ -44,6 +44,7 @@ extra:
       isometric-renders:
           repo: https://github.com/gliscowo/isometric-renders
           name: Isometric Renders
+          icon: isometric-renders.png
       owo:
           repo: https://github.com/wisp-forest/owo-lib
           name: oωo
@@ -51,6 +52,9 @@ extra:
       scatter:
           repo: https://github.com/gliscowo/scatter-dart
           name: scatter
+      docs:
+          repo: https://github.com/wisp-forest/docs
+          name: docs
 
 extra_css:
     - overrides.css

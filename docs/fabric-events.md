@@ -1,5 +1,8 @@
+---
+project: docs
+---
 # Fabric API Events
-:octicons-tag-24: Fabric API version: 0.62.0+1.19.2
+:octicons-tag-24: Fabric API version: 0.64.0+1.19.2
 
 :octicons-list-unordered-16: Total event count: 130
 

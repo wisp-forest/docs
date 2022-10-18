@@ -1,3 +1,7 @@
+---
+project: docs
+---
+
 # FAQ
 
 ## I get disconnected due to a "[oωo] handshake failure - incompatible server" when trying to join a server
