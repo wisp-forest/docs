@@ -3,28 +3,26 @@ title: Home
 project: isometric-renders
 ---
 
-!!! tip ""
+<!-- !!! tip ""
     **:octicons-clock-16: The Isometric Renders documentation is currently being rewritten - it is not accurate for versions >=0.3.0**
 
-<br>
+<br> -->
 
 # Isometric Renders
-To get started, check out [/isorender](slash_isorender.md) for some general information on how to use this mod
+To get started, check out [/isorender](slash_isorender.md) - that page contains documentation for the primary command you use to launch Isometric Renders
 
-***
-
-!!! caution "Basic Safety Information"
-    Working with large images is pretty processing intensive, meaning that resolutions **over 8192x8192** have considerable potential to be very laggy and sometimes cause your game to crash depending on how much ram you have. Just basic renders at these, or even higher resolutions should be fine, batch rendering is however very concerning and not officially supported because of that. Batch renders at 4096x4096 should still be fine on somewhat OK hardware, don't come complain though if it makes you lag *hard*.
-
-    **TLDR:** Don't do batch renders over 2048x2048 unless you feel adventurous or know your hardware can take it
+!!! abstract ""
+    By nature, working with large images can be a very intense task for your processor to deal with. Starting at roughly 6000x6000, you may notice considerable slowdown when creating renders - especially when doing multiple at the same time. For this reason, be carefuly when starting a long batch render or exporting an animation at high resolution - your system might not like it.
 
 ## Convenience Features
-##### Inventory-based batches
-You might want to perform batch operations like rendering blocks, items or atlases on sets of items that are not necessarily a creative tab. To do this, you can simply use the following hotkeys while in any inventory.
+ - #### Inventory-based batches
 
- - ++shift+f12++ to render an atlas of all items in that inventory
- - ++ctrl+f12++ to perform a batch render of all blocks in that inventory
- - ++alt+f12++ to perform a batch render of all items in that inventory
+    You might want to perform batch operations like rendering an atlas or a block/item batch on sets of items that don't necessarily form a creative tab, tag or namespace. To do this, you can simply press ++ctrl+f12++ while in any inventory. You will get a preview of which items will be rendered and can choose which batch operation to start.
 
-##### Visual area selection
-To speed up the process of creating an area render and to see visually what's going on, you can use the keybind called `[ISO] Select Area`. It will let you select the two corners of the area you want to render. You can then use `/isorender area` without further arguments to render that selection. To clear your selection, use the keybind while sneaking.
+    ![batch operatin screen](https://cdn.discordapp.com/attachments/857970721166065674/1032051544176205944/batch-operation-screen.png){ .center-image .sized-image style="--image-width: 90%;" }
+
+ - #### Visual area selection
+
+    Usually when creating an area render you do not want to manually figure out the coordinates of the area's corners. Instead, you would use the keybind labelled **<span style="color: #545454;">[</span><span style="color: #00c9f1;">I</span><span style="color: #00f1c7;">S</span><span style="color: #00f195;">O</span><span style="color: #545454;">]</span> Select Area**. Pressing it once highlights and selects the first corner of your selection, pressing it again selects the second corner. You can then run `/isorender area` without any further arguments to render the area in this selection.
+
+    To clear your area selection and make the overlay disappear, press the keybind while sneaking.
