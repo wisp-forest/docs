@@ -59,6 +59,12 @@ extra:
 extra_css:
     - overrides.css
 
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+
 markdown_extensions:
     - admonition
     - attr_list
@@ -66,6 +72,8 @@ markdown_extensions:
         custom_checkbox: true
     - pymdownx.details
     - pymdownx.keys
+    - pymdownx.arithmatex:
+        generic: true
     - pymdownx.highlight:
         anchor_linenums: true
     - pymdownx.inlinehilite
@@ -94,7 +102,7 @@ nav:
     - Isometric Renders:
         - isometric-renders/home.md
         - isometric-renders/slash_isorender.md
-        - isometric-renders/exporting.md
+        - isometric-renders/options.md
     - oωo:
         - owo/setup.md
         - owo/features.md

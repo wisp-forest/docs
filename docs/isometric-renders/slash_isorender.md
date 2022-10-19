@@ -3,11 +3,6 @@ title: /isorender
 project: isometric-renders
 ---
 
-!!! tip ""
-    **:octicons-clock-16: The Isometric Renders documentation is currently being rewritten - it is not accurate for versions >=0.3.0**
-
-<br>
-
 # /isorender
 
 The `/isorender` command sits at the very core of Isometric Renders. It is your primary interface for launching all rendering operations and is also used to enter [Unsafe Mode](home.md#unsafe-mode).
@@ -71,6 +66,18 @@ Render the area of the world between the two given block coordinate triples. If 
 
     # render the area between the given coodinate triples
     /isorender area 3 63 -120 8 66 -123`
+    ```
+
+### :octicons-command-palette-16: `/isorender tooltip`
+Render the given item's tooltip, including NBT. If the item is omitted, render the tooltip of the player's current item instead
+
+!!! examples
+    ```mcfunction
+    # render the tooltip of your current item
+    /isorender tooltip 
+
+    # render the tooltip of a netherite pickaxe enchanted with efficiency 5
+    /isorender tooltip minecraft:netherite_pickaxe{Enchantments:[{id:"efficiency",lvl:5}]}
     ```
    
 ## Batch Render Operations
