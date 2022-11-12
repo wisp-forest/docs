@@ -54,7 +54,7 @@ extra:
           name: scatter
       docs:
           repo: https://github.com/wisp-forest/docs
-          name: docs
+          name: Wisp Forest
 
 extra_css:
     - overrides.css
@@ -128,5 +128,6 @@ nav:
     - scatter:
         - scatter/home.md
         - scatter/upload.md
+        - scatter/edit.md
         - scatter/config.md
 
