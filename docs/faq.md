@@ -1,5 +1,6 @@
 ---
 project: docs
+summary: Frequently Asked Questions + their answers
 ---
 
 # FAQ

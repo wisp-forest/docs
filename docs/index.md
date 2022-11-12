@@ -1,5 +1,6 @@
 ---
 project: docs
+summary: Home of the Wisp Forest Documentation Hub
 ---
 
 # Welcome to the Wisp Forest Documentation Hub

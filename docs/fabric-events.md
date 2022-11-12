@@ -1,5 +1,6 @@
 ---
 project: docs
+summary: All events currently in Fabric API
 ---
 # Fabric API Events
 :octicons-tag-24: Fabric API version: 0.64.0+1.19.2
