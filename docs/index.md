@@ -1,4 +1,5 @@
 ---
+title: Home
 project: docs
 summary: Home of the Wisp Forest Documentation Hub
 ---

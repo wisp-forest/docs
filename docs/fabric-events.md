@@ -1,4 +1,5 @@
 ---
+title: Fabric API Events
 project: docs
 summary: All events currently in Fabric API
 ---
