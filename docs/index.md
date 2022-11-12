@@ -1,7 +1,7 @@
 ---
 title: Home
 project: docs
-summary: Home of the Wisp Forest Documentation Hub
+summary: The Wisp Forest Documentation Hub
 ---
 
 # Welcome to the Wisp Forest Documentation Hub
