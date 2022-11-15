@@ -55,6 +55,9 @@ extra:
       docs:
           repo: https://github.com/wisp-forest/docs
           name: Wisp Forest
+      numismatic-overhaul:
+          repo: https://github.com/wisp-forest/numismatic-overhaul
+          name: Numismatic Overhaul
 
 extra_css:
     - overrides.css
@@ -102,6 +105,9 @@ nav:
         - isometric-renders/home.md
         - isometric-renders/slash_isorender.md
         - isometric-renders/options.md
+    - Numismatic Overhaul:
+        - numismatic-overhaul/home.md
+        - numismatic-overhaul/trades.md
     - oωo:
         - owo/setup.md
         - owo/features.md
