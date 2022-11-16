@@ -17,13 +17,6 @@ There are many useful shortcuts you can use to make your life easier when handli
 
 - If you want to withdraw **every coin in your purse**, simply hold ++shift+ctrl++ while clicking the withdraw button.  
 
-## TODO - Shops  
-Note to self, write the following:  
-
-- Simple how-to with the shop
-- Explain that you CAN buy your own trades by ++shift+right click++ if you own it
-- Inform about the inexhaustible shop block, and when it was added. 
-
 ## Configuration
 You might want to configure certain aspects of Numismatic Overhaul, whether you are a player, a modpack developer, or server admin.  
 If you want to make or edit the villager trades, you need to make a Datapack following the [data format seen on this page.](trades.md)  

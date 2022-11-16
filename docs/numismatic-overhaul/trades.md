@@ -1,4 +1,10 @@
-# Trade Data Formatting
+---
+title: Villager Trade Data Format
+project: numismatic-overhaul
+---
+
+
+# Villager Trade Data Format
 
 All trade definition files belong in `data/numismatic-overhaul/villager_trades`
 
@@ -19,20 +25,19 @@ Each trade definition file needs two elements in the root object:
 `trades`: The trades for this profession, wrapped in JsonArrays prefixed by the respective level
 
 **Example:**
-```
+```json
 {
-  "profession": "farmer"
-  "trades":{
+  "profession": "farmer",
+  "trades": {
     "novice": [
       {
         "type": ...
-        ..options...
+        ...options...
       },
       {
         "type": ...
-        ..options...
+        ...options...
       }
-      ...
     ]
   }
 }
@@ -46,7 +51,7 @@ Each trade definition file needs two elements in the root object:
 `tag`: An NBT tag **JsonObject** *optional*
 
 **Example:**
-```
+```json
 {
   "id": "minecraft:diamond_pickaxe",
   "count": 1
@@ -57,7 +62,7 @@ Each trade definition file needs two elements in the root object:
 ```
 
 ## Trade Types
-All trade types have these optional parameters:
+**ALL TRADE TYPES** have these optional parameters:
 
 `price_multiplier`: The multiplier to apply when a player has gossip **float** *default: 0.05*
 
@@ -79,7 +84,7 @@ The Villager __buys__ the given stack for the given price
 `buy`: The item to buy **ItemStack definition**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:buy_item",
   "buy": {
@@ -104,7 +109,7 @@ The Villager __sells__ the given stack for the given price
 `sell`: The Item to sell **ItemStack definition**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:sell_stack",
   "sell": {
@@ -132,7 +137,7 @@ Sells an item for another item and some money
 `price`: The price in bronze coins **int**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:process_item",
   "sell": {
@@ -159,7 +164,7 @@ Sells a map for a specific structure
 `structure`: The structure id, you can find these out using `/locate` **string**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:sell_map",
   "structure": "minecraft:endcity",
@@ -184,7 +189,7 @@ Sells the given stack for the given price, but only if the villager is in the gi
 `dimension`: The target dimension **String**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:dimension_sell_stack",
   "sell": {
@@ -207,7 +212,7 @@ Sells a single random enchantment, prices are calculated based on the generated 
 `price_multiplier`: Multiplier for the price **float** *optional*
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:sell_single_enchantment",
   "price_multiplier": 0.75
@@ -232,7 +237,7 @@ Sells an item enchanted at the given level, prices are calculated based on the g
 `item`: The item to enchant, defaults to book **ItemStack definition** *optional*
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:enchant_item",
   "base_price": 250,
@@ -258,7 +263,7 @@ Sells a piece of randomly dyed piece of leather armor
 `price`: The price in bronze coins **int**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:sell_dyed_armor",
   "item": "minecraft:leather_boots",
@@ -282,7 +287,7 @@ Sells an item that can have a potion effect applied(eg potions, tipped arrows) w
 `price`: The price in bronze coins **int**
 
 **Example:**
-```
+```json
 {
   "type": "numismatic-overhaul:sell_potion_container",
   "container_item": {
