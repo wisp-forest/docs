@@ -17,9 +17,9 @@ There are many useful shortcuts you can use to make your life easier when handli
 
 - If you want to withdraw **every coin in your purse**, simply hold ++shift+ctrl++ while clicking the withdraw button.  
 
-### Shop Block  
-The shop block is very useful for creating an economy with other players.  
-See its [own page here.](shop.md)
+### Shop Blocks  
+The Shop Block is very useful for creating an economy with other players.  
+For a reference on how they work, see their [own page here.](shop.md)
 
 ## Configuration
 You might want to configure certain aspects of Numismatic Overhaul, whether you are a player, a modpack developer, or server admin.  
