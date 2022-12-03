@@ -31,7 +31,7 @@ Then, declare the dependency inside your `dependencies` block and as well as the
 === "gradle.properties"
     ```{ .properties .owo-version-container }
     # https://maven.wispforest.io/io/wispforest/owo-lib/
-    owo_version=... 
+    owo_version=...
     ```
 
 If you want to use a version other than the most current one, check the [GitHub releases page](https://github.com/wisp-forest/owo-lib/releases/)
