@@ -58,6 +58,9 @@ extra:
       numismatic-overhaul:
           repo: https://github.com/wisp-forest/numismatic-overhaul
           name: Numismatic Overhaul
+      condensed-creative:
+          repo: https://github.com/wisp-forest/condensed-creative
+          name: Condensed Creative
 
 extra_css:
     - overrides.css
@@ -137,4 +140,7 @@ nav:
         - scatter/upload.md
         - scatter/edit.md
         - scatter/config.md
+    - Condensed Creative:
+        - condensed-creative/setup.md
+        - condensed-creative/condensed-item-entries.md
 
