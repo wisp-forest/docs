@@ -3,7 +3,7 @@ title: Recipe Remainders
 project: owo
 ---
 
-This feature allows for recipe specific Remainders within a specific Recipe. Minecraft has an internal Remainder system, but the downside to such is it is global for all recipes 
+Minecraft has a remainder system for items, although it is restricted to a single remainder per item for all recipes. This system is designed to be more flexible.
 
 Let's start with normal recipe you might make within your mod:
 
@@ -29,12 +29,15 @@ Let's start with normal recipe you might make within your mod:
 }
 ```
 
-To start, all remainders must be put within the `"owo:remainders"` JSON Object. Then such is as simple as declaring the identifier of the given target item first and then declaring the remainder item as either an identifier or as a Son Object with following Parameters:
+Then declare the identifier of given target item and then declare the remainder item. Either use the item's identifier or create a JSON object with the following Parameters:
 
 | Parameter | Description |
 | --- | --- |
 | `item` | The Identifier of the given item being returned |
 | `count` | The amount of the given item to be returned |
+
+???+ important
+	Currently custom NBT data is not supported!
 
 ```json title="test_recipe.json"
 {
@@ -50,4 +53,6 @@ To start, all remainders must be put within the `"owo:remainders"` JSON Object. 
 }
 ```
 
-Now our recipe will have remainders for each stick and sand item found within the recipe during Remainders check.
+The given recipe will now return our declared Remainders when crafted:
+
+![Remainder Example](https://cdn.discordapp.com/attachments/1005626715025965217/1065049667949305866/remainders_example.gif){ .docs-image .center-image }
