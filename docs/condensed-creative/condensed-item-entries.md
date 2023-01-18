@@ -33,14 +33,14 @@ For **all loaders** you will need a class that implements `CondensedCreativeInit
 
 You can start Registering Entries using the `CondensedEntryRegistry` which will give you a builder back allowing you to change certain things like:
 
-| Attribute | <div style="width:7.9rem">Java Method</div> | <div style="width:7.2rem">JSON Method</div> | 
-| ------ | ------ | ------ |
-| **Item Comparison**: Enables comparison of the items within the ItemStacks rather than the stacks themselves | `useItemComparison()` | `"item_comparison":...` |
-| **Title**: Modifies the tooltip title with the provided Text[^1] [:material-information-outline:](){ title="Will default to using the given Identifier" } | `setTitle()` | `"title:..."` |
-| **Description**: Modifies the entries' tooltip by adding the given Text[^1] as a description | `setDescription()` | `"description:..."` |
-| **Entry Order**: Allows changing between sorting off of Default or Itemgroup | `setEntryOrder()` | `"entry_order":...` |
-| **Strict Filtering**: Attempts to filter out any Entries not found within the Entries Item Group | `toggleStrictFiltering()` | `"strict_filter":...`
-| **Entry Sorting**: Allows for custom sorting of children within code | `setEntrySorting()` | NONE |
+| Attribute | <div style="width:7.9rem">Java Method</div> | <div style="width:7.2rem">JSON Method</div> | Value Type |
+| ------ | :------: | :------: | :------: |
+| **Item Comparison**: Enables comparison of the items within the ItemStacks rather than the stacks themselves | `useItemComparison()` | `"item_comparison":...` | Boolean |
+| **Title**: Modifies the tooltip title with the provided Text[^1] [:material-information-outline:](){ title="Will default to using the given Identifier" } | `setTitle()` | `"title:..."` | Text |
+| **Description**: Modifies the entries' tooltip by adding the given Text[^1] as a description | `setDescription()` | `"description:..."` | Text |
+| **Entry Order**: Allows changing between sorting off of Default or Itemgroup | `setEntryOrder()` | `"entry_order":...` | Entry Order |
+| **Strict Filtering**: Attempts to filter out any Entries not found within the Entries Item Group | `toggleStrictFiltering()` | `"strict_filter":...` | Boolean |
+| **Entry Sorting**: Allows for custom sorting of children within code | `setEntrySorting()` | NONE | Consumer |
 
 [^1]: Such is Parsed based on Minecraft's Internal [Text Serialization](https://minecraft.fandom.com/wiki/Raw_JSON_text_format)
 
@@ -79,7 +79,7 @@ You can start Registering Entries using the `CondensedEntryRegistry` which will 
 
 ## Datapack Method
 
-Another method for registering Condensed Entries is thru Datapack system within minecraft. All files must be put into your mods assets folder: `assets/{your modid}/condensed_entries`.
+Another method for registering Condensed Entries is through the Datapack system within Minecraft. All files must be put into your mods assets folder: `assets/{your modid}/condensed_entries`.
 
 Following the example below, the idea is to nest entries within a given ItemGroups JsonObject:
 
@@ -111,12 +111,12 @@ Following the example below, the idea is to nest entries within a given ItemGrou
 
 1. The ItemGroups given Identifier
 2. The Condensed Entries Identifier with the given modid followed by the Entries Name
-3. Starting Item inwhich this Entry should be placed
-4. :material-information-outline: If such ItemGroup is a OwoItemGroup, you can define Tab Indices as Strings
-5. :octicons-tag-24: 3.0.0 : Shard entries allow you to template your entries if you add blocks to multiple ItemGroups or Tabs 
+3. Starting Item in which this Entry should be placed
+4. :material-information-outline: If such ItemGroup is a owoItemGroup, you can define Tab Indices as Strings
+5. :octicons-tag-24: 3.0.0 : Shard entries allow you to template your entries if you add blocks to multiple ItemGroups or Tabs. You can use the Identifier of the Shard Entry and then edit that given instance within its JSON Object.
 
 ???+ note
-	You can use Identifiers from either Forge or Fabric for Vanilla ItemGroups as there is a internal intercompatibility layer that handles translation to the correct platform
+	You can use Identifiers from either Forge or Fabric for Vanilla ItemGroups as there is an internal intercompatibility layer that handles translation to the correct platform
 
 ***
 
