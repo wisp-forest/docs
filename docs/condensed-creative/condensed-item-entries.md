@@ -38,9 +38,16 @@ You can start Registering Entries using the `CondensedEntryRegistry` which will 
 | **Item Comparison**: Enables comparison of the items within the ItemStacks rather than the stacks themselves | `useItemComparison()` | `"item_comparison":...` | Boolean |
 | **Title**: Modifies the tooltip title with the provided Text[^1] [:material-information-outline:](){ title="Will default to using the given Identifier" } | `setTitle()` | `"title:..."` | Text |
 | **Description**: Modifies the entries' tooltip by adding the given Text[^1] as a description | `setDescription()` | `"description:..."` | Text |
-| **Entry Order**: Allows changing between sorting off of Default or Itemgroup | `setEntryOrder()` | `"entry_order":...` | Entry Order |
+| **Entry Order**: Allows changing between sorting from Default or Itemgroup (Explained Below) | `setEntryOrder()` | `"entry_order":...` | Entry Order |
 | **Strict Filtering**: Attempts to filter out any Entries not found within the Entries Item Group | `toggleStrictFiltering()` | `"strict_filter":...` | Boolean |
-| **Entry Sorting**: Allows for custom sorting of children within code | `setEntrySorting()` | NONE | Consumer |
+| **Entry Sorting**: Allows for custom sorting of children as ItemStacks within code | `setEntrySorting()` | NONE | Consumer |
+
+???+ note "Entry Order"
+    === "Default Order"
+      	Such is based off of whatever method was used to generate the Condensed Entry either by the collections initial order or the Registry Order when using a Tag.
+
+    === "ItemGroup Order"
+      	Such is based off order of the given Items that were found within the specified ItemGroup. So depending on how the Items are added to the group will be the order within the Condensed Entry.
 
 [^1]: Such is Parsed based on Minecraft's Internal [Text Serialization](https://minecraft.fandom.com/wiki/Raw_JSON_text_format)
 

@@ -24,7 +24,7 @@ project: condensed-creative
 
 ## Overview
 
-Condensed Creative is a small library mod that allows for Mod or Datapack Developers to reduce Creative ItemGroup clutter by compacting similar Items into Condensed Entries that can be expanded or shrunk similar to Bedrock Addition of the Game. 
+Condensed Creative is a small library mod that allows for Mod or Datapack Developers to reduce Creative ItemGroup clutter by compacting similar Items into Condensed Entries that can be expanded or shrunk similar to Bedrock Edition of the Game. 
 
 ### Build Setup
 
