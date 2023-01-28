@@ -168,7 +168,7 @@ Now comes the meat of this exercise - creating the UI Model in XML. To begin, we
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19.3/owo-ui.xsd">
     <components>
 
     </components>
@@ -235,12 +235,12 @@ We're now again at the point were you can open your screen - once again it will 
 
 We really encourage you to write this yourself instead of simply copying it - the autocomplete in your IDE should make it a very fast process and will also make you discover many of the other components and options available. Once you're done with this, you can open the screen again and see that it looks exactly like the end result of the previous example! But wait, there's one thing missing - the button does not do anything when clicked. 
 
-Let's fix that by going back to our screen class' `build(...)` method. In here, you can query the button using the ID we just gave it. To do this, you call `childById(...)` on the root component. It is important to note here that IDs need not be unique within your hierarchy - this method simply returns the first matching component it comes across. For type safety reasons we also need to provide the type of component we're looking for, which, since we want the button, is `ButtonWidget.class`. After you have acquired the button this way, you can configure `onPress` like any other property:
+Let's fix that by going back to our screen class' `build(...)` method. In here, you can query the button using the ID we just gave it. To do this, you call `childById(...)` on the root component. It is important to note here that IDs need not be unique within your hierarchy - this method simply returns the first matching component it comes across. For type safety reasons we also need to provide the type of component we're looking for, which, since we want the button, is `ButtonComponent.class`. After you have acquired the button this way, you can configure `onPress` like any other property:
 
 ```java
 @Override
 protected void build(FlowLayout rootComponent) {
-    rootComponent.childById(ButtonWidget.class, "the-button").onPress((ButtonComponent button) -> {
+    rootComponent.childById(ButtonComponent.class, "the-button").onPress(button -> {
         System.out.println("click");
     });
 }
