@@ -3,7 +3,7 @@ title: Registration
 project: owo
 ---
 
-???+ note
+!!! note ""
     The further down this article goes, the more advanced it becomes and the less likely it is you will need the information for a simple mod.
 
 ## Basics
