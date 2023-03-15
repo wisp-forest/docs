@@ -154,7 +154,7 @@ Now the superclass constructor requires a `DataSource`. This is simply a way to 
 
 - `#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime. 
 
-- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo-ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
+- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
 
 For this example, let's use the `file` data source and place our `my_ui_model.xml` file directly in the `run/` directory of your project, turning the constructor into this:
 
@@ -184,7 +184,7 @@ We're now again at the point were you can open your screen - once again it will 
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19.3/owo-ui.xsd">
     <components>
         <flow-layout direction="vertical">
             <children> <!--(1)-->
