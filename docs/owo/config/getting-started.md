@@ -114,11 +114,11 @@ Example:
 @Config(name = "my-config", wrapperName = "MyConfig")
 public class MyConfigModel {
     ...
-        
+
     @Nest
     public ThisIsNested nestedObject = new ThisIsNested();
 
-    public class ThisIsNested {
+    public static class ThisIsNested {
         public boolean aNestedValue = false;
         public int anotherNestedValue = 42;
     }
