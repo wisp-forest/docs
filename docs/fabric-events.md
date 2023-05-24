@@ -4,9 +4,9 @@ project: docs
 summary: All events currently in Fabric API
 ---
 # Fabric API Events
-:octicons-tag-24: Fabric API version: 0.72.0+1.19.3
+:octicons-tag-24: Fabric API version: 0.82.0+1.19.4
 
-:octicons-list-unordered-16: Total event count: 132
+:octicons-list-unordered-16: Total event count: 148
 
 ### Grouped events
 ***
@@ -46,6 +46,27 @@ summary: All events currently in Fabric API
  - INIT
  - JOIN
  - DISCONNECT
+
+#### [ClientReceiveMessageEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents.java)
+
+ - ALLOW_CHAT
+ - ALLOW_GAME
+ - MODIFY_GAME
+ - CHAT
+ - GAME
+ - CHAT_CANCELED
+ - GAME_CANCELED
+
+#### [ClientSendMessageEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents.java)
+
+ - ALLOW_CHAT
+ - ALLOW_COMMAND
+ - MODIFY_CHAT
+ - MODIFY_COMMAND
+ - CHAT
+ - COMMAND
+ - CHAT_CANCELED
+ - COMMAND_CANCELED
 
 #### [ClientTickEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.java)
 
@@ -199,6 +220,7 @@ summary: All events currently in Fabric API
  - [CombinedProvidersImpl$Provider.event](https://github.com/FabricMC/fabric/tree/1.19/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/impl/transfer/fluid/CombinedProvidersImpl$Provider.java)
  - [CommandRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-command-api-v2/src/main/java/net/fabricmc/fabric/api/command/v2/CommandRegistrationCallback.java)
  - [CommonLifecycleEvents.TAGS_LOADED](https://github.com/FabricMC/fabric/tree/1.19/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/CommonLifecycleEvents.java)
+ - [CoreShaderRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/CoreShaderRegistrationCallback.java)
  - [DynamicRegistrySetupCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-registry-sync-v0/src/main/java/net/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback.java)
  - [FluidStorage.GENERAL_COMBINED_PROVIDER](https://github.com/FabricMC/fabric/tree/1.19/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/api/transfer/v1/fluid/FluidStorage.java)
  - [HudRenderCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback.java)
