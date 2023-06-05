@@ -55,6 +55,20 @@ public class MyModInitializer implements ModInitializer {
 }
 ```
 
+<details>
+  <summary>Note for Eclipse IDE users</summary>
+  
+  If you are using Eclipse IDE, you will need to do some additional configuration to get the generated class to register.
+  In your build.gradle, add the following:
+  ```
+  sourceSets.main.java.srcDirs += [ 'src/main/generatedJava' ]
+  compileJava.options.generatedSourceOutputDirectory = file("${projectDir}/src/main/generatedJava/<your config class package>")
+  ```
+  
+  This will ensure that the generated class ends up the correct directory, and  that it gets picked up by Eclipse. Just make sure to replace `<your config class package>` with the path of your `ConfigModel`'s package. For example if your `ConfigModel` class is at: `com.example.config.MyConfigModel`, you would use `com/example/config`.
+  ***
+</details>
+
 And that's it! You can now use your config values everywhere.
 
 #### Additional options
