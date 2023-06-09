@@ -39,7 +39,7 @@ public class MyFirstScreen extends BaseOwoScreen<FlowLayout> {
 }
 ```
 
-You now need to fill in these two methods. In `createAdapter()` you have to initialize the UI system. For this job we use `OwoUIAdapter.create(...)` and pass in the screen and root component factory[^1], for which we'll choose the `VerticalFlowLayout` via `Containers.verticalFlow(...)`, making the final implementation look like this:
+You now need to fill in these two methods. In `createAdapter()` you have to initialize the UI system. For this job we use `OwoUIAdapter.create(...)` and pass in the screen and root component factory[^1], for which we'll choose the `FlowLayout` with the `VERTICAL` algorithm via `Containers.verticalFlow(...)`, making the final implementation look like this:
 
 ```java
 @Override
@@ -85,7 +85,7 @@ protected void build(FlowLayout rootComponent) {
     rootComponent.child(
         Components.button(
                 Text.literal("A Button"), 
-                (ButtonComponent button) -> { System.out.println("click"); } // (1)
+                button -> { System.out.println("click"); } // (1)
             )
     );
 }
@@ -112,7 +112,7 @@ protected void build(FlowLayout rootComponent) {
     
     rootComponent.child(
             Containers.verticalFlow(Sizing.content() /*(1)*/, Sizing.content())
-                .child(Components.button(Text.literal("A Button"), (ButtonComponent button) -> { System.out.println("click"); }))
+                .child(Components.button(Text.literal("A Button"), button -> { System.out.println("click"); }))
                 .padding(Insets.of(10)) // (2)
                 .surface(Surface.DARK_PANEL)
                 .verticalAlignment(VerticalAlignment.CENTER)
@@ -154,13 +154,14 @@ Now the superclass constructor requires a `DataSource`. This is simply a way to 
 
 - `#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime. 
 
-- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
+- ~~`#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.~~<br><br>
+As of **0.11**, this is deprecated and should no longer be used. Instead, you can press ++ctrl+f5++ while viewing the screen and select your UI model file in the menu that shows. Alternatively, you can also use the `/owo-ui-set-reload-path` command to associated a file with any given UI model
 
-For this example, let's use the `file` data source and place our `my_ui_model.xml` file directly in the `run/` directory of your project, turning the constructor into this:
+For this example, let's use the `assets` data source and place our `my_ui_model.xml` file in th `assets/<my-mod-id>/owo_ui/` directory of your project, turning the constructor into this:
 
 ```java
 public MyScreen() {
-    super(FlowLayout.class, DataSource.file("my_ui_model.xml"));
+    super(FlowLayout.class, DataSource.asset(new Identifier("my-mod-id", "my_ui_model")));
 }
 ```
 
@@ -168,7 +169,7 @@ Now comes the meat of this exercise - creating the UI Model in XML. To begin, we
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19.3/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.20/owo-ui.xsd">
     <components>
 
     </components>
@@ -184,7 +185,7 @@ We're now again at the point were you can open your screen - once again it will 
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19.3/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.20/owo-ui.xsd">
     <components>
         <flow-layout direction="vertical">
             <children> <!--(1)-->
