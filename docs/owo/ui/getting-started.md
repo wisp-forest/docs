@@ -152,16 +152,16 @@ public class MyScreen extends BaseUIModelScreen<FlowLayout> {
 
 Now the superclass constructor requires a `DataSource`. This is simply a way to describe where the UI Model should be loaded from - for this there are two standard options: 
 
-- `#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime. 
-
-- ~~`#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.~~<br><br>
+- ~~`#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime.~~<br><br>
 As of **0.11**, this is deprecated and should no longer be used. Instead, you can press ++ctrl+f5++ while viewing the screen and select your UI model file in the menu that shows. Alternatively, you can also use the `/owo-ui-set-reload-path` command to associated a file with any given UI model
 
-For this example, let's use the `assets` data source and place our `my_ui_model.xml` file in th `assets/<my-mod-id>/owo_ui/` directory of your project, turning the constructor into this:
+- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
+
+For this example, let's use the `assets` data source and place our `my_ui_model.xml` file in th `assets/mymod/owo_ui/` directory of your project, turning the constructor into this:
 
 ```java
 public MyScreen() {
-    super(FlowLayout.class, DataSource.asset(new Identifier("my-mod-id", "my_ui_model")));
+    super(FlowLayout.class, DataSource.asset(new Identifier("mymod", "my_ui_model")));
 }
 ```
 
