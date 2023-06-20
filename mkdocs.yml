@@ -58,6 +58,9 @@ extra:
       numismatic-overhaul:
           repo: https://github.com/wisp-forest/numismatic-overhaul
           name: Numismatic Overhaul
+      lavender:
+          repo: https://github.com/wisp-forest/lavender
+          name: Lavender
 
 extra_css:
     - overrides.css
@@ -132,6 +135,9 @@ nav:
           - owo/ui/component-basics.md
           - owo/ui/layout-basics.md
           - owo/ui/utility-components.md
+    - Lavender:
+        - lavender/setup.md
+        - lavender/getting-started.md
     - scatter:
         - scatter/home.md
         - scatter/upload.md
