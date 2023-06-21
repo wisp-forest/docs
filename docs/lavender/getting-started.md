@@ -3,6 +3,8 @@ title: Getting Started
 project: lavender
 ---
 
+**:material-progress-alert: Work-in-progress**
+
 When setting up documentation for a mod with Lavender, the very first step you need to take is creating the required file structure in your mod's resource pack. To begin, create a `lavender` directory in your mod's `assets`. To this, you *can* now add the following subdirectories:
 
 - :material-folder-text: `books`<br> 
@@ -26,14 +28,15 @@ To make your first book, create its book definition (for this example we'll be m
 {}
 ```
 
-Yes, that is in fact all that's required for a minimal book definition - you just need to tell Lavender *somehow* that your book exists at all. Of course, there are some other properties you *can* set, but none of the are mandatory:
+Yes, that is in fact all that's required for a minimal book definition - you just need to tell Lavender *somehow* that your book exists at all. Of course, there are some other properties you *can* set, but none of them are mandatory:
 
-| Property | Description |
-| --- | --- |
-| texture | This is used to decide which texture to use for the GUI of your book. There are some built into Lavender following the `lavender:textures/gui/<color>_book.png` template |
-| display_completion | If some or all entries of your book are locked behind advancements, you can set this to `true` to make the book display a completion bar on the main index page and separately for each category |
+| Property           | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| texture            | This is used to decide which texture to use for the GUI of your book. There are some built into Lavender following the `lavender:textures/gui/<color>_book.png` template                                                                                                                                                                                                                                                                                                     |
+| display_completion | If some or all entries of your book are locked behind advancements, you can set this to `true` to make the book display a completion bar on the main index page and separately for each category                                                                                                                                                                                                                                                                             |
 | dynamic_book_model | Lavender has a built-in book, the *dynamic book*, which uses NBT data to emulate any book currently loaded into the game. This is primarily of interest if you are a modpack developer and thus cannot register your own book item through Lavender's API. You can set this property to another item model's ID (e.g. `mymodpack:my_book_model` -> `assets/mymodpack/models/item/my_book_model.json`) to make the dynamic book use said model when it is emulating your book |
-| extend | Should you be adding content to another mod with a Lavender guidebook, you can set this property to extend the original mod's book with your own entries and categories. To read more on how this work, look at the [respective article](writing-extensions.md) |
+| extend             | Should you be adding content to another mod with a Lavender guidebook, you can set this property to extend the original mod's book with your own entries and categories. To read more on how this work, look at the [respective article](writing-extensions.md)                                                                                                                                                                                                              |
+
 
 ## Adding Entries
 
@@ -53,7 +56,6 @@ Now that we have our book defined, let's start by adding a first entry. To do th
 In here, we put some **markdown-formatted** content for our entry. Lavender 
 supports most of the *standard* Markdown formatting syntax with some 
 {green}minecraft-specific{} extensions, like this one for color
-
 ```
 
 At this point, you're ready to open your book for the first time! Go ahead and start the game (or, if it is already running, do a resource reload with ++f3+t++) - Lavender will now have loaded your book and the first entry we just wrote. To get yourself a dynamic book for testing, run `/get-lavender-book mymod:my_book`. Then, after opening the book and selecting your entry, you'll be greeted by the following screen:
@@ -70,5 +72,48 @@ Further, if you take out some Nether Quartz Ore and hover it while having the bo
 
 ## Adding Categories
 
-Now that we have made an entry (and it should hopefully be abundantly clear how to create more of them), let's move on to creating a category. 
+Now that we have made an entry (and it should hopefully be abundantly clear how to create more of them), let's move on to creating a category. Analogously to entries, categories must be placed in the `assets/mymod/lavender/categories/my_book/` directory of your mod's resource pack (specifically, we'll save it as `a_category.md`). The format for categories, as you can see below, is very similar to entries - only the frontmatter is slightly different:
 
+```markdown
+``​`json
+{
+  "title": "A Category",
+  "icon": "minecraft:dirt"
+}
+``​`
+
+Just like __entries__, categories fully support **markdown formatting**.
+Be careful when writing their descriptions however, as you only get a
+single page to work with.
+```
+
+Now, in order for your category to actually show in the book, at least one entry must be inside it. To this end, modify the frontmatter of the entry we made previously:
+
+```markdown
+``​`json
+{
+  "title": "My First Page",
+  "icon": "minecraft:quartz",
+  {++"category": "mymod:a_category",++}
+  "associated_items": [
+    "minecraft:nether_quartz_ore"
+  ]
+}
+``​`
+
+...
+
+```
+
+After making these changes, sync them to your game instance and press the reload button to see them in action! You'll also have noticed by now that Lavender can handle entries without a category (contrary to what you might be used to from Patchouli). This can be quite useful if you have an introductory entry that doesn't really belong anywhere else *or* if your mod is not complex enough to warrant multiple categories.
+
+## Finishing up
+
+To end of this introductory tutorial, we'll add a landing page entry to the book to replace the smiley face greeting you upon opening it thus far. Luckily, this is as easy as creating an entry *directly inside* `assets/mymod/lavender/entries/my_book/` which is simply called `landing_page.md` - it will automatically get picked up and displayed
+
+### Further reading
+
+While this introduction should get you up to speed on writing basic documentation, there's a lot more that Lavender has to offer in terms of Markdown syntax and metadata. To read more about this, check out the following articles:
+
+ - [Metadata Format](metadata-format.md) holds information on all flags and other metadata you can put into the frontmatter of both entries and categories
+ <!-- - []() -->

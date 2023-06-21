@@ -3,6 +3,9 @@ title: Setup
 project: lavender
 ---
 
+!!! tip "Work-in-progress"
+    The Lavender documentation is still being written and not quite complete yet. In places where an article here is still missing, feel free to refer to Lavender's Javadoc where present or simply ask for help on [our Discord](https://discord.gg/xrwHKktV2d)
+
 <script>
     window.addEventListener('version-available', event => {
         const code = document.querySelector(".lavender-version-container").firstChild;

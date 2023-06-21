@@ -138,6 +138,7 @@ nav:
     - Lavender:
         - lavender/setup.md
         - lavender/getting-started.md
+        - lavender/metadata-format.md
     - scatter:
         - scatter/home.md
         - scatter/upload.md
