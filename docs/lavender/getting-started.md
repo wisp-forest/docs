@@ -5,6 +5,7 @@ project: lavender
 
 **:material-progress-alert: Work-in-progress**
 
+
 When setting up documentation for a mod with Lavender, the very first step you need to take is creating the required file structure in your mod's resource pack. To begin, create a `lavender` directory in your mod's `assets`. To this, you *can* now add the following subdirectories:
 
 - :material-folder-text: `books`<br> 
@@ -35,7 +36,7 @@ Yes, that is in fact all that's required for a minimal book definition - you jus
 | texture            | This is used to decide which texture to use for the GUI of your book. There are some built into Lavender following the `lavender:textures/gui/<color>_book.png` template                                                                                                                                                                                                                                                                                                     |
 | display_completion | If some or all entries of your book are locked behind advancements, you can set this to `true` to make the book display a completion bar on the main index page and separately for each category                                                                                                                                                                                                                                                                             |
 | dynamic_book_model | Lavender has a built-in book, the *dynamic book*, which uses NBT data to emulate any book currently loaded into the game. This is primarily of interest if you are a modpack developer and thus cannot register your own book item through Lavender's API. You can set this property to another item model's ID (e.g. `mymodpack:my_book_model` -> `assets/mymodpack/models/item/my_book_model.json`) to make the dynamic book use said model when it is emulating your book |
-| extend             | Should you be adding content to another mod with a Lavender guidebook, you can set this property to extend the original mod's book with your own entries and categories. To read more on how this work, look at the [respective article](writing-extensions.md)                                                                                                                                                                                                              |
+| extend             | Should you be adding content to another mod with a Lavender guidebook, you can set this property to extend the original mod's book with your own entries and categories. To read more on how this works, look at the [respective article](writing-extensions.md)                                                                                                                                                                                                              |
 
 
 ## Adding Entries
