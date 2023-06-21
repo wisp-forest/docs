@@ -3,8 +3,6 @@ title: Layout Basics
 project: owo
 ---
 
-**:material-progress-alert: Work-in-progress**
-
 When building a UI, arranging components on screen is one of your primary tasks - in owo-ui, this is accomplished using layout components. A layout component is a parent component which accepts multiple children and places them on the screen in a certain fashion.
 
 ## Layout Types

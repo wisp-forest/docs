@@ -3,8 +3,6 @@ title: Getting Started
 project: owo
 ---
 
-**:material-progress-alert: Work-in-progress**
-
 ## Choosing a paradigm
 
 Before creating your first screen with owo-ui, you need to decide which approach you want to take: code-driven or data-driven. Here's a quick comparison:

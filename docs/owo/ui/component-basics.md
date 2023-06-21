@@ -3,8 +3,6 @@ title: Component Basics
 project: owo
 ---
 
-**:material-progress-alert: Work-in-progress**
-
 There are quite a few things to know about how components internally work and how their properties decide behavior. This page serves as a helpful reference for the most important concepts.
 
 ## Using the Inspector
