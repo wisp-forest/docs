@@ -139,6 +139,7 @@ nav:
         - lavender/setup.md
         - lavender/getting-started.md
         - lavender/metadata-format.md
+        - lavender/markdown-syntax.md
         - lavender/writing-extensions.md
     - scatter:
         - scatter/home.md
