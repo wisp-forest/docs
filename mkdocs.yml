@@ -34,7 +34,7 @@ theme:
         code: Fira Mono
 
 copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/gliscowo\">glisco</a>, with assistance from the Wisp Forest team"
-extra:          
+extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/xrwHKktV2d
@@ -50,7 +50,7 @@ extra:
           name: oωo
           icon: owo.png
       scatter:
-          repo: https://github.com/gliscowo/scatter-dart
+          repo: https://github.com/gliscowo/scatter
           name: scatter
       docs:
           repo: https://github.com/wisp-forest/docs
