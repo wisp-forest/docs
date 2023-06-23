@@ -8,7 +8,7 @@ The Shop Block is a simple block which lets you sell items to other players.
 
 The two tabs in the block correspond to the Shop Inventory, and the Shop Trades.  
 
-![Image of the Shop Trade Screen.](https://media.discordapp.net/attachments/857970721166065674/1042552882618183832/shop_gui.png){ .center-image .sized-image style="--image-width: 85%;" }
+![shop trade configuration interface](../assets/numismatic-overhaul/shop-gui.png){ .center-image .sized-image style="--image-width: 85%;" }
 
 Inside the Shop Trade Screen you can add new trades with the top-right widget.  
 
@@ -20,7 +20,7 @@ This second widget with the coin counters lets you withdraw all the money which 
 
 If you wish to view the trades in your own shop, *right-clicking your Shop Block while sneaking* will open up the Trade Screen - just like any other player would see it.
 
-![Viewing the shop from a buyers point of view, with the items set from the Trade Screen.](https://media.discordapp.net/attachments/857970721166065674/1042552928759713842/trade_gui.png){ .center-image .sized-image style="--image-width: 85%;" }
+![viewing the shop from the buyer's point of view, with the items set from the trade interface](../assets/numismatic-overhaul/shop-merchant-gui.png){ .center-image .sized-image style="--image-width: 85%;" }
 
 
 ## Inexhaustible Shop
