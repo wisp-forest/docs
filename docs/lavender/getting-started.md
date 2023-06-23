@@ -12,7 +12,7 @@ When setting up documentation for a mod with Lavender, the very first step you n
   This is where all book definitions go - for every book you want your mod to declare you place a single `.json` file in here, the format on which is outlined in the next section.
 
 - :material-folder-edit: `entries/<book name>/`<br>
-  This is where you place your entries, potentially further organized into subdirectories. The entry format is briefly described below, but to get the full details you might want to [check out the respective article](entry-format.md).
+  This is where you place your entries, potentially further organized into subdirectories. The entry format is briefly described below, but to get the full details you might want to [check out the respective article](metadata-format.md).
 
 - :material-folder-open: `categories/<book name>/`<br>
   All category definitions belong in here. Categories are used to group entries together, and work in much the same way (except that they don't support multiple pages)
