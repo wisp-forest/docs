@@ -61,7 +61,7 @@ supports most of the *standard* Markdown formatting syntax with some
 
 At this point, you're ready to open your book for the first time! Go ahead and start the game (or, if it is already running, do a resource reload with ++f3+t++) - Lavender will now have loaded your book and the first entry we just wrote. To get yourself a dynamic book for testing, run `/get-lavender-book mymod:my_book`. Then, after opening the book and selecting your entry, you'll be greeted by the following screen:
 
-![example entry in in-game book](https://media.discordapp.net/attachments/857970721166065674/1120850526146416781/book-screen-annotated.png){ .center-image }
+![example entry in in-game book](../assets/lavender/book-screen-annotated.png){ .center-image }
 
 !!! tip "The reload button and you"
     The reload button helpfully outlined in the above figure is only visible while running in oωo's [debug mode](../owo/system-properties.md#-dowodebug-truefalse) and, when pressed, instantly reloads all book content (this includes book definitions!) from disk without having to sit through an entire client resource reload.
@@ -69,7 +69,7 @@ At this point, you're ready to open your book for the first time! Go ahead and s
     With this, however, it is important to note that neither Gradle not IntelliJ provide your mod assets directly from the source and instead copy them to some temporary directory. Thus, to properly sync your changes to the running game, you need to either rebuild or directly invoke IntelliJ's "Reload changed classes" action, after which you can do a reload and see your changes in-game
 
 Further, if you take out some Nether Quartz Ore and hover it while having the book you just made in your hotbar, you'll see that (just as declared) the entry is referenced in the item's tooltip:
-![example entry tooltip](https://media.discordapp.net/attachments/857970721166065674/1120850741800751195/tooltip.png){ .docs-image .center-image }
+![example entry tooltip](../assets/lavender/associated-entry-tooltip.png){ .docs-image .center-image }
 
 ## Adding Categories
 

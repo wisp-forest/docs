@@ -150,7 +150,7 @@ Notice the two blank lines above and below the page break - they are part of thi
 To insert a dynamically updating reference to a keybinding, use `<keybind;"translation key of binding here">` - like this:
 
 `<keybind;key.attack>` renders as
-![keybind tooltip example](https://media.discordapp.net/attachments/857970721166065674/1121544837666189403/keybind-tooltip.png){ .docs-image }
+![keybind tooltip example](../assets/lavender/keybind-tooltip.png){ .docs-image }
 
 To get the translation key of a given keybind, look it up in game's `options.txt` file. You'll notice that it saves the keybindings using a `key_` prefix - you need to drop this. The key in our example here is stored as `key_key.attack` in the file, yet we only use `key.attack`
 
@@ -180,7 +180,7 @@ To insert a preview of the mentioned game elements, you use the same syntax as f
 
 To insert a dynamically updating recipe preview, use the familiar syntax for `recipe` and supply the recipe's ID - like this: `<recipe;minecraft:warped_fence_gate>`
 
-![warped fence gate recipe preview](https://media.discordapp.net/attachments/857970721166065674/1121911668289589329/recipe.png){ .docs-image .center-image }
+![warped fence gate recipe preview](../assets/lavender/recipe-preview.png){ .docs-image .center-image }
 
 Do note that this preview is entirely dynamic, and if the recipe gets changed or replaced (even by one of an entirely separate type) it will still be accurate. By default, all Vanilla recipe types are supported - if you are a mod author you can add your own ones using Lavender's simple API. Specifically, take a look at `BookScreen.registerRecipeHandler`.
 
