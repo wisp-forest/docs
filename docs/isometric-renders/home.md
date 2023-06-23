@@ -23,7 +23,7 @@ To get started, check out [/isorender](slash_isorender.md) - that page contains 
 
     You might want to perform batch operations like rendering an atlas or a block/item batch on sets of items that don't necessarily form a creative tab, tag or namespace. To do this, you can simply press ++ctrl+f12++ while in any inventory. You will get a preview of which items will be rendered and can choose which batch operation to start.
 
-    ![batch operation screen](https://cdn.discordapp.com/attachments/857970721166065674/1032051544176205944/batch-operation-screen.png){ .center-image .sized-image style="--image-width: 90%;" }
+    ![batch operation screen](../assets/isometric-renders/batch-operation-screen.png){ .center-image .sized-image style="--image-width: 90%;" }
 
  - #### Visual area selection
 
