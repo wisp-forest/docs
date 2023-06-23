@@ -3,7 +3,7 @@ title: owo-ui Academy
 project: owo
 ---
 
-![owo-ui-academy example screen](https://cdn.discordapp.com/attachments/857970721166065674/1016795690204135544/2022-09-06_21.39.52.png){ .docs-image }
+![owo-ui-academy example screen](../../assets/owo/ui-academy.png){ .docs-image }
 
 owo-ui-academy is an interactive, in-game tutorial that teaches you the essential concepts of owo-ui.
 

@@ -57,6 +57,6 @@ This annotation applies to any field and declares that the option it represents 
 
 The annotation also has a secondary effect when combined with `@Sync(Option.SyncMode.OVERRIDE_CLIENT)`. Because an option which only applies after restart cannot be dynamically overridden by the server, owo-config will not allow players to connect if their client's value does not match the server.
 
-![config mismatch example](https://cdn.discordapp.com/attachments/857970721166065674/1006889351164215326/sync-error.png)
+![config mismatch example](../../assets/owo/config-sync-error.png)
 
 [^1]: Yes, this is a word

@@ -9,7 +9,7 @@ When building a UI, arranging components on screen is one of your primary tasks 
 owo-ui has two built-in layout components, which we'll explore now. Should neither of these meet your needs, you can always make your own - simply extend `BaseParentComponent`.
 
 ### Flow Layout
-![vertical flow layout reference](https://cdn.discordapp.com/attachments/857970721166065674/1013911965900476507/vertical_flow_layout.png){ align=right style="--image-width: 20%;" .sized-image }
+![vertical flow layout reference](../../assets/owo/flow-layout-reference.png){ align=right style="--image-width: 20%;" .sized-image }
 
 :material-xml: `#!xml <flow-layout direction="vertical|​horizontal">` <br>
 :material-language-java: `#!java Containers.verticalFlow(...)` | `#!java Containers.horizontalFlow(...)`
@@ -25,7 +25,7 @@ The grid layout is equally simple as the flow layout - it places every child in 
 
 When a grid layout is content-sized, every row and column becomes as large as it needs to be to fit the largest cell. Otherwise, every row and column is evenly split along the layout's length in that direction.
 
-![grid layout reference](https://cdn.discordapp.com/attachments/857970721166065674/1013921383480311911/grid_layout.png){ style="--image-width: 60%; display: block; margin-right: auto; margin-left: auto;" .sized-image }
+![grid layout reference](../../assets/owo/grid-layout-reference.png){ style="--image-width: 60%; display: block; margin-right: auto; margin-left: auto;" .sized-image }
 
 ## Layout Properties
 

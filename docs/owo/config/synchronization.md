@@ -25,7 +25,7 @@ When a client-side option gets overridden by the server, it enters the so-called
 ### Restart-only options
 When `@Sync(Option.SyncMode.OVERRIDE_CLIENT)` is applied to a field which is also annotated as `@RestartRequired`, special handling is employed. Because such a value cannot be safely overridden by the server, the server's value is instead only used for verification. In case the client's value *does not match the server*, the client will automatically disconnect and prompt the user to change the value themselves and restart.
 
-![config mismatch example](https://cdn.discordapp.com/attachments/857970721166065674/1006889351164215326/sync-error.png)
+![config mismatch example](../../assets/owo/config-sync-error.png)
 
 ## Config Sync Flow
 ``` mermaid

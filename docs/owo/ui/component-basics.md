@@ -9,7 +9,7 @@ There are quite a few things to know about how components internally work and ho
 
 Many properties of a component can be analyzed visually right in game, using the component inspector. While in debug mode, it can be enabled on any owo screen (or, more specifically, any UI adapter which can capture the relevant keyboard input) by pressing ++ctrl+shift++. You can then use your mouse to hover the component you wish to inspect. The text annotation presents information in the following format:
 
-![inspector text format](https://cdn.discordapp.com/attachments/857970721166065674/1013186780415135876/inspector.png){ .center-image }
+![inspector text format](../../assets/owo/inspector-reference.png){ .center-image }
 
 :fontawesome-solid-square:{ style="color: #554994;" } The type of the component <br>
 :fontawesome-solid-square:{ style="color: #f675a8;" } The ID of the component (if defined) <br>
@@ -22,7 +22,7 @@ Everything is given in logical pixels - that is, pixels after the UI Scale optio
 
 ## Margins
 
-![margins explainer image](https://cdn.discordapp.com/attachments/857970721166065674/1013228773732274297/margins.png){ align=right style="--image-width: 30%;" .sized-image }
+![margins explainer image](../../assets/owo/margins-reference.png){ align=right style="--image-width: 30%;" .sized-image }
 
 Each component defines a set of margins. These decide how much dead space to add around the component's main bounding box on each side - this is most often useful for spacing out neighboring components. Margins may also be negative, which effectively shrinks the bounding box of the component on that side, although results may sometimes be counterintuitive.
 
@@ -30,7 +30,7 @@ The inspector draws the margins of a component in <span style="color: #FFF338;">
 
 ## Padding
 
-![padding explainer image](https://cdn.discordapp.com/attachments/857970721166065674/1013228774285901894/padding.png){ align=right style="--image-width: 30%;" .sized-image }
+![padding explainer image](../../assets/owo/padding-reference.png){ align=right style="--image-width: 30%;" .sized-image }
 
 Every parent component defines padding. This decides how much dead space is added inside the component's bounding box, surrounding its children. If the component is not content-sized, this means the space available to its children becomes smaller. Just like margins, padding may be negative.
 

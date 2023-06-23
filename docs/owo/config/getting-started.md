@@ -71,7 +71,7 @@ Each option's translation key is generated based on its key as well as the confi
 Translation keys for enums are generated based on the name of the option, like this: `text.config.<config name>.option.<option key>.value.<name of enum value>`. The name of the enum value is always fully lowercase.
 
 #### Registering with [ModMenu](https://modrinth.com/mod/modmenu)
-![modmenu config example](https://cdn.discordapp.com/attachments/857970721166065674/1006877040533848075/modmenu.png)
+![modmenu config example](../../assets/owo/config-modmenu.png)
 In order to make your config screen available from ModMenu, you only need to apply the `@Modmenu` annotation to your config model class.
 
 ```java
@@ -89,7 +89,7 @@ The annotation requires that you pass in your mod's id, and optionally a custom 
 When your config has more than just a few options, it is often beneficial to organize it in a sensible manner. owo-config provides two tools for this purpose - sections and nested objects
 
 #### Sections
-![section header example](https://cdn.discordapp.com/attachments/857970721166065674/1006704549064613898/section-header.png)
+![section header example](../../assets/owo/config-section-header.png)
 A section gets a header as shown above and can also be quickly navigated to using the sidebar. To begin a new section in your config, simply apply the `@SectionHeader` annotation to the field with which you want the section to begin.
 
 Example:
@@ -106,7 +106,7 @@ public class MyConfigModel {
 
 
 #### Nested Objects
-![nested object example](https://cdn.discordapp.com/attachments/857970721166065674/1006707303224975381/nested-object.png)
+![nested object example](../../assets/owo/config-nested-object.png)
 A nested object adds a level of indentation to all the options inside it. It can also be collapsed to be out of the way if the options it contains are rarely needed. To define a nested object, declare an inner class in your config model, add a field of its type and apply the `@Nest` annotation to said field.
 
 Example:

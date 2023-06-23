@@ -52,7 +52,7 @@ protected @NotNull OwoUIAdapter<FlowLayout> createAdapter() {
 
 And that's it! You now have the screen all initialized and ready to go. If you open it at this point, you'll see precisely nothing:
 
-![a blank screen](https://cdn.discordapp.com/attachments/857970721166065674/1012757838399021066/unknown.png){ .docs-image }
+![a blank screen](../../assets/owo/getting-started/step-0.png){ .docs-image }
 
 Let's fix that by giving our root component a so-called surface, in this case the standard dark, translucent background most vanilla UIs use.
 
@@ -68,7 +68,7 @@ protected void build(FlowLayout rootComponent) {
 
 Now the screen looks like this:
 
-![a screen with a dark translucent background](https://cdn.discordapp.com/attachments/857970721166065674/1012757838810054686/unknown.png){ .docs-image }
+![a screen with a dark translucent background](../../assets/owo/getting-started/step-1.png){ .docs-image }
 
 Great! Let's begin by simply adding a button right in the center. To accomplish this, we first set the root component's alignment to `CENTER` on both axes and then add our button - like this:
 
@@ -96,7 +96,7 @@ protected void build(FlowLayout rootComponent) {
 
 The result is as expected, a button saying "A Button" right in the center of our screen:
 
-![a screen with a centered button](https://cdn.discordapp.com/attachments/857970721166065674/1012757839384678420/unknown.png){ .docs-image }
+![a screen with a centered button](../../assets/owo/getting-started/step-2.png){ .docs-image }
 
 Before we finish off this introduction, let's wrap the button in a container and style that like a vanilla UI panel. To do this, we only need to create the container via `Containers.verticalFlow(...)` and add our button and surface to it like normal. If you understood everything so far, the following code should be pretty simple to grasp:
 
@@ -125,7 +125,7 @@ protected void build(FlowLayout rootComponent) {
 
 Leaving us with a final screen that looks like this:
 
-![a screen with a centered button and a panel around it](https://cdn.discordapp.com/attachments/857970721166065674/1012757092651761786/2022-08-25_01.16.48.png){ .docs-image }
+![a screen with a centered button and a panel around it](../../assets/owo/getting-started/step-3.png){ .docs-image }
 
 
 ### Data-driven
@@ -177,7 +177,7 @@ Now comes the meat of this exercise - creating the UI Model in XML. To begin, we
 If you're using IntelliJ, you now have to place your cursor on the URL in `xsi:noNamespaceSchemaLocation`, press ++alt+enter++ and select `Fetch external resource`. This will make it download the XML schema, giving you rich autocomplete and error checking right inside the IDE.
 
 Great, you can now begin building your UI. Let's first declare the root component. We'll use the `flow-layout`, just as declared on our class, and say that its `direction` is `vertical`:
-![flow layout in xml](https://cdn.discordapp.com/attachments/857970721166065674/1012687016741318676/flow-layout.gif){ .docs-image .center-image }
+![flow layout in xml](../../assets/owo/getting-started/flow-layout.gif){ .docs-image .center-image }
 
 We're now again at the point were you can open your screen - once again it will just be completely blank. Let's add content then - for the sake of brevity this will now all be a single code block:
 
