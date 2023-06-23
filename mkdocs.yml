@@ -100,7 +100,7 @@ markdown_extensions:
     - pymdownx.critic
 
 nav:
-    - Home: 
+    - Home:
         - index.md
         - faq.md
         - fabric-events.md

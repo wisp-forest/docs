@@ -12,6 +12,7 @@ summary: The Wisp Forest Documentation Hub
 - If you're a user, you're probably looking for the [FAQ](faq) which should answer most of the common questions and problems you might encounter.
 - You can also find the guidebooks of our mods hosted, over on the [guides subdomain](https://guides.wispforest.io)
 - The documentation for [Isometric Renders](isometric-renders/home.md) is also available here, with every aspect of the mod covered in great detail.
+- So is that of [Numismatic Overhaul](numismatic-overhaul/home.md), with information on both the player-facing features and developer-facing trade format documentation
 
 
 ### :material-code-json: For Developers
