@@ -44,11 +44,11 @@ extra:
       isometric-renders:
           repo: https://github.com/gliscowo/isometric-renders
           name: Isometric Renders
-          icon: isometric-renders.png
+          icon: isometric-renders/icon.png
       owo:
           repo: https://github.com/wisp-forest/owo-lib
           name: oωo
-          icon: owo.png
+          icon: owo/icon.png
       scatter:
           repo: https://github.com/gliscowo/scatter
           name: scatter
