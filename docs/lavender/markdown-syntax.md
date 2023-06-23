@@ -25,11 +25,11 @@ Lavender intentionally does not support any of the alternative characters usuall
 Furthermore, like in Discord for example, you can use
 
 - `__double underscores__` for <u>underlined text</u>
-- `~~double tilde~~` for ~~strikethrough text~~
+- `~~double tilde~~` for ~~strike-through text~~
 
 ### Color
 
-To add color to a span of text, you open with `{<color here>}` and close with `{}`. The `<color here>` part can be one of two things: either one of Minecrat's text colors (like `red`) or a 6 digit `RRGGBB` hex color. Refer to the following examples:
+To add color to a span of text, you open with `{<color here>}` and close with `{}`. The `<color here>` part can be one of two things: either one of Minecrat's text colors (like `red`) or a 6 digit `#RRGGBB` hex color. Refer to the following examples:
 
 - `{red}some red{} text`<br>
   <span style="color: #FF5555;">some red</span> text
@@ -40,7 +40,7 @@ To add color to a span of text, you open with `{<color here>}` and close with `{
 
 Using standard Markdown syntax, wrap some text into `[square brackets](followed by a link in parantheses)` to create a [hyperlink](https://youtu.be/dQw4w9WgXcQ). 
 
-However, Lavender also offers specific syntax for linking to other entries or categories in the same book. To create an internal link, begin it with a caret `^` and follow with the ID of an entry or category (derived using the resource's namespace and path relative to their respective directory). Refer to these handy example:
+However, Lavender also offers specific syntax for linking to other entries or categories in the same book. To create an internal link, begin it with a caret `^` and follow with the ID of an entry or category (derived using the resource's namespace and path relative to their respective directory). Refer to these handy examples:
 
 - `[category link](^mymod:a_category)`<br>
   Links to `assets/mymod/lavender/categories/<book id>/a_category.md`
@@ -126,4 +126,86 @@ To instead create an ordered list, simply replace the dashes with the item's ind
             4. deeper
     7. and back to base
 
-Do note that, unlike in this demonstration using MkDocs' markdown renderer, Lavender does not renumber your elements and instead uses the index you provide verbatim
+    !!! note ""
+        Do note that, unlike in this demonstration using MkDocs' markdown renderer, Lavender does not renumber your elements and instead uses the index you provide verbatim
+
+### Page Breaks
+
+In order to prevent inconsistent results and confusing rules, Lavender makes no attempts to automatically break your entries into pages. Instead, you need to manually insert a page break, like this:
+
+```md
+...page 1 content here...
+
+;;;;;
+
+...page 2 content here...
+```
+
+Notice the two blank lines above and below the page break - they are part of this syntax and must not be omitted
+
+## Game Elements
+
+### Keybinds
+
+To insert a dynamically updating reference to a keybinding, use `<keybind;"translation key of binding here">` - like this:
+
+`<keybind;key.attack>` renders as
+![keybind tooltip example](https://media.discordapp.net/attachments/857970721166065674/1121544837666189403/keybind-tooltip.png){ .docs-image }
+
+To get the translation key of a given keybind, look it up in game's `options.txt` file. You'll notice that it saves the keybindings using a `key_` prefix - you need to drop this. The key in our example here is stored as `key_key.attack` in the file, yet we only use `key.attack`
+
+### Entities, Items, Blocks and Recipes
+
+To insert a preview of the mentioned game elements, you use the same syntax as for keybindings - like in these examples:
+
+- `<entity;minecraft:zombie>`<br>
+  Insert a Zombie
+
+- `<entity;minecraft:zombie{IsBaby:1b}>`<br>
+  Insert a Baby Zombie by providing the relevant NBT tag in addition to the entity ID
+
+- `<item;minecraft:diamond_shovel>`<br>
+  Inserts a Diamond Shovel, with a proper functioning tooltip as well
+
+- `<item;minecraft:diamond_shovel{Enchantments:[{id: "minecraft:efficiency", lvl: 5}]}>`<br>
+  Inserts a Diamond Shovel enchanted with Efficiency V by providing the relevant NBT tag in addition to the item ID
+
+- `<block;minecraft:furnace>`<br>
+  Insert a Furnace
+
+- `<block;minecraft:furnace[lit=true]>`<br>
+  Inserts a lit Furnace by providing the relevant block state properties. NBT for block entities is supported as well (you can use the `/setblock` command as reference for the syntax)
+
+### Recipes
+
+To insert a dynamically updating recipe preview, use the familiar syntax for `recipe` and supply the recipe's ID - like this: `<recipe;minecraft:warped_fence_gate>`
+
+![warped fence gate recipe preview](https://media.discordapp.net/attachments/857970721166065674/1121911668289589329/recipe.png){ .docs-image .center-image }
+
+Do note that this preview is entirely dynamic, and if the recipe gets changed or replaced (even by one of an entirely separate type) it will still be accurate. By default, all Vanilla recipe types are supported - if you are a mod author you can add your own ones using Lavender's simple API. Specifically, take a look at `BookScreen.registerRecipeHandler`.
+
+### Textures (Images)
+
+Images in lavender-md are a bit of a special case, as they actually display textures and not arbitrary images loaded from the internet. The basic syntax is identical to standard markdown: `![<tooltip>](<texture resource ID>)`. 
+
+For example, to display the Fire Resistance icon, use the following: `![Fire Resistance](minecraft:textures/mob_effect/fire_resistance.png)`
+
+As you'll notice, by default the texture is display with its actual size - however, this is not usually desireable when you need to display an image on your page. To make Lavender stretch the texture to the width of the page, append `,fit` after the resource ID.
+
+As another example, to display the Furnace's GUI texture scaled to fit the page, use: `![Furnace](minecraft:textures/gui/container/furnace.png,fit)`
+
+#### Adding your own textures
+
+For the presumably most common use-case, displaying your own images, you need to include said image as a texture resource in your mod's resource pack (that is, somewhere in `assets/mymod/textures`). Ideally, you make them 256x256 in size - we love our good ol' powers of two.
+
+## oωo-ui Templates
+
+The most flexible way of creating custom components for you pages (without writing code, that is), is by using oωo-ui templates. You can read some more on how to create UI-models [here](../owo/ui/getting-started.md#data-driven). 
+
+Once you have a UI model with your template in it, you can use the following syntax to insert it into Lavender markdown:
+
+`<|template-name@ui-model-id|>`<br>
+or, if your template takes parameters<br>
+`<|template-name@ui-model-id|param1=value1,param2=value2|>`
+
+If any of your template parameters contain a comma, you can escape it using `\`
