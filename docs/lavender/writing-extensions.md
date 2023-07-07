@@ -6,7 +6,7 @@ project: lavender
 **:material-progress-alert: Work-in-progress**
 
 
-If you are writing an addon to another mod which uses Lavender, you might want to integrate the documentation for your additions into the mod's existing guidebook. In order to keep clean separation between the original mod's and your addon's resources, Lavender offers **extension books** for this purpose.
+If you are writing an add-on to another mod which uses Lavender, you might want to integrate the documentation for your additions into the mod's existing guidebook. In order to keep clean separation between the original mod's and your addon's resources, Lavender offers **extension books** for this purpose.
 
 
 ### Defining an extension
