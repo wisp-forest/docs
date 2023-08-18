@@ -43,8 +43,8 @@ Yes, that is in fact all that's required for a minimal book definition - you jus
 
 Now that we have our book defined, let's start by adding a first entry. To do this, since our book is called `my_book`, we add `my_first_entry.md` into `assets/mymod/lavender/entries/my_book/` and give it the following content:
 
-```markdown title="my_first_entry.md"
-``​`json
+````markdown title="my_first_entry.md"
+```json
 {
   "title": "My First Page",
   "icon": "minecraft:quartz",
@@ -52,7 +52,7 @@ Now that we have our book defined, let's start by adding a first entry. To do th
     "minecraft:nether_quartz_ore"
   ]
 }
-``​`
+```
 
 In here, we put some **markdown-formatted** content for our entry. Lavender 
 supports most of the *standard* Markdown formatting syntax with some 
@@ -62,7 +62,7 @@ supports most of the *standard* Markdown formatting syntax with some
 
 This above page-break syntax (;;;;;) starts the next page.
 <recipe;minecraft:furnace>
-```
+````
 
 At this point, you're ready to open your book for the first time! Go ahead and start the game (or, if it is already running, do a resource reload with ++f3+t++) - Lavender will now have loaded your book and the first entry we just wrote. To get yourself a dynamic book for testing, run `/get-lavender-book mymod:my_book`. Then, after opening the book and selecting your entry, you'll be greeted by the following screen:
 
@@ -80,36 +80,36 @@ Further, if you take out some Nether Quartz Ore and hover it while having the bo
 
 Now that we have made an entry (and it should hopefully be abundantly clear how to create more of them), let's move on to creating a category. Analogously to entries, categories must be placed in the `assets/mymod/lavender/categories/my_book/` directory of your mod's resource pack (specifically, we'll save it as `a_category.md`). The format for categories, as you can see below, is very similar to entries - only the frontmatter is slightly different:
 
-```markdown title="a_category.md"
-``​`json
+````markdown title="a_category.md"
+```json
 {
   "title": "A Category",
   "icon": "minecraft:dirt"
 }
-``​`
+```
 
 Just like __entries__, categories fully support **markdown formatting**.
 Be careful when writing their descriptions however, as you only get a
 single page to work with.
-```
+````
 
 Now, in order for your category to actually show in the book, at least one entry must be inside it. To this end, modify the frontmatter of the entry we made previously:
 
-```markdown title="my_first_entry.md"
-``​`json
+````markdown title="my_first_entry.md"
+```json
 {
   "title": "My First Page",
   "icon": "minecraft:quartz",
-  {++"category": "mymod:a_category",++}
+  "category": "mymod:a_category", // new boi here
   "associated_items": [
     "minecraft:nether_quartz_ore"
   ]
 }
-``​`
+```
 
 ...
 
-```
+````
 
 After making these changes, sync them to your game instance and press the reload button to see them in action! You'll also have noticed by now that Lavender can handle entries without a category (contrary to what you might be used to from Patchouli). This can be quite useful if you have an introductory entry that doesn't really belong anywhere else *or* if your mod is just not complex enough to warrant multiple categories.
 
