@@ -153,6 +153,8 @@ nav:
     - gadget:
         - gadget/home.md
         - gadget/for_server_admins.md
+        - gadget/entity_inspector.md
+        - gadget/nbt_inspector.md
         - Packet Dumps:
             - gadget/packet-dumps/index.md
             - gadget/packet-dumps/quick_start.md

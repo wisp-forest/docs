@@ -35,7 +35,7 @@ And then declare your dependency the usual way:
     }
     ```
 
-    1. If you need to use the gadget API (e.g. if you want to make a custom packet deserializer), uncomment this.
+    1. If you need to use the gadget API (e.g. if you want to make [a custom packet deserializer](packet-dumps/custom_packets.md)), uncomment this.
 
 === "gradle.properties"
     ```{ .properties .gadget-version }

@@ -11,7 +11,7 @@ While gadget has automatic support for almost all vanilla packets and some commo
 ## Making an entrypoint
 An easy way to run some code only when gadget is installed are the `gadget:init` and `gadget:client_init` entrypoints. They are run right after gadget main/client init, and any errors are logged and swallowed to avoid crashes.
 
-=== "fabric.json"
+=== "fabric.mod.json"
     ```json
     {
         // ...
