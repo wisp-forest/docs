@@ -6,7 +6,7 @@ project: gadget
 While gadget has automatic support for almost all vanilla packets and some common mod packets, unknown custom payload packets are represented as their hex dumps, as gadget has no idea what that packet's structure is or how to display it. This page is meant to help you implement support for your packets so that you can easily view them in dumps.
 
 !!! info
-    If you use a library to add your network packets, then your packets might be already fully supported. Packets using [oωo networking](../../owo/networking.md) or [Fabric API packet-object networking](https://github.com/FabricMC/fabric/blob/1.20.1/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/FabricPacket.java#L22-L61) then gadget will automatically display your packets as the actual packet object.
+    If you use a library to add your network packets, then your packets might be already fully supported. Packets using [oωo networking](../../owo/networking.md) or [Fabric API packet-object networking](https://github.com/FabricMC/fabric/blob/1.20.1/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/FabricPacket.java#L22-L61) are automatically displayed as the actual packet object.
 
 ## Making an entrypoint
 An easy way to run some code only when gadget is installed are the `gadget:init` and `gadget:client_init` entrypoints. They are run right after gadget main/client init, and any errors are logged and swallowed to avoid crashes.
