@@ -61,6 +61,9 @@ extra:
       lavender:
           repo: https://github.com/wisp-forest/lavender
           name: Lavender
+      gadget:
+          repo: https://github.com/wisp-forest/gadget
+          name: gadget
 
 extra_css:
     - overrides.css
@@ -147,4 +150,13 @@ nav:
         - scatter/upload.md
         - scatter/edit.md
         - scatter/config.md
+    - gadget:
+        - gadget/home.md
+        - gadget/for_server_admins.md
+        - gadget/entity_inspector.md
+        - gadget/nbt_inspector.md
+        - Packet Dumps:
+            - gadget/packet-dumps/index.md
+            - gadget/packet-dumps/quick_start.md
+            - gadget/packet-dumps/custom_packets.md
 
