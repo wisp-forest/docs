@@ -3,7 +3,7 @@ title: Structures
 project: lavender
 ---
 
-Many mods involve multiblock structures of some kind, which can be hard if not nigh impossible to describe using text alone. It is almost always preferrable to simply give the player a direct preview of what the structure looks like when fully built.
+Many mods involve multiblock structures of some kind, which can be hard if not nigh impossible to describe using text alone. It is almost always preferable to simply give the player a direct preview of what the structure looks like when fully built.
 
 For this purpose, Lavender (much like Patchouli) offers structure preview & verification. The player can preview your structures in your book *and* right in the world - layer by layer if necessary.
 
@@ -12,12 +12,12 @@ For this purpose, Lavender (much like Patchouli) offers structure preview & veri
 In this tutorial, we'll be creating the structure definition for the well you see in this screenshot:
 ![a stone-brick well in minecraft](../assets/lavender/well-prebuilt.png){ .docs-image }
 
-To get started, create a JSON file in `assets/mymod/lavender/structures` - we'll call it `well.json`, for obvious reasons. Then, create the two base elements of a structures definition. If you've worked with the JSON representation of shaped recipes before, this might look familiar:
+To get started, create a JSON file in `assets/mymod/lavender/structures` - we'll call it `well.json`, for obvious reasons. Then, create the two base elements of a structure's definition. If you've worked with the JSON representation of shaped recipes before, this might look familiar:
 
 - `keys`, object<br>
   The keys object is a mapping from single-character keys to the block(s) they represent. The value associated with each key must be a stringified block state - the kind of input the `/setblock` command expects. 
 - `layers`, array of arrays<br>
-  Each inner array of the `layers` array describes a single layer of your structure, from the bottom up. Each layer in turn contains a string, where each character represent a block through the mappings defined in `keys`
+  Each inner array of the `layers` array describes a single layer of your structure, from the bottom up. Each layer in turn contains a string, where each character represents a block through the mappings defined in `keys`
 
 Let's start by adding all of the keys required for the well:
 ```json title="well.json"
@@ -112,7 +112,7 @@ You'll notice that where there's air (or, well, nothing) in our structure we put
 
 ## Adding the structure to an entry
 
-Just like the other game elements described in [Markdown Syntax](markdown-syntax.md#game-elements), a structure is inserted into an entry (or, if you need this for some reason, category) using the `<structure;"structure ID here">` syntax. Thus, to insert the structure we just defined, we use `<structure:mymod:well>`
+Just like the other game elements described in [Markdown Syntax](markdown-syntax.md#game-elements), a structure is inserted into an entry (or, if you need this for some reason, category) using the `<structure;"structure ID here">` syntax. Thus, to insert the structure we just defined, we use `<structure;mymod:well>`
 
 ![well preview inside a lavender book](../assets/lavender/well-book-preview.png){ .docs-image .center-image }
 
