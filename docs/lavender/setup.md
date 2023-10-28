@@ -21,12 +21,13 @@ repositories {
 }
 ```
 
-Then, declare the dependency inside your `dependencies` block and as well as the version you want to use inside your `gradle.properties`
+Then, declare the dependency inside your `dependencies` block and as well as the version you want to use inside your `gradle.properties`. Since Lavender depends on owo-lib, it's generally recommended to also include owo-sentinel as a means for your players to easily acquire the library without having to download it themselves. Check out [owo's setup page](../owo/setup.md) for more information
 
 === "build.gradle"
     ```groovy 
     dependencies {
         modImplementation "io.wispforest:lavender:${project.lavender_version}"
+        include "io.wispforest:owo-sentinel:${project.owo_version}" // check owo's page for this version
     }
     ```
 
