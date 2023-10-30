@@ -13,7 +13,7 @@ When owo is installed, a number of modifications are made to the translation eng
 }
 ```
 
-You can now populate this array with JSON conforming to Minecraft's text component format, which you can look up [on the wiki](https://minecraft.fandom.com/wiki/Raw_JSON_text_format). 
+You can now populate this array with JSON conforming to Minecraft's text component format, which you can look up [on the wiki](https://minecraft.wiki/w/Raw_JSON_text_format). 
 
 ### Basic Example
 For demonstrating the basics, let's change the name of the Echo Shard. We want the word "Shard" to be <span style="color: #0096FF;">of this blue color</span>, which is achieved by the following simple JSON:
