@@ -154,6 +154,11 @@ To insert a dynamically updating reference to a keybinding, use `<keybind;"trans
 
 To get the translation key of a given keybind, look it up in game's `options.txt` file. You'll notice that it saves the keybindings using a `key_` prefix - you need to drop this. The key in our example here is stored as `key_key.attack` in the file, yet we only use `key.attack`
 
+### Translations
+:octicons-tag-24: 0.1.3
+
+To insert a string translated using the game's translation system, wrap the key in `%{...}%`. For instance, `%{item.minecraft.diamond}%` would display the translated name of the diamond item in the client's active language.
+
 ### Entities, Items, Blocks and Recipes
 
 To insert a preview of the mentioned game elements, you use the same syntax as for keybindings - like in these examples:
@@ -209,3 +214,35 @@ or, if your template takes parameters<br>
 `<|template-name@ui-model-id|param1=value1,param2=value2|>`
 
 If any of your template parameters contain a comma, you can escape it using `\`
+
+## owo-ui Models
+To directly embed some owo-ui model XML into your entry, create a code fence like this:
+````md
+```xml owo-ui
+    ... model code here ...
+```
+````
+
+For instance, the following snippet would display a diamond on a dark panel background:
+````md
+```xml owo-ui
+<stack-layout>
+    <children>
+        <item>
+            <stack>minecraft:diamond</stack>
+            <set-tooltip-from-stack>true</set-tooltip-from-stack>
+        </item>
+    </children>
+
+    <padding>
+        <all>5</all>
+    </padding>
+
+    <surface>
+        <panel dark="true"/>
+    </surface>
+</stack-layout>
+```
+````
+
+![a rendered view of the above xml snippet](../assets/lavender/embedded-ui-model.png){ .docs-image .center-image }
