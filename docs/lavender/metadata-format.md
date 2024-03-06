@@ -20,6 +20,7 @@ The following properties are all applicable to entries - that is, you can declar
 | associated_items                           | A list of item (with optional NBT) which should link to this entry in their tooltip and, if the respective item is a block item, when looking at said block while holding the book                                                                  |
 | required_advancements                      | A list of advancement IDs which the player must have completed before they can view this entry. If `display_completion` is `true` in the book definition, a progress bar will indicate to the player how many entries they have unlocked/left to go |
 | secret                                     | If this entry is locked due to a missing advancement, don't show it to the player at all instead of simply displaying it as locked                                                                                                                  |
+| ordinal                                    | A sorting index for this entry, displayed in ascending order. Entries with no ordinal are displayed last                                                                                                                                            |
 
 ## Categories
 
@@ -31,4 +32,5 @@ The following properties are all applicable to categories:
 | icon                                       | An item to use as this category's icon in the index (optionally including NBT)                                                               |
 | icon_sprite                                | The identifier of a GUI sprite to use as this category's icon                                                                                |
 | secret                                     | If all entries in this category are currently locked or invisible to the player, don't show it all instead of simply displaying it as locked |
+| ordinal                                    | A sorting index for this category, displayed in ascending order. Categories with no ordinal are displayed last                               |
 
