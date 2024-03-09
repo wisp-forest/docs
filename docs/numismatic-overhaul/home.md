@@ -22,10 +22,11 @@ The Shop Block is very useful for creating an economy with other players. For a 
 
 ## Configuration
 You might want to configure certain aspects of Numismatic Overhaul, whether you are a player, a modpack developer, or server admin.  
-If you want to make or edit the villager trades, you need to make a Datapack following the [data format seen on this page.](trades.md)  
 
 Some of the values are found in the **Configuration file**.  
 You can find this file named `numismatic-overhaul.json5`, in your `.minecraft/config` folder.  
+
+If you want to make or edit the villager trades, you need to make a Datapack following the [data format seen on this page.](trades.md) To disable them entirely, see [the section below.](#villager-trades)
 
 ### Dropped coins on death
 By default you drop 10% of all the coins in your purse on death. To change this you only need to edit the gamerule `moneyDropPercentage`. You can do this when creating a world, or using the `/gamerule` command.  
@@ -39,7 +40,7 @@ To add more mobs to this list, you need to add them to the following entity tag:
 `numismatic-overhaul:the_bourgeoisie` 
 
 ### Villager Trades
-Numismatic by default changes all villagers to use coins instead of Emeralds when trading. Despite this Emeralds are still useful for a handful of vanilla things (for example building a Beacon or activating one). 
+By all villagers use coins instead of Emeralds when trading. Despite this Emeralds are still useful for a handful of vanilla things, for example building or activating a Beacon. 
 
 If you do not want villagers to use Emeralds instead of coins, you can simply set the "Enable Villager Trading" option to false in the [config file](#configuration). 
 

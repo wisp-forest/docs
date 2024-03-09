@@ -6,8 +6,17 @@ project: numismatic-overhaul
 ## Shop
 The Shop Block is a simple block which lets you sell items to other players. 
 
+### Recipe
+
+The shop block requires the following:
+
+- Two Bronze Coins
+- One Smooth Stone Slab
+- Three Wooden Planks (any kind should work)
+
 ![crafting recipe for shop block](../assets/numismatic-overhaul/shop-recipe.png){.center-image .sized-image style="--image-width: 75%; }
 
+### Usage
 The two tabs in the block correspond to the Shop Inventory, and the Shop Trades.  
 
 ![shop trade configuration interface](../assets/numismatic-overhaul/shop-gui.png){ .center-image .sized-image style="--image-width: 85%;" }
