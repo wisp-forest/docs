@@ -4,7 +4,9 @@ project: numismatic-overhaul
 ---
 
 ## Shop
-The Shop Block is a simple block which lets you sell items to other players.  
+The Shop Block is a simple block which lets you sell items to other players. 
+
+![crafting recipe for shop block](../assets/numismatic-overhaul/shop-recipe.png){.center-image .sized-image style="--image-width: 75%; }
 
 The two tabs in the block correspond to the Shop Inventory, and the Shop Trades.  
 

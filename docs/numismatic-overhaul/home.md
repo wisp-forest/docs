@@ -38,6 +38,13 @@ Only Pillagers in base Numismatic Overhaul drop currency. They randomly drop bet
 To add more mobs to this list, you need to add them to the following entity tag:  
 `numismatic-overhaul:the_bourgeoisie` 
 
+### Villager Trades
+Numismatic by default changes all villagers to use coins instead of Emeralds when trading. Despite this Emeralds are still useful for a handful of vanilla things (for example building a Beacon or activating one). 
+
+If you do not want villagers to use Emeralds instead of coins, you can simply set the "Enable Villager Trading" option to false in the [config file](#configuration). 
+
+Note that this option does not apply retroactively, meaning existing villagers will keep their old trades despite you changing this option. Unlocking new trades/finding new villagers will have the correct trades. 
+
 ### Moving the purse
 The purse might not always be positioned correctly with other mods installed.  
 Look for the values `purseX` and `purseY` in your [config file](#configuration).  
