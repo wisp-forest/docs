@@ -138,6 +138,7 @@ nav:
           - owo/ui/academy.md
           - owo/ui/component-basics.md
           - owo/ui/layout-basics.md
+          - owo/ui/templates.md
           - owo/ui/utility-components.md
     - Lavender:
         - lavender/setup.md
