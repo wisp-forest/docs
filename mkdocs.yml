@@ -149,6 +149,7 @@ nav:
           - owo/ui/components/label.md
           - owo/ui/components/scroll-container.md
           - owo/ui/components/slider.md
+          - owo/ui/components/templates.md
     - Lavender:
         - lavender/setup.md
         - lavender/getting-started.md
