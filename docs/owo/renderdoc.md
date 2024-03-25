@@ -24,7 +24,7 @@ oωo includes a comprehensive wrapper for the [RenderDoc](https://renderdoc.org)
 
 If RenderDoc is detected while running in debug mode, owo's `/renderdoc` command will be made available. This command opens a screen that you can use to configure the RenderDoc overlay as well as to trigger captures and, most importantly, open the RenderDoc replay UI. This is especially useful as it means you can always have RenderDoc injected while developing and do a capture and analyze it on-demand.
 
-![renderdoc configuration screen](https://cdn.discordapp.com/attachments/857970721166065674/1024785031379550238/unknown.png){ .docs-image }
+![renderdoc configuration screen](../assets/owo/renderdoc-compat-screen.png){ .docs-image }
 
 
 ### owo-ui integration

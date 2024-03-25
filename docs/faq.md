@@ -6,9 +6,9 @@ summary: Frequently Asked Questions + their answers
 
 # FAQ
 
-## I get disconnected due to a "[oωo] handshake failure - incompatible server" when trying to join a server
+## I get disconnected due to an "[oωo] handshake failure" when trying to join a server
 
-- **The server is running a proxy:** If the server is using a proxy which is not Velocity, there is nothing you can do. If the server is running Velocity, install the [oωo velocity plugin](https://github.com/BasiqueEvangelist/OwoVelocityPlugin) on the proxy.
+- **The server is running a proxy:** If the server is using a proxy which is not Velocity, there is nothing you can do. If the server is running Velocity, install the [oωo velocity plugin](https://modrinth.com/plugin/owo-velocity-plugin) on the proxy.
 
 - **The server is not using a proxy:** This means that the installed mods on the server and your game are not matching up. Try making sure that all the mod versions are the same and they are being properly loaded
 

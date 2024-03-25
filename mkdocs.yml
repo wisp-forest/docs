@@ -34,7 +34,7 @@ theme:
         code: Fira Mono
 
 copyright: "Documentation by <a style=\"color: #13A6F0;\" href=\"https://github.com/gliscowo\">glisco</a>, with assistance from the Wisp Forest team"
-extra:          
+extra:
   social:
     - icon: fontawesome/brands/discord
       link: https://discord.gg/xrwHKktV2d
@@ -44,13 +44,13 @@ extra:
       isometric-renders:
           repo: https://github.com/gliscowo/isometric-renders
           name: Isometric Renders
-          icon: isometric-renders.png
+          icon: isometric-renders/icon.png
       owo:
           repo: https://github.com/wisp-forest/owo-lib
           name: oωo
-          icon: owo.png
+          icon: owo/icon.png
       scatter:
-          repo: https://github.com/gliscowo/scatter-dart
+          repo: https://github.com/gliscowo/scatter
           name: scatter
       docs:
           repo: https://github.com/wisp-forest/docs
@@ -58,6 +58,12 @@ extra:
       numismatic-overhaul:
           repo: https://github.com/wisp-forest/numismatic-overhaul
           name: Numismatic Overhaul
+      lavender:
+          repo: https://github.com/wisp-forest/lavender
+          name: Lavender
+      gadget:
+          repo: https://github.com/wisp-forest/gadget
+          name: gadget
 
 extra_css:
     - overrides.css
@@ -97,7 +103,7 @@ markdown_extensions:
     - pymdownx.critic
 
 nav:
-    - Home: 
+    - Home:
         - index.md
         - faq.md
         - fabric-events.md
@@ -116,6 +122,7 @@ nav:
         - owo/item-groups.md
         - owo/recipe-remainders.md
         - owo/networking.md
+        - owo/endec.md
         - owo/rich-translations.md
         - owo/system-properties.md
         - owo/renderdoc.md
@@ -133,9 +140,25 @@ nav:
           - owo/ui/component-basics.md
           - owo/ui/layout-basics.md
           - owo/ui/utility-components.md
+    - Lavender:
+        - lavender/setup.md
+        - lavender/getting-started.md
+        - lavender/metadata-format.md
+        - lavender/markdown-syntax.md
+        - lavender/structures.md
+        - lavender/writing-extensions.md
     - scatter:
         - scatter/home.md
         - scatter/upload.md
         - scatter/edit.md
         - scatter/config.md
+    - gadget:
+        - gadget/home.md
+        - gadget/for_server_admins.md
+        - gadget/entity_inspector.md
+        - gadget/nbt_inspector.md
+        - Packet Dumps:
+            - gadget/packet-dumps/index.md
+            - gadget/packet-dumps/quick_start.md
+            - gadget/packet-dumps/custom_packets.md
 

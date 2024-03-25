@@ -4,9 +4,9 @@ project: docs
 summary: All events currently in Fabric API
 ---
 # Fabric API Events
-:octicons-tag-24: Fabric API version: 0.64.0+1.19.2
+:octicons-tag-24: Fabric API version: 0.82.0+1.19.4
 
-:octicons-list-unordered-16: Total event count: 130
+:octicons-list-unordered-16: Total event count: 148
 
 ### Grouped events
 ***
@@ -46,6 +46,27 @@ summary: All events currently in Fabric API
  - INIT
  - JOIN
  - DISCONNECT
+
+#### [ClientReceiveMessageEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientReceiveMessageEvents.java)
+
+ - ALLOW_CHAT
+ - ALLOW_GAME
+ - MODIFY_GAME
+ - CHAT
+ - GAME
+ - CHAT_CANCELED
+ - GAME_CANCELED
+
+#### [ClientSendMessageEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-message-api-v1/src/client/java/net/fabricmc/fabric/api/client/message/v1/ClientSendMessageEvents.java)
+
+ - ALLOW_CHAT
+ - ALLOW_COMMAND
+ - MODIFY_CHAT
+ - MODIFY_COMMAND
+ - CHAT
+ - COMMAND
+ - CHAT_CANCELED
+ - COMMAND_CANCELED
 
 #### [ClientTickEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-lifecycle-events-v1/src/client/java/net/fabricmc/fabric/api/client/event/lifecycle/v1/ClientTickEvents.java)
 
@@ -130,6 +151,12 @@ summary: All events currently in Fabric API
  - START_DATA_PACK_RELOAD
  - END_DATA_PACK_RELOAD
 
+#### [ServerLivingEntityEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerLivingEntityEvents.java)
+
+ - ALLOW_DAMAGE
+ - ALLOW_DEATH
+ - AFTER_DEATH
+
 #### [ServerLoginConnectionEvents](https://github.com/FabricMC/fabric/tree/1.19/fabric-networking-api-v1/src/main/java/net/fabricmc/fabric/api/networking/v1/ServerLoginConnectionEvents.java)
 
  - INIT
@@ -190,21 +217,21 @@ summary: All events currently in Fabric API
  - [ClientCommandRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-command-api-v2/src/client/java/net/fabricmc/fabric/api/client/command/v2/ClientCommandRegistrationCallback.java)
  - [ClientPickBlockApplyCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/client/player/ClientPickBlockApplyCallback.java)
  - [ClientPickBlockGatherCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/client/player/ClientPickBlockGatherCallback.java)
- - [ClientSpriteRegistryCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-textures-v0/src/client/java/net/fabricmc/fabric/api/event/client/ClientSpriteRegistryCallback.java)
  - [CombinedProvidersImpl$Provider.event](https://github.com/FabricMC/fabric/tree/1.19/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/impl/transfer/fluid/CombinedProvidersImpl$Provider.java)
  - [CommandRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-command-api-v2/src/main/java/net/fabricmc/fabric/api/command/v2/CommandRegistrationCallback.java)
  - [CommonLifecycleEvents.TAGS_LOADED](https://github.com/FabricMC/fabric/tree/1.19/fabric-lifecycle-events-v1/src/main/java/net/fabricmc/fabric/api/event/lifecycle/v1/CommonLifecycleEvents.java)
+ - [CoreShaderRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/CoreShaderRegistrationCallback.java)
  - [DynamicRegistrySetupCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-registry-sync-v0/src/main/java/net/fabricmc/fabric/api/event/registry/DynamicRegistrySetupCallback.java)
  - [FluidStorage.GENERAL_COMBINED_PROVIDER](https://github.com/FabricMC/fabric/tree/1.19/fabric-transfer-api-v1/src/main/java/net/fabricmc/fabric/api/transfer/v1/fluid/FluidStorage.java)
  - [HudRenderCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/HudRenderCallback.java)
  - [InvalidateRenderStateCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/InvalidateRenderStateCallback.java)
+ - [ItemGroupEvents.MODIFY_ENTRIES_ALL](https://github.com/FabricMC/fabric/tree/1.19/fabric-item-group-api-v1/src/main/java/net/fabricmc/fabric/api/itemgroup/v1/ItemGroupEvents.java)
  - [ItemTooltipCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-item-api-v1/src/client/java/net/fabricmc/fabric/api/client/item/v1/ItemTooltipCallback.java)
  - [LivingEntityFeatureRenderEvents.ALLOW_CAPE_RENDER](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRenderEvents.java)
  - [LivingEntityFeatureRendererRegistrationCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/LivingEntityFeatureRendererRegistrationCallback.java)
  - [ModifyItemAttributeModifiersCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-item-api-v1/src/main/java/net/fabricmc/fabric/api/item/v1/ModifyItemAttributeModifiersCallback.java)
  - [ServerEntityCombatEvents.AFTER_KILLED_OTHER_ENTITY](https://github.com/FabricMC/fabric/tree/1.19/fabric-entity-events-v1/src/main/java/net/fabricmc/fabric/api/entity/event/v1/ServerEntityCombatEvents.java)
  - [ServerMessageDecoratorEvent.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-message-api-v1/src/main/java/net/fabricmc/fabric/api/message/v1/ServerMessageDecoratorEvent.java)
- - [SpriteRegistryCallbackHolder.EVENT_GLOBAL](https://github.com/FabricMC/fabric/tree/1.19/fabric-textures-v0/src/client/java/net/fabricmc/fabric/impl/client/texture/SpriteRegistryCallbackHolder.java)
  - [TooltipComponentCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-rendering-v1/src/client/java/net/fabricmc/fabric/api/client/rendering/v1/TooltipComponentCallback.java)
  - [UseBlockCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/UseBlockCallback.java)
  - [UseEntityCallback.EVENT](https://github.com/FabricMC/fabric/tree/1.19/fabric-events-interaction-v0/src/main/java/net/fabricmc/fabric/api/event/player/UseEntityCallback.java)

@@ -5,13 +5,13 @@ project: scatter
 
 ## What is scatter?
 
-![scatter demo](https://cdn.discordapp.com/attachments/829956762543194122/979137484434845746/carbon.png)
+![scatter demo](../assets/scatter/scatter-example.png)
 
 scatter is a command-line utility for distributing mods to hosting providers. Currently supported are CurseForge, Modrinth and GitHub Releases. After first-time setup, scatter uploads to all supported hosts in a single command
 
 ## Quick Start
 
-Download the latest version of scatter from [Github Actions](https://github.com/gliscowo/scatter-dart/actions) by clicking on the latest successful run and downloading the correct binary for your OS from the "Artifacts" section.
+Download the latest version of scatter from [Github Actions](https://github.com/gliscowo/scatter/actions) by clicking on the latest successful run and downloading the correct binary for your OS from the "Artifacts" section.
 
 #### Configuring your tokens 
 

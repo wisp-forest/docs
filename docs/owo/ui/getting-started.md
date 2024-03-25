@@ -3,8 +3,6 @@ title: Getting Started
 project: owo
 ---
 
-**:material-progress-alert: Work-in-progress**
-
 ## Choosing a paradigm
 
 Before creating your first screen with owo-ui, you need to decide which approach you want to take: code-driven or data-driven. Here's a quick comparison:
@@ -39,7 +37,7 @@ public class MyFirstScreen extends BaseOwoScreen<FlowLayout> {
 }
 ```
 
-You now need to fill in these two methods. In `createAdapter()` you have to initialize the UI system. For this job we use `OwoUIAdapter.create(...)` and pass in the screen and root component factory[^1], for which we'll choose the `VerticalFlowLayout` via `Containers.verticalFlow(...)`, making the final implementation look like this:
+You now need to fill in these two methods. In `createAdapter()` you have to initialize the UI system. For this job we use `OwoUIAdapter.create(...)` and pass in the screen and root component factory[^1], for which we'll choose the `FlowLayout` with the `VERTICAL` algorithm via `Containers.verticalFlow(...)`, making the final implementation look like this:
 
 ```java
 @Override
@@ -54,7 +52,7 @@ protected @NotNull OwoUIAdapter<FlowLayout> createAdapter() {
 
 And that's it! You now have the screen all initialized and ready to go. If you open it at this point, you'll see precisely nothing:
 
-![a blank screen](https://cdn.discordapp.com/attachments/857970721166065674/1012757838399021066/unknown.png){ .docs-image }
+![a blank screen](../../assets/owo/getting-started/step-0.png){ .docs-image }
 
 Let's fix that by giving our root component a so-called surface, in this case the standard dark, translucent background most vanilla UIs use.
 
@@ -70,7 +68,7 @@ protected void build(FlowLayout rootComponent) {
 
 Now the screen looks like this:
 
-![a screen with a dark translucent background](https://cdn.discordapp.com/attachments/857970721166065674/1012757838810054686/unknown.png){ .docs-image }
+![a screen with a dark translucent background](../../assets/owo/getting-started/step-1.png){ .docs-image }
 
 Great! Let's begin by simply adding a button right in the center. To accomplish this, we first set the root component's alignment to `CENTER` on both axes and then add our button - like this:
 
@@ -85,7 +83,7 @@ protected void build(FlowLayout rootComponent) {
     rootComponent.child(
         Components.button(
                 Text.literal("A Button"), 
-                (ButtonComponent button) -> { System.out.println("click"); } // (1)
+                button -> { System.out.println("click"); } // (1)
             )
     );
 }
@@ -98,7 +96,7 @@ protected void build(FlowLayout rootComponent) {
 
 The result is as expected, a button saying "A Button" right in the center of our screen:
 
-![a screen with a centered button](https://cdn.discordapp.com/attachments/857970721166065674/1012757839384678420/unknown.png){ .docs-image }
+![a screen with a centered button](../../assets/owo/getting-started/step-2.png){ .docs-image }
 
 Before we finish off this introduction, let's wrap the button in a container and style that like a vanilla UI panel. To do this, we only need to create the container via `Containers.verticalFlow(...)` and add our button and surface to it like normal. If you understood everything so far, the following code should be pretty simple to grasp:
 
@@ -112,7 +110,7 @@ protected void build(FlowLayout rootComponent) {
     
     rootComponent.child(
             Containers.verticalFlow(Sizing.content() /*(1)*/, Sizing.content())
-                .child(Components.button(Text.literal("A Button"), (ButtonComponent button) -> { System.out.println("click"); }))
+                .child(Components.button(Text.literal("A Button"), button -> { System.out.println("click"); }))
                 .padding(Insets.of(10)) // (2)
                 .surface(Surface.DARK_PANEL)
                 .verticalAlignment(VerticalAlignment.CENTER)
@@ -127,7 +125,7 @@ protected void build(FlowLayout rootComponent) {
 
 Leaving us with a final screen that looks like this:
 
-![a screen with a centered button and a panel around it](https://cdn.discordapp.com/attachments/857970721166065674/1012757092651761786/2022-08-25_01.16.48.png){ .docs-image }
+![a screen with a centered button and a panel around it](../../assets/owo/getting-started/step-3.png){ .docs-image }
 
 
 ### Data-driven
@@ -152,15 +150,16 @@ public class MyScreen extends BaseUIModelScreen<FlowLayout> {
 
 Now the superclass constructor requires a `DataSource`. This is simply a way to describe where the UI Model should be loaded from - for this there are two standard options: 
 
-- `#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime. 
+- ~~`#!java DataSource.file(...)` is used for development - you simply give it the file path to your UI model, relative to the game's run directory. With this data source, the file is re-loaded every time you open the screen, which enables the instant hotswapping. When building for production however, this is not an option and will crash at runtime.~~<br><br>
+As of **0.11**, this is deprecated and should no longer be used. Instead, you can press ++ctrl+f5++ while viewing the screen and select your UI model file in the menu that shows. Alternatively, you can also use the `/owo-ui-set-reload-path` command to associated a file with any given UI model
 
-- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo-ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
+- `#!java DataSource.asset(...)` loads the model from the current resourcepacks. It expects an identifier like `mymod:my_ui_model`, which would point to `assets/mymod/owo_ui/my_ui_model.xml`. This way the model is only refreshed when reloading resource packs, making for much better performance and allowing resourcepacks to override and customize your UI.
 
-For this example, let's use the `file` data source and place our `my_ui_model.xml` file directly in the `run/` directory of your project, turning the constructor into this:
+For this example, let's use the `assets` data source and place our `my_ui_model.xml` file in th `assets/mymod/owo_ui/` directory of your project, turning the constructor into this:
 
 ```java
 public MyScreen() {
-    super(FlowLayout.class, DataSource.file("my_ui_model.xml"));
+    super(FlowLayout.class, DataSource.asset(new Identifier("mymod", "my_ui_model")));
 }
 ```
 
@@ -168,7 +167,7 @@ Now comes the meat of this exercise - creating the UI Model in XML. To begin, we
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.20/owo-ui.xsd">
     <components>
 
     </components>
@@ -178,13 +177,13 @@ Now comes the meat of this exercise - creating the UI Model in XML. To begin, we
 If you're using IntelliJ, you now have to place your cursor on the URL in `xsi:noNamespaceSchemaLocation`, press ++alt+enter++ and select `Fetch external resource`. This will make it download the XML schema, giving you rich autocomplete and error checking right inside the IDE.
 
 Great, you can now begin building your UI. Let's first declare the root component. We'll use the `flow-layout`, just as declared on our class, and say that its `direction` is `vertical`:
-![flow layout in xml](https://cdn.discordapp.com/attachments/857970721166065674/1012687016741318676/flow-layout.gif){ .docs-image .center-image }
+![flow layout in xml](../../assets/owo/getting-started/flow-layout.gif){ .docs-image .center-image }
 
 We're now again at the point were you can open your screen - once again it will just be completely blank. Let's add content then - for the sake of brevity this will now all be a single code block:
 
 ```xml
 <owo-ui xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.19/owo-ui.xsd">
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/wisp-forest/owo-lib/1.20/owo-ui.xsd">
     <components>
         <flow-layout direction="vertical">
             <children> <!--(1)-->
@@ -235,12 +234,12 @@ We're now again at the point were you can open your screen - once again it will 
 
 We really encourage you to write this yourself instead of simply copying it - the autocomplete in your IDE should make it a very fast process and will also make you discover many of the other components and options available. Once you're done with this, you can open the screen again and see that it looks exactly like the end result of the previous example! But wait, there's one thing missing - the button does not do anything when clicked. 
 
-Let's fix that by going back to our screen class' `build(...)` method. In here, you can query the button using the ID we just gave it. To do this, you call `childById(...)` on the root component. It is important to note here that IDs need not be unique within your hierarchy - this method simply returns the first matching component it comes across. For type safety reasons we also need to provide the type of component we're looking for, which, since we want the button, is `ButtonWidget.class`. After you have acquired the button this way, you can configure `onPress` like any other property:
+Let's fix that by going back to our screen class' `build(...)` method. In here, you can query the button using the ID we just gave it. To do this, you call `childById(...)` on the root component. It is important to note here that IDs need not be unique within your hierarchy - this method simply returns the first matching component it comes across. For type safety reasons we also need to provide the type of component we're looking for, which, since we want the button, is `ButtonComponent.class`. After you have acquired the button this way, you can configure `onPress` like any other property:
 
 ```java
 @Override
 protected void build(FlowLayout rootComponent) {
-    rootComponent.childById(ButtonWidget.class, "the-button").onPress((ButtonComponent button) -> {
+    rootComponent.childById(ButtonComponent.class, "the-button").onPress(button -> {
         System.out.println("click");
     });
 }
