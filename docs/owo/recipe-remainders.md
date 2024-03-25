@@ -55,4 +55,4 @@ Then declare the identifier of given target item and then declare the remainder 
 
 The given recipe will now return our declared Remainders when crafted:
 
-![Remainder Example](../assets/remainders-example.gif){ .docs-image .center-image }
+![Remainder Example](../assets/owo/remainders-example.gif){ .docs-image .center-image }
