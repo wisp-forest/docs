@@ -55,4 +55,4 @@ Then declare the identifier of given target item and then declare the remainder 
 
 The given recipe will now return our declared Remainders when crafted:
 
-![Remainder Example](https://cdn.discordapp.com/attachments/1005626715025965217/1065049667949305866/remainders_example.gif){ .docs-image .center-image }
+![Remainder Example](../assets/remainders-example.gif){ .docs-image .center-image }
