@@ -36,9 +36,9 @@ Here is an example of a recipe:
 ```
 
 ### Input Format
-Inputs follows the Ingredient format with an addition of the `count` field within the Object declaration used to give info about how much of such is required. A single recipe can accept, at max, **10** items.
+Inputs follows the Ingredient format with such being the identifier of a given item tag (`"tag": ...`) or entry (`"item": ...`) with its corresponding field name and an addition of the `count` field within the Object declaration used to give info about how much of such is required. 
 
-**TODO: ADD INFO ABOUT BOTH Item and Tag Ingredients combined with custom ingredients from fabric**
+A single recipe can accept, at max, **10** different ingredient entries. Furthermore, we also support any of fabric's custom Ingredients like its Custom NBT based Ingredient.
 
 ### Output Format
 
