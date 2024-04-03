@@ -10,8 +10,8 @@ Knowing how to create a datapack is essential when creating new recipes like wit
 # Creating a Datapack
 Creating a basic datapack is fairly simple. To start out you need a folder or a zip file that contains the datapack.  
 The main components for a datapack:
-* A `pack.mcmeta` file, which tells Minecraft what versions your datapack supports.
-* A data folder, which contains all the data of your pack.  
+- A `pack.mcmeta` file, which tells Minecraft what versions your datapack supports.
+- A data folder, which contains all the data of your pack.  
 
 These are required for any data pack. If you look at any example you will find these folders. 
 This tutorial will teach you how to format these.  
@@ -52,15 +52,15 @@ The standard structure for your pack would be `data/namespace`, and in this fold
 
 Having limitless possibility can cause some confusion between packs (*for the better*), which is why Minecraft only loads specific things from specific folders.
 An example is the fact that recipes will only be loaded under a `recipes` folder. A list of folders that work this way are:
-* `advancements`
-* `dimensions`
-* `functions`
-* `loot_tables`
-* `predicates`
-* `recipes` <--- This one is the most important for Alloy Forging
-* `structures`
-* `tags`
-* `worldgen`
+- `advancements`
+- `dimensions`
+- `functions`
+- `loot_tables`
+- `predicates`
+- `recipes` <--- This one is the most important for Alloy Forging
+- `structures`
+- `tags`
+- `worldgen`
 
 
 When putting files inside these main folders but you can create subfolders to sort it as you please.  
@@ -82,11 +82,11 @@ You can send this zip file to your friends, who can install it by extracting the
 # Example Datapack
 Now to try to create a datapack!  
 To get started we will do the following:
-* Create a new single player world (with cheats enabled)
-* Exit back to the menu
-* Navigate to the world we created
-* Click "Edit World"
-* Finally, click "Open World Folder".  
+- Create a new single player world (with cheats enabled)
+- Exit back to the menu
+- Navigate to the world we created
+- Click "Edit World"
+- Finally, click "Open World Folder".  
 
 Then we will head into the `datapacks` folder, where we can create our datapack. 
  
@@ -98,7 +98,7 @@ Inside we create a `pack.mcmeta` file, and an empty `data` folder. Since I am pl
 Now we open the world again, and as long as the datapack was properly formatted it will be loaded automatically.  
 We can verify this by running the command `/datapack list`. If done correctly it should load!  
 
-![Running "/datapack list" was successful, and shows the datapack in the chat.](https://github.com/Noaaan/DatapackTutorial/blob/main/images/testpack.png)  
+![Running "/datapack list" was successful, and shows the datapack in the chat.](https://raw.githubusercontent.com/Noaaan/DatapackTutorial/main/images/testpack.png)  
 
 Now we can add something to the pack which could be useful. Considering we are making an Alloy Forgery recipe later, we should probably add a tag which we can use in our recipes. I want to be able to smelt certain stone blocks into deepslate using an Alloy Forge.  
 
@@ -162,11 +162,11 @@ Inside it we write our new recipe. A regular smelting recipe looks something lik
 }
 ```
 All of these objects shape a smelting recipe. Here is what each object means:
-* `type` decides what is using your recipe, like smelting or shapeless crafting. You can find a list of vanilla recipe types [here.](https://minecraft.fandom.com/wiki/Recipe#List_of_recipe_types)
-* `ingredient` is an object that contains either an `item` or a `tag`, which is used in the recipe. The object inside contains the identifier of either the tag or the item, depending on what you picked.
-* `result` is the item output of the recipe. Note for vanilla this only accepts single items.
-* `experience` is the amount of experience dropped when completing a smelting recipe.
-* `cookingtime` is how long it takes for the item to smelt.  
+- `type` decides what is using your recipe, like smelting or shapeless crafting. You can find a list of vanilla recipe types [here.](https://minecraft.fandom.com/wiki/Recipe#List_of_recipe_types)
+- `ingredient` is an object that contains either an `item` or a `tag`, which is used in the recipe. The object inside contains the identifier of either the tag or the item, depending on what you picked.
+- `result` is the item output of the recipe. Note for vanilla this only accepts single items.
+- `experience` is the amount of experience dropped when completing a smelting recipe.
+- `cookingtime` is how long it takes for the item to smelt.  
 
 The `type` is used in all recipes, but the other objects can vary depending on what you are making.   
 For more in-depth info [check out the Minecraft Wiki.](https://minecraft.fandom.com/wiki/Recipe)  
