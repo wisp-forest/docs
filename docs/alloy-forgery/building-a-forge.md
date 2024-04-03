@@ -3,8 +3,6 @@ title: How to build a Forge
 project: alloy-forgery
 ---
 
-
-# Building a Forge
 *Up to date as of 2.0.22*
 
 You can currently make an Alloy Forge out of 5 materials: Bricks, Stone Bricks, Blackstone, Deepslate, and End Stone.  
@@ -25,7 +23,8 @@ The Forge controller is crafted from the respective material of the forge tier w
 ### Tiers and Materials
 Tiers are important for making recipes harder to make, or to make them more efficient.
 
-Mods and modpacks can add their own Alloy Forges, but by default you can make a Forge out of the following materials: 
+Mods and modpacks can add their own Alloy Forges, but by default you can make a Forge out of the following materials:
+
 - Stone Bricks (Tier 1)
 - Bricks (Tier 1)
 - Polished Blackstone (Tier 2)
@@ -35,11 +34,12 @@ Mods and modpacks can add their own Alloy Forges, but by default you can make a 
 
 ### Fuels
 
-A forge can by default be fueled by vanilla materials. Currently they accept the following list: 
-* Coal and Blocks of Coal
-* Charcoal 
-* Blaze Rods 
-* Lava Bucket
+A forge can by default be fueled by vanilla materials. Currently they accept the following list:
+
+- Coal and Blocks of Coal
+- Charcoal 
+- Blaze Rods 
+- Lava Bucket
 
 For more information on how to add recipes and fuels, [go to this page.](./recipes.md)  
 

@@ -3,12 +3,12 @@ title: Adding Recipes and Fuels
 project: alloy-forgery
 ---
 
-# Creating a recipe
+## Creating a recipe
 When creating an Alloy Forge recipe you want to use the `alloy_forgery:forging` type.  
-The recipe can be placed anywhere under `data/namespace/recipes` in your data.  
+The recipe can be placed anywhere under `data/<namespace>/recipes` in your data.  
 Here is an example of a recipe:  
 
-```JSON
+```JSON title="copper_ingots_from_ore.json"
 {
   "type": "alloy_forgery:forging",
   "inputs": [
@@ -35,27 +35,23 @@ Here is an example of a recipe:
 }
 ```
 
-Here is what each of the objects do:
-
-## Input Format
-Inputs follows the Ingredient format with an addition of the `count` field within the Object declaration used to give info about how much of such is required. The max allowed amount of items that can be put within the recipes is **10**.
+### Input Format
+Inputs follows the Ingredient format with an addition of the `count` field within the Object declaration used to give info about how much of such is required. A single recipe can accept, at max, **10** items.
 
 **TODO: ADD INFO ABOUT BOTH Item and Tag Ingredients combined with custom ingredients from fabric**
 
-## Output Format
+### Output Format
 
-There currently exists two methods of returning an item as an output:
+There currently exist two methods of returning an item as an output:
 
-#### Item
-Using the `item` field as the items identifier combined with a `count` for control on the stack size of such returned item. Such is shown above as the first example.
+- **Item**  
+  Using the `item` field as the items identifier combined with a `count` for control on the stack size of such returned item. Such is shown above as the first example.
 
-#### Tagged
-**Supported as of version 2.0.16+**
-
-Using the `tag` field supplied with the desired target tag will allow for which ever entries within such to be used as an output though due to tags random ordering, it's best to supply a `priority` array of outputs to chose from that are known to work out the gate if found. 
+- **Tagged** (Supported as of version 2.0.16+)  
+  Using the `default` field supplied with the desired target tag will allow for whichever entries within such to be used as an output though due to tags random ordering, it's best to supply a `priority` array of outputs to chose from that are known to work out the gate if found. 
 
 ??? note "Tag Output Selection"
-    Such array will be sequentially check to see if the specified entry exists and if none are found, will default to using the tag to try and find any entry to use as an output.
+    The `priority` array will be sequentially checked to see if the specified entry exists and if none are found, will default to using the tag to try and find any entry to use as an output.
 
 Tagged Output Example:
 ```JSON
@@ -95,27 +91,27 @@ Tagged Output Example:
 }
 ```
 
-### Overrides
-Overrides allow changing the output item depending on the tier of the Forge. If using the Tagged output, it is not needed to supply any info on what output is wanted. Accepted formatting: 
+#### Overrides
+Overrides allow changing the output item depending on the tier of the Forge. Accepted formatting: 
 
-| Examples | Description |
-| --- | --- |
-| `"2"` | The override applies only to tier 2. |
-| `"3+"` | The override applies to tier 3, and anything above it. |
+| Examples   | Description                                                                                    |
+|------------|------------------------------------------------------------------------------------------------|
+| `"2"`      | The override applies only to tier 2.                                                           |
+| `"3+"`     | The override applies to tier 3, and anything above it.                                         |
 | `"2 to 5"` | The override only applies to the specified range of tiers, in this case from tier 2 to tier 5. |
 
-### Minimum Forge Tier
+#### Minimum Forge Tier
 `min_forge_tier` field indicates the minimum tier required to use this recipe.
 
 #### Fuel Per Tick
 `fuel_per_tick` field indicates the amount of fuel consumed by the Forge per tick. One bucket of lava is 24000 fuel.
 
-## Recipe Remainders
+### Recipe Remainders
 **Supported as of version 2.0.17+, requires owo-lib 0.8.0+**
 
-Due to Vanilla's very generic Recipe Remainders, you can use owo's [Recipe Specific Remainders]() instead, allowing for fully customizable recipe remainders, or use the built-in Global Remainer System loaded thru the `data/{your_mod_id_here}/forge_remainder` folder.
+Due to Vanilla's very generic recipe remainders, you can use owo's [Recipe Specific Remainders](../owo/recipe-remainders.md) instead, allowing for fully customizable recipe remainders, or use the built-in global remainder system loaded through the `data/<namespace>/forge_remainder` folder.
 
-A example for Global Alloy Forgery Remainders is below:
+A example for global Alloy Forgery remainders is below:
 ```JSON
 {
   "remainders": {
@@ -135,19 +131,16 @@ In the upper example you can declare a map of your item to an object.
 
 The initial Item ID here is the input to be replaced. Supported settings:
 
-| Field | Description |
-| --- | --- |
-| `item` | The ID of the returned item. |
+| Field   | Description                    |
+|---------|--------------------------------|
+| `item`  | The ID of the returned item.   |
 | `count` | Custom stack counts (optional) |
 
 In the lower example, the initial item (copper ore) is what is being checked for, and the second item (sand) is returned once the recipe completes.
 
-# Adding new fuels  
-Alloy Forgery loads fuel from a specific folder in data.   
-The path is `data/namespace/alloy_forge_fuels`, and in here you put your fuel definition.  
-A fuel file does not require a specific name, and can hold multiple different fuels.  
-Currently we only support items for fuels, tags are not accepted.  
-An example is provided below:  
+## Adding new fuels  
+Alloy Forgery loads fuel from a specific folder in data. The path is `data/<namespace>/alloy_forge_fuels`, and in here you put your fuel definition. A fuel file does not require a specific name, and can hold multiple different fuels. Currently, we only support items for fuels, tags are not accepted. An example is provided below: 
+
 ```JSON
 {
   "fuels": [
