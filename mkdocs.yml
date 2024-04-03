@@ -64,6 +64,9 @@ extra:
       gadget:
           repo: https://github.com/wisp-forest/gadget
           name: gadget
+      alloy-forgery:
+          repo: https://github.com/wisp-forest/alloy-forgery
+          name: Alloy Forgery
 
 extra_css:
     - overrides.css
@@ -107,6 +110,7 @@ nav:
         - index.md
         - faq.md
         - fabric-events.md
+        - datapack-tutorial.md
     - Isometric Renders:
         - isometric-renders/home.md
         - isometric-renders/slash_isorender.md
@@ -161,4 +165,11 @@ nav:
             - gadget/packet-dumps/index.md
             - gadget/packet-dumps/quick_start.md
             - gadget/packet-dumps/custom_packets.md
+    - Alloy Forgery:
+        - alloy-forgery/home.md
+        - alloy-forgery/adding-recipes-and-fuels.md
+        - alloy-forgery/building-a-forge.md
+        - alloy-forgery/recipe-adaptation.md
+        - alloy-forgery/defining-a-forge.md
+
 
