@@ -67,6 +67,9 @@ extra:
       alloy-forgery:
           repo: https://github.com/wisp-forest/alloy-forgery
           name: Alloy Forgery
+      accessories:
+          repo: https://github.com/wisp-forest/accessories
+          name: Accessories
 
 extra_css:
     - overrides.css
@@ -171,5 +174,12 @@ nav:
         - alloy-forgery/building-a-forge.md
         - alloy-forgery/recipe-adaptation.md
         - alloy-forgery/defining-a-forge.md
-
-
+    - Accessories: 
+        - accessories/home.md
+        - accessories/slot_types.md
+        - accessories/slot_groups.md
+        - accessories/binding_slots_to_entities.md
+        - accessories/api_nbt_format.md
+        - accessories/unique_slot_api.md
+        - accessories/current_events.md
+        - accessories/rendering_api.md
