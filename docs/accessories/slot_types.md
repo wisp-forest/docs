@@ -58,9 +58,31 @@ Slots were designed with the potential for the given slot amount to be changeabl
 
 ### Adjustment API
 
-Within Accessories exists a programmatic way of adjusting slot amount similar in design to the data pack method but it is warned that you be careful with such operations on globally used slots as such operations are harder to track comparably. 
+Within Accessories exists a programmatic way of adjusting slot amount similar in design to the data pack but using direct method calls found either on the `AccessoriesCapability` or the targeted `AccessoriesContainer` itself.
 
-You can register such adjustments can be registered though `SlotAmountAdjustmentRegistry` main event object `AFTER_SLOT_LOAD`. What's passed back upon event invocation is the current instance of the `SlotAmountAdjustmentRegistry` allowing devs to register `SlotAmountAdjustment` for given Slots.
+An example of adding and removing of additional ring slots are below using the capability on an Accessory equip method:
+
+```java
+...
+@Override
+public void onEquip(ItemStack stack, SlotReference reference) {
+	var map = HashMultimap.<String, AttributeModifier>create();
+
+	map.put("ring", new AttributeModifier(ringAdditonUUID, "additional_rings", 100, AttributeModifier.Operation.ADDITION));
+
+	reference.capability().addPersistentSlotModifiers(map);
+}
+
+@Override
+public void onUnequip(ItemStack stack, SlotReference reference) {
+	var map = HashMultimap.<String, AttributeModifier>create();
+
+	map.put("ring", new AttributeModifier(ringAdditonUUID, "additional_rings", 100, AttributeModifier.Operation.ADDITION));
+
+	reference.capability().removeSlotModifiers(map);
+}
+...
+```
 
 ### Config File
 
