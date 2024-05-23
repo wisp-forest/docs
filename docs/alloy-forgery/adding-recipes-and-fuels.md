@@ -36,7 +36,7 @@ Here is an example of a recipe:
 ```
 
 ### Input Format
-Inputs follow the Minecraft ingredient format (used by most other recipes) with such being the identifier of a given item tag (`"tag": ...`) or entry (`"item": ...`) and an additional `count` field used to give info about how much of such is required. 
+The inputs follow the Minecraft ingredient format (used by most other recipes) with such being the identifier of a given item tag (`"tag": ...`) or entry (`"item": ...`) and an additional `count` field used to give info about how much of such is required. 
 
 A single recipe can accept, at max, **10** different ingredient entries. Furthermore, we also support any of Fabric's custom Ingredients like its Custom NBT-based Ingredient.
 
@@ -44,17 +44,18 @@ A single recipe can accept, at max, **10** different ingredient entries. Further
 
 There currently exist two methods of returning an item as an output:
 
-- **Item**  
-  Using the `item` field as the items identifier combined with a `count` for control on the stack size of such returned item. Such is shown above as the first example.
+#### **Item**  
+  Using the `item` field as the item's identifier combined with a `count` for control on the stack size of such returned item. Such is shown above as the first example.
 
-- **Tagged** (Supported as of version 2.0.16+)  
+#### **Tagged**   
+  **Supported as of version 2.0.16+**
+
   Using the `default` field supplied with the desired target tag will allow for whichever entries within such to be used as an output though due to tags random ordering, it's best to supply a `priority` array of outputs to chose from that are known to work out the gate if found. 
 
 ??? note "Tag Output Selection"
     The `priority` array will be sequentially checked to see if the specified entry exists and if none are found, will default to using the tag to try and find any entry to use as an output.
 
-Tagged Output Example:
-```JSON
+```JSON title="lead_ingots_from_raw_ore.json"
 {
   "fabric:load_conditions": [
     {
