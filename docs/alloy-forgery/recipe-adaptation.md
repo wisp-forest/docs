@@ -3,7 +3,7 @@ title: Recipe Adaptation
 project: alloy-forgery
 ---
 
-Since 2.1.0, Alloy Forgery added a system to adapt existing recipes to alloy forging recipes. Currently, the only adapted recipe type for which the system is being using for it's for Blast Furnace recipes to work within the forge.
+Since 2.1.0, Alloy Forgery added a system to adapt existing recipes to alloy forging recipes. Currently, only Blast Furnace recipes are adapted to work with the forge.
 
 Developed alongside this adaptation system is the ability to create tags for Recipes with such following the same format as any other tag just being the tags should be placed within the `{your_namespace_here}/tags/recipes/` folder within your datapack.
 
