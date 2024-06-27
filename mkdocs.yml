@@ -178,6 +178,7 @@ nav:
         - accessories/home.md
         - accessories/slot_types.md
         - accessories/binding_slots_to_entities.md
+        - accessories/binding_accessories_to_slots.md
         - accessories/slot_groups.md
         - accessories/api_events.md
         - accessories/itemstack_components.md
