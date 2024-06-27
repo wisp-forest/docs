@@ -7,18 +7,25 @@ project: accessories
 
 Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories! 
 
-**Currently underdevelopment and may be lacking in certain areas. Plans are in place to include a more tutorialized documentation on how you can create an accessory within the future.**
+!!! tip "Work-in-progress"
+    The Accessories documentation is still being improved, and currently lacks a quick start guide. If you are unsure about something, try to reference the JavaDoc or simply come ask in [our Discord](https://discord.gg/xrwHKktV2d) - we'll be happy to help
 
 ## Overview
 
-Accessories is a data-driven accessory mod for NeoForge and Fabric with its design around being loader agnostic allowing for more common code base than typically implementations. Such API is based on the works of [Curios](https://github.com/TheIllusiveC4/Curios) and [Trinkets](https://github.com/emilyploszaj/trinkets) with credit going to both [TheIllusiveC4](https://github.com/TheIllusiveC4) and [emilyploszaj](https://github.com/emilyploszaj) for their work on Accessory mods for Minecraft.
+Accessories is a data-driven accessory mod for NeoForge and Fabric and is designed to be loader agnostic. This allows for more common code base than typically implementations. The API is based on the works of [Curios](https://github.com/TheIllusiveC4/Curios) and [Trinkets](https://github.com/emilyploszaj/trinkets), with credit going to both [TheIllusiveC4](https://github.com/TheIllusiveC4) and [emilyploszaj](https://github.com/emilyploszaj) for their work on accessory mods for Minecraft.
 
 ## Features
 
-The benefits to alternative solutions are:
+- Full support for `LivingEntity`, meaning the API supports not players, but other mobs like Zombies, Skeletons or even Wolves!
+- Integration with DataComponents, which allows any ItemStack to be usable as an accessory (useful for testing or just messing around). 
+- A Unique Slot API, which allows for adjusting or restricting what slots exist for Accessories. This can be accessed with both code or datapacks.
+- Events for adjusting behavior of Minecraft's mechanics depending on Accessories, like disabling Enderman aggro or Piglin neutrality.
+- Optional compatibility layers for both Curios and Trinkets, which allows any accessory to be usable regardless of modpack configuration. 
 
-- Multiloader design allowing for both Platform Specific mods and support for Multiloader mods using Common code area
-- Datapackable/Programmatic Unique Slot API allowing for either more user adjustable design or more restrictive method for mod specific accessory handling
-- ItemStack Data Component based Accessory system allowing for any item with proper data to be an accessory for datapack or just to mess around with.
-- Compatibility layers for other competing Accessory APIs with Sinytra connector in mind for there designs.
-- Builtin Events for general adjustments to Minecraft's mechanics like Enderman Mask or Piglin neutrality.
+
+### Why Accessories?
+
+- More powerful and better API
+- Better support for rendering accessories
+- Supports multiloader setups, which makes porting and maintenance much easier
+- Built-in vanity slots, which allows for more customization
