@@ -16,7 +16,7 @@ Accessories is a data-driven accessory mod for NeoForge and Fabric and is design
 
 ## Features
 
-- Full support for `LivingEntity`, meaning the API supports not players, but other mobs like Zombies, Skeletons or even Wolves!
+- Full support for LivingEntity, meaning the API supports not only Players, but also other mobs like Zombies, Skeletons or even Wolves!
 - Integration with DataComponents, which allows any ItemStack to be usable as an accessory (useful for testing or just messing around). 
 - A Unique Slot API, which allows for adjusting or restricting what slots exist for Accessories. This can be accessed with both code or datapacks.
 - Events for adjusting behavior of Minecraft's mechanics depending on Accessories, like disabling Enderman aggro or Piglin neutrality.
