@@ -3,11 +3,11 @@ title: ItemStack Data Components
 project: accessories
 ---
 
-Below is the current set of available Data Components for ItemStacks that are supported with documentation about there function and format to use such
+Below is the current set of available Data Components for ItemStacks that are supported with documentation about there function and format.
 
 ## Attribute Format
 
-Any ItemStack can have Attributes added onto such thought the `accessories:attributes` item component with such being comprised of a list of attribute entries similar to Minecraft's default implementation. Below is an example of such:
+Any ItemStack can have Attributes added onto such though the `accessories:attributes` item component with such being comprised of a list of attribute entries similar to Minecraft's default implementation. Below is an example of such:
 
 ```nbt
 {
@@ -36,20 +36,32 @@ Any ItemStack can have Attributes added onto such thought the `accessories:attri
 
 ## Slot Validation
 
-Any ItemStack can within its `accessories:slot_validation` item component can be adjusted to be prevented being equipped within a slot or be adjusted to be equipped into another slot if wanted.
+Any ItemStack can define invalid or valid slots to which it can be equipped within the `accessories:slot_validation` item component allowing you to add the ability to equip such within a slot or override current equability for an existing accessory.
+
+```nbt
+{
+    "valid_slot": [
+        "hat"
+    ]
+    "invalid_slot": [
+        "shoes"
+    ]
+}
+```
 
 | <div style="width:118px">Field</div> | Usage | Examples |
 |--|--|--|
-|`"valid_slot_overrides"`| A array of string values of valid slots that such stack can be equipped into when attempted | `"hat"`, `"ring"` |
-|`"invalid_slot_overrides"`| A array of string values of invalid slots that such stack **can not** be equipped into when attempted | `"back"`, `"shoes"` |
+|`"valid_slots"`| A array of string values of valid slots that such stack can be equipped into when attempted | `"hat"`, `"ring"` |
+|`"invalid_slots"`| A array of string values of invalid slots that such stack **can not** be equipped into when attempted | `"back"`, `"shoes"` |
 
-## Slot Validation
+## Default Render Override
 
-Any ItemStack can have a component called `accessories:render_override` that allows for an item to have its render use the default variant if desired as its funny
+Any ItemStack can have a component called `accessories:render_override` that allows for an item to have its render use the default variant if desired as it's funny... that's it
 
 | <div style="width:118px">Field</div> | Usage | Examples |
 |--|--|--|
 |`"default_render_override"`| A optional boolean value indicating if present that the default render should or should not be used | `true` |
 
+## Accessory Nest
 
 **{WIP} TODO! {WIP}**

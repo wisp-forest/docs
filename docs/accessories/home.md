@@ -7,7 +7,7 @@ project: accessories
 
 Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories! 
 
-**Currently underdevelopment and may be lacking in certain areas. Plans are in place to include a more tutorialized documentation on how you can create an accessory within the future.**\
+**Currently underdevelopment and may be lacking in certain areas. Plans are in place to include a more tutorialized documentation on how you can create an accessory within the future.**
 
 ## Overview
 
@@ -17,8 +17,8 @@ Accessories is a data-driven accessory mod for NeoForge and Fabric with its desi
 
 The benefits to alternative solutions are:
 
-- Multi-loader mods can now have more common code for handling their implemented Accessory items
-- All Entities of the Living Entity Variant can be used within the API meaning not just Player, but other mobs like Zombies, Skeletons or even dogs!
-- Full support for NBT based Accessories with the ability to for instance an obsidian block give the player armor if placed within the ring slot!
-- Unique Slot API for mods that need accessories specific to its mod for progression or mechanics to expand the experience
+- Multiloader design allowing for both Platform Specific mods and support for Multiloader mods using Common code area
+- Datapackable/Programmatic Unique Slot API allowing for either more user adjustable design or more restrictive method for mod specific accessory handling
+- ItemStack Data Component based Accessory system allowing for any item with proper data to be an accessory for datapack or just to mess around with.
+- Compatibility layers for other competing Accessory APIs with Sinytra connector in mind for there designs.
 - Builtin Events for general adjustments to Minecraft's mechanics like Enderman Mask or Piglin neutrality.

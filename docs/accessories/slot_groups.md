@@ -7,7 +7,7 @@ Slot Groups are manly a cosmetic system meant to wrap certain slots in specific 
 
 ## Data Pack Format
 
-Such files should be placed within the `data/{replace_with_pack_namespace}/accessories/slot/` with the file name corresponding to the group name. Further updates may provide a trinket style screen depending on development issues with such. Below is details on the given format and an example of what such should look like:
+Such files should be placed within the `data/{replace_with_pack_namespace}/accessories/group/` with such `.json` file corresponding to the group name. Further updates may provide a trinket style screen depending on development issues with such. Below is details on the given format and an example of what such should look like:
 
 ```json
 {

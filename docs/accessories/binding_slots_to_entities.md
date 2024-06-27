@@ -3,7 +3,7 @@ title: Binding Slots to Entities
 project: accessories
 ---
 
-Accessories API requires that each slot is bound to entity types to allow for the entities to have such slots. By default, the given implemented slots are bound to any entity type found within the `accessories:defaulted_targets` entity type tag which currently includes players and armor stands. 
+Accessories requires that each slot is bound to the desired entity types for the given the entities to have such slots. By default, the given implemented slots are bound to any entity type found within the `accessories:defaulted_targets` entity type tag which currently includes players and armor stands. 
 
 ## Data Pack Format
 
