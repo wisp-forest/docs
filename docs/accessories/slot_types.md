@@ -3,13 +3,13 @@ title: Creating and Adjusting Slots
 project: accessories
 ---
 
-# Slots
-
 Below is information going over the Data format for creating Slot Types and default implementations include within the mod to start off with some extra API for manipulating various aspects of such
 
 ## Data Pack Format
 
-Slot types are added to allow for both mod creators and mod pack developers the ability to adjust parameters to their hearts content. By default, there exists base implications for many to start from inwhich such is listed in the next section but if you need to add a new one here is the general format. The file must be placed within the `data/{replace_with_pack_namespace}/accessories/slot/` with such `.json` file being the name to which the slot will be given. Here is the `back` slot as an example of the file format:
+Slot types are added to allow for both mod creators and mod pack developers the ability to adjust parameters to their hearts content. By default, there exists base implications for many to start from inwhich such is listed in the next section but if you need to add a new one here is the general format. 
+
+The file must be placed within the `data/{replace_with_pack_namespace}/accessories/slot/` with such `.json` file being the name to which the slot will be given. Here is the `back` slot as an example of the file format:
 
 ```json
 {
@@ -101,4 +101,8 @@ Such file is located within the `./config/` folder directory within Minecraft in
 	]
 }
 ```
+
+### Unique Slot API
+
+Provided by Accessories is a method of creating slots specific for your mod either though Datapack or within code for more control over aspects of the slot type size and such.
 

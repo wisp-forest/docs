@@ -5,7 +5,9 @@ project: accessories
 
 # Accessories
 
-Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories!
+Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories! 
+
+**Currently underdevelopment and may be lacking in certain areas. Plans are in place to include a more tutorialized documentation on how you can create an accessory within the future.**\
 
 ## Overview
 

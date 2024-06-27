@@ -177,9 +177,8 @@ nav:
     - Accessories: 
         - accessories/home.md
         - accessories/slot_types.md
-        - accessories/slot_groups.md
         - accessories/binding_slots_to_entities.md
-        - accessories/api_nbt_format.md
-        - accessories/unique_slot_api.md
-        - accessories/current_events.md
+        - accessories/slot_groups.md
+        - accessories/api_events.md
+        - accessories/itemstack_components.md
         - accessories/rendering_api.md

@@ -1,5 +1,5 @@
 ---
-title: Bind Slots to Entities
+title: Binding Slots to Entities
 project: accessories
 ---
 
@@ -35,4 +35,4 @@ For other slots create it is required that you create a file within the `data/{r
 | <div style="width:102px">Field Keys</div> | Data Type | Description |
 |--|--|--|
 | `"slots"` | String[] | An list of all slot names to be available to the given entities targeted |
-| `"entities"` | String | A list containing either specific locations of entity types or an entity type tag prefix with a hashtag |
+| `"entities"` | String[] | A list containing either specific locations of entity types or an entity type tag prefix with a hashtag |
