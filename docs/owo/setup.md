@@ -14,7 +14,7 @@ To add oωo to you project, begin by including our maven in the repositories blo
 
 ```groovy title="build.gradle"
 repositories {
-    maven { url 'https://maven.wispforest.io' }
+    maven { url 'https://maven.wispforest.io/releases/' }
 }
 ```
 
