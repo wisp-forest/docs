@@ -29,6 +29,9 @@ Render the given item, including NBT. If the item is omitted, render the player'
 ### :octicons-command-palette-16: `/isorender block`
 Render the given block, including NBT and block state data. If the block is omitted, render whichever block the player is currently looking at
 
+!!! hint ""
+    The water in waterlogged block will not be visible in a block render. If you do want a render of that, simply do a single-block area render (as explained below) instead
+
 !!! examples
     ```mcfunction
     # render the block you're looking at
