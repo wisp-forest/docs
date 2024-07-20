@@ -34,4 +34,4 @@ Then, declare the dependency inside your `dependencies` block and as well as the
     owo_version=...
     ```
 
-If you want to use a version other than the most current one, check the [GitHub releases page](https://github.com/wisp-forest/owo-lib/releases/)
+If you want to use a version other than the latest one, check the [GitHub releases page](https://github.com/wisp-forest/owo-lib/releases/)
