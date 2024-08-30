@@ -125,7 +125,7 @@ possible text that could be searched for to the method to allow users to search 
 Your extension might want to add custom search syntax that means "only let *this* extension handle it".
 `#!java LimelightExtension#checkExclusiveGatherer` is provided for this purpose: the extension can check
 the gather context and return a gatherer that will exclusively handle this search. This is used by the
-built-in calculator module (for `=` queries) and the bangs module (for `!` queries).
+built-in calculator extension (for `=` queries) and the bangs extension (for `!` queries).
 
 ```java
 public class MyFunExtension implements LimelightExtension {
