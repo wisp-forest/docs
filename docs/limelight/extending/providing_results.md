@@ -1,9 +1,8 @@
 ---
 title: Providing Results
 project: limelight
+summary: Defining result entries and providing them to the user.
 ---
-
-**:material-progress-alert: Work-in-progress**
 
 ## Defining results
 `#!java ResultEntry` is the sealed base interface of all results in Limelight. While it has some common

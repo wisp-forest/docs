@@ -1,6 +1,7 @@
 ---
 title: Adding Wikis
 project: limelight
+summary: Defining your wikis to let users search through them.
 ---
 
 The **Wiki** (`limelight:wiki`) extension has built-in support for querying the

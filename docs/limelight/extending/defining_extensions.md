@@ -1,9 +1,8 @@
 ---
 title: Defining Extensions
 project: limelight
+summary: Defining and registering a Limelight extension.
 ---
-
-**:material-progress-alert: Work-in-progress**
 
 A `LimelightExtension` is the basic building block of extending Limelight functionality. Limelight has several built-in extensions, but if you're adding Limelight compatibility or making a Limelight addon mod, you probably want to make your own extension.
 
@@ -44,7 +43,7 @@ You also need[^1] to provide a translatable title for the extension (and optiona
 ```
 
 This results in this Limelight config screen entry:
-![](../../assets/limelight/my_fun_extension_entry.png){ .docs-image }
+![a config entry for My Fun Extension](../../assets/limelight/my_fun_extension_entry.png){ .docs-image }
 
 
 [^1]: You can also override the `LimelightExtension#name` and `LimelightExtension#description` methods.

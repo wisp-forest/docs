@@ -1,9 +1,8 @@
 ---
 title: Setup
 project: limelight
+summary: Setting up Limelight integration for your mod.
 ---
-
-**:material-progress-alert: Work-in-progress**
 
 To start setting up your addon, add an optional dependency on Limelight:
 
@@ -57,3 +56,5 @@ Now that you have Limelight's code in your development environment, you need to 
         }
     }
     ```
+
+Continue by [adding an extension](./defining_extensions.md).

@@ -187,6 +187,7 @@ nav:
         - accessories/itemstack_components.md
         - accessories/rendering_api.md
     - Limelight:
+        - limelight/index.md
         - Configuring:
             - limelight/configuring/adding_wikis.md
         - Extending:
