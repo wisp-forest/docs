@@ -3,9 +3,9 @@ title: Recipe Adaptation
 project: alloy-forgery
 ---
 
-Since 2.1.0, Alloy Forgery comes with a System to adapt existing eecipes to alloy forging recipes with the only current implementation of the system being used to adapt existing Blast Furnace recipes to work within the forge.
+Since 2.1.0, Alloy Forgery added a system to adapt existing recipes to alloy forging recipes. Currently, only Blast Furnace recipes are adapted to work with the forge.
 
-Developed alongside this adaptation system is the ability to create tags for Recipes with such following the same format as any other tag just being the tags should be placed within the `{your_namespace_here}/tags/recipes/` folder within your datapack
+Developed alongside this adaptation system is the ability to create tags for Recipes with such following the same format as any other tag just being the tags should be placed within the `{your_namespace_here}/tags/recipes/` folder within your datapack.
 
 ## Blast Furnace Adaptation
 
@@ -21,9 +21,9 @@ You can also specifically blacklist a blasting recipe from gaining the increased
 
 More recent versions of Alloy Forgery include a config file which contains some more options on controlling blasting adaption, such outlined below:
 
-| Option                         | Description                                                                                                                                                                                                                                   |
-|--------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `allowHigherTierOutput`        | Allows for the ability to toggle on or off the tier increase on **ALL** Blasting Recipes.                                                                                                                                                     |
-| `allowBlastingFurnaceAdaption` | Allows for the ability to toggle on or off the blasting adaption for **ALL** Blasting Recipes.                                                                                                                                                |
-| `baseInputAmount`              | Adjusts the required input amount for the adapted Blasting Recipe. Such functions as a multiplier for both the input and output meaning that with the default value of '2', the required amount needed to craft is '2' with an output of '2'. |
-| `higherTierOutputIncrease`     | Controls the amount of increased output that is gotten when using a tier 3 Alloy Forge if such tier output was not disabled.                                                                                                                  |
+| Option <p style="width: 230px;"/> | Description |
+|--|--|
+| `allowHigherTierOutput`| Allows for the ability to toggle on or off the tier increase on **ALL** Blasting Recipes. |
+| `allowBlastingFurnaceAdaption`| Allows for the ability to toggle on or off the blasting adaption for **ALL** Blasting Recipes. |
+| `baseInputAmount` | Adjusts the required input amount for the adapted Blasting Recipe. Such functions as a multiplier for both the input and output meaning that with the default value of '2', the required amount needed to craft is '2' with an output of '2'. |
+| `higherTierOutputIncrease` | Controls the amount of increased output that is gotten when using a tier 3 Alloy Forge if such tier output was not disabled. |
