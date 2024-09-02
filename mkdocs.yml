@@ -70,6 +70,9 @@ extra:
       accessories:
           repo: https://github.com/wisp-forest/accessories
           name: Accessories
+      limelight:
+          repo: https://github.com/wisp-forest/limelight
+          name: Limelight
 
 extra_css:
     - overrides.css
@@ -183,3 +186,12 @@ nav:
         - accessories/api_events.md
         - accessories/itemstack_components.md
         - accessories/rendering_api.md
+    - Limelight:
+        - limelight/index.md
+        - Configuring:
+            - limelight/configuring/adding_wikis.md
+        - Extending:
+            - limelight/extending/setup.md
+            - limelight/extending/defining_extensions.md
+            - limelight/extending/providing_results.md
+            - limelight/extending/adding_wiki_sources.md
