@@ -4,11 +4,19 @@ project: limelight
 summary: Setting up Limelight integration for your mod.
 ---
 
+<script>
+    window.addEventListener('version-available', event => {
+        [].forEach.call(document.querySelectorAll(".limelight-version"), v => {
+            v.outerHTML = v.outerHTML.replaceAll("...", event.detail);
+        });
+    })
+</script>
+
 To start setting up your addon, add an optional dependency on Limelight:
 
 === "gradle.properties"
-    ```properties
-    limelight_version=0.1.0+1.21
+    ``` { .properties .limelight-version }
+    limelight_version=...
     ```
 
 === "build.gradle"
@@ -18,8 +26,8 @@ To start setting up your addon, add an optional dependency on Limelight:
     }
 
     dependencies {
-        modCompileOnly "me.basiqueevangelist:limelight:${project.limelight_version}"
-        modLocalRuntime "me.basiqueevangelist:limelight:${project.limelight_version}"
+        modCompileOnly "io.wispforest:limelight:${project.limelight_version}"
+        modLocalRuntime "io.wispforest:limelight:${project.limelight_version}"
     }
     ```
 
