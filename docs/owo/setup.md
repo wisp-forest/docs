@@ -18,13 +18,25 @@ repositories {
 }
 ```
 
-Then, declare the dependency inside your `dependencies` block and as well as the version you want to use inside your `gradle.properties`. As you can see, this example also includes `owo-sentinel`. sentinel is a super tiny mod which is designed to be Jar-in-Jar'd by mods that depend on owo. If a player then installs your mod without installing owo, sentinel will prevent their game from launching and instead open a window warning them that owo is required. It gives them the option to automatically install owo or open owo's page so they can do it manually
+Then, declare the dependency inside your `dependencies` block and as well as the version you want to use inside your `gradle.properties`. 
+
+!!! Fabric-Only
+    As you can see, this example also includes `owo-sentinel`. sentinel is a super tiny mod which is designed to be Jar-in-Jar'd by mods that depend on owo. If a player then installs your mod without installing owo, sentinel will prevent their game from launching and instead open a window warning them that owo is required. It gives them the option to automatically install owo or open owo's page so they can do it manually
 
 === "build.gradle"
     ```groovy 
     dependencies {
+        // Loom - Fabric
         modImplementation "io.wispforest:owo-lib:${project.owo_version}"
         include "io.wispforest:owo-sentinel:${project.owo_version}"
+
+        // Moddev Projects - Neforge
+        implementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        accessTransformer "io.wispforest:owo-lib-neoforge-dev:${rootProject.owo_version}"
+        interfaceInjectionData "io.wispforest:owo-lib-neoforge-dev:${rootProject.owo_version}"
+
+        // Arch Loom Projects - Neoforge
+        modImplementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
     }
     ```
 
