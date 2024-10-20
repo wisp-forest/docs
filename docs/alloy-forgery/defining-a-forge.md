@@ -26,8 +26,10 @@ An example is provided below:
 }
 ```
 
-- `material` - Defines the block used for crafting the Forge Controller and the block the Forge is built from.
-- `additional_materials` - Defines extra materials the Forge structure can be built from.
-- `tier` - The tier of the Forge. Determines what recipes it can process. 
-- `fuel_capacity` - How much fuel the Forge can hold before needing to be refueled. 
-- `speed_multiplier` - A multiplier which decides how fast the Forge processes a recipe. Does not impact fuel consumption.
+| Field <p style="width: 170px;"/> | Description |
+|--|--|
+| `material` | Defines the block used for crafting the Forge Controller and the block the Forge is built from. |
+| `additional_materials` | Defines extra materials the Forge structure can be built from. |
+| `tier` | The tier of the Forge. Determines what recipes it can process. |
+| `fuel_capacity` | How much fuel the Forge can hold before needing to be refueled. |
+| `speed_multiplier` | A multiplier which decides how fast the Forge processes a recipe. Does not impact fuel consumption. |
