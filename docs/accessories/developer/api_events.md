@@ -46,9 +46,9 @@ Any event below can be implemented directly on an `Accessory` implementation or 
 
 An event allowing the ability to adjust if the entity should be able to walk on powdered snow.
 
-### [EndermanMasked](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/events/extra/EndermanMasked.java#L20)
+### [IsGazeDisguised]() {WIP: TODO ADD LINK}
 
-An event allowing for the control over if the `EnderMan` entity sees the wearer entity as using a mask item to conceal their eyeballs, preventing them from being angered.
+An event allowing for the control over if the given looking `LivingEntity` sees the wearer entity as disguised preventing certain actions like being angered or allowing the creature to move.
 
 ### [FortuneAdjustment](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/events/extra/FortuneAdjustment.java#L18)
 
@@ -61,3 +61,9 @@ An event allowing for the adjustment of the level of looting provided to the ent
 ### [PiglinNeutralInducer](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/events/extra/PiglinNeutralInducer.java#L19)
 
 An event allowing for adjusting if the entity should anger any piglins within range of them.
+
+## **Deprecated** 
+
+### [EndermanMasked](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/events/extra/EndermanMasked.java#L20)
+
+Recommend switching to `IsGazeDisguised` event instead and specifically checking for Enderman as the looker entity.

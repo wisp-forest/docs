@@ -1,11 +1,13 @@
 ---
-title: Slot Groupings
+title: Creating Slot Groupings
 project: accessories
 ---
 
 Slot Groups are manly a cosmetic system meant to wrap certain slots in specific parts the body as a way to better order specific sets of slots and act as an easy method to quickly move to such specific slots within the Accessories Screen. 
 
 ## Data Pack Format
+
+To create a Slot group you will need to place a file 
 
 Such files should be placed within the `data/{replace_with_pack_namespace}/accessories/group/` with such `.json` file corresponding to the group name. Further updates may provide a trinket style screen depending on development issues with such. Below is details on the given format and an example of what such should look like:
 

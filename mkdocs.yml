@@ -179,13 +179,19 @@ nav:
         - alloy-forgery/defining-a-forge.md
     - Accessories: 
         - accessories/home.md
-        - accessories/slot_types.md
-        - accessories/binding_slots_to_entities.md
-        - accessories/binding_accessories_to_slots.md
-        - accessories/slot_groups.md
-        - accessories/api_events.md
-        - accessories/itemstack_components.md
-        - accessories/rendering_api.md
+        - accessories/various_questions.md
+        - General:
+            - accessories/general/slot_types.md
+            - accessories/general/defaulted_slots.md
+            - accessories/general/binding_accessories_to_slots.md
+            - accessories/general/binding_slots_to_entities.md
+            - accessories/general/slot_groups.md
+            - accessories/general/api_usage.md
+        - Developer:
+            - accessories/developer/dev_setup.md
+            - accessories/developer/api_events.md
+            - accessories/developer/rendering_api.md
+            - accessories/developer/itemstack_components.md
     - Limelight:
         - limelight/index.md
         - Configuring:

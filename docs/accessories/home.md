@@ -5,7 +5,7 @@ project: accessories
 
 # Accessories
 
-Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories! 
+Welcome to the Accessories Wiki such will attempt to cover the API for using Accessories systems and give examples to learn how to implement your own accessories! These docs were written in mind for the 1.2.0 version of Accessories and above so **older** versions may have different methods or do not contain certain API described here.
 
 !!! tip "Work-in-progress"
     The Accessories documentation is still being improved, and currently lacks a quick start guide. If you are unsure about something, try to reference the JavaDoc or simply come ask in [our Discord](https://discord.gg/xrwHKktV2d) - we'll be happy to help
@@ -30,3 +30,4 @@ Accessories is a data-driven accessory mod for NeoForge and Fabric and is design
 - Events for adjusting behavior of Minecraft's mechanics depending on Accessories, like disabling Enderman aggro or Piglin neutrality.
 - Optional compatibility layers for both competing Accessory APIs, which allows any accessory to be usable regardless of modpack configuration. 
     - Designed with Sinytra Connector in mind!
+- Fully configurable support for Gliders (Like Elytra), Totems, and Banners built in!
