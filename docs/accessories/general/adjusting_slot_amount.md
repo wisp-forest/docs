@@ -1,5 +1,5 @@
 ---
-title: Adjusting Accessory Equability
+title: Adjusting Slot Amount
 project: accessories
 ---
 
@@ -44,7 +44,7 @@ public class RingIncreaser implements Accessory {
 }
 ```
 
-Another Programmatic method of such is by adjusting the slots Dynamic Modifiers instead of adding to entity on equiping of the accessory:
+Another Programmatic method of such is by adjusting the slots Dynamic Modifiers instead of adding to entity on equipping of the accessory:
 
 ```java
 public class HatIncreaser implements Accessory {

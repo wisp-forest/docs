@@ -186,7 +186,7 @@ nav:
             - accessories/general/binding_accessories_to_slots.md
             - accessories/general/binding_slots_to_entities.md
             - accessories/general/slot_groups.md
-            - accessories/general/api_usage.md
+            - accessories/general/adjusting_slot_amount.md
         - Developer:
             - accessories/developer/dev_setup.md
             - accessories/developer/api_fundamentals.md
