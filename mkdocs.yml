@@ -189,8 +189,9 @@ nav:
             - accessories/general/api_usage.md
         - Developer:
             - accessories/developer/dev_setup.md
-            - accessories/developer/api_events.md
+            - accessories/developer/api_fundamentals.md
             - accessories/developer/rendering_api.md
+            - accessories/developer/api_events.md
             - accessories/developer/itemstack_components.md
     - Limelight:
         - limelight/index.md
