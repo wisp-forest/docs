@@ -5,10 +5,14 @@ project: accessories
 
 If such information below is still leaving you with questions, you can look at each platform's test mod [[Fabric](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/fabric/src/testmod), [Neoforge](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/neoforge/src/testmod)] for starting points. You can also ask questions within the Discord {todo: add discord link} for more assistance.
 
-Creating a slot within Accessories requires you either follow the Datapack method which allows for full ability to tweak Slot Properties and its bound Entities. 
+Creating a slot within Accessories requires you follow the two options available to you:
+- Datapack method: Allows for full ability to tweak Slot Properties and its bound Entities within `json` files loaded on server start
+- Programmatic method: More restrictive control over a given slot type using the Unique slot API
 
 ???+ tip "Notice of Datapackablity"
-    It is recommend that when taking this approach that you design your Mod in mind that it may allow for certain behaviors to be moved from one slot to another, remove your target slot, or even prevent a item from being equipped in any slot.
+    When using the Data Pack method it is recommend that you design your Mod with the ability to be adjusted by end users since much of accessories base system allows for items to be moved from one slot to another, remove your target slot, or even prevent a item from being equipped in any slot. 
+
+    Such maybe your intention to attempt some sense of balance but will lead to issues when Modpack makers are unable to balance based on other mods.
 
 ## Data Pack Format
 

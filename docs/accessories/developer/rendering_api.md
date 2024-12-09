@@ -1,14 +1,14 @@
 ---
-title: Rendering API
+title: Rendering API Breakdown
 project: accessories
 ---
 
-To link a given item to a specific `AccessoryRenderer` you will need to register such within the `AccessoriesRendererRegistry` class. By **default** all accessory items that have no renderer registered will get the `DefaultAccessoryRenderer` which attempts to render the block/item on the player in a position where the slot is located on the player. 
+To link a given item to a specific `AccessoryRenderer` you will need to register such within the `AccessoriesRendererRegistry` class. By **default** all accessory items that have no renderer registered will get the `DefaultAccessoryRenderer` which attempts to render the block/item on the player in a position where the slot is located on the entity. 
 
 !!! info "Default Accessory Rendering Behavior"
-    All default slots have implemented renderers for such but new slots will need to implement there own using the `DefaultAccessoryRenderer#registerHelper` method. More about the `DefaultAccessoryRenderer` can be found below.
+    All default slots have implemented renderers for such but new slots will need to implement their own using the `DefaultAccessoryRenderer#registerHelper` method. More about the `DefaultAccessoryRenderer` can be found below.
 
-If you need a simple item rendering for your accessory than you could look at `SimpleAccessoryRenderer` as all the is required of you is to override the `align` method to transform the rendering to specific location on the player.
+If you need a simple item rendering for your accessory than you could look at `SimpleAccessoryRenderer` as such requires you to just override the `align` method to transform the rendering to specific location on the entity.
 
 ## Transformation Methods
 
@@ -33,4 +33,6 @@ Furthermore you can use `transformToFace` to target specific faces of a given mo
 
 As stated above that Accessories provides a default rendering for items that have yet to registered. This can be manipulated using the `AccessoryRenderTransformations` data component {WIP TODO: ADD LINK} for use with Data driven Accessories.
 
-New slots will need to implement there own using the `DefaultAccessoryRenderer#registerHelper` method for the Default renderer to render anything which is just a generic helper to transform the renderer to the slots location on the entity.
+New slots will need to implement their own using the `DefaultAccessoryRenderer#registerHelper` method for the Default renderer to render anything which is just a generic helper to transform the renderer to the slots location on the entity.
+
+The only way for one to disable the Default Rendering for a given Accessory is by using the `AccessoriesRendererRegistry#registerNoRenderer` or adjusting the Data Component if actively toggled on

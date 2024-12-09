@@ -3,7 +3,7 @@ title: Creating Slot Groupings
 project: accessories
 ---
 
-Slot Groups are manly a cosmetic system meant to wrap certain slots in specific parts the body as a way to better order specific sets of slots and act as an easy method to quickly move to such specific slots within the Accessories Screen. 
+Slot Groups are mainly a cosmetic system meant to wrap certain slots in specific parts the body as a way to better order specific sets of slots and act as an easy method to quickly move to such specific slots within the Accessories Screen. 
 
 ## Data Pack Format
 

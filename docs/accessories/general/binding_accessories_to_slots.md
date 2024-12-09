@@ -1,5 +1,5 @@
 ---
-title: Adjusting Accessory Equability
+title: Adjusting Accessory Equipablity
 project: accessories
 ---
 

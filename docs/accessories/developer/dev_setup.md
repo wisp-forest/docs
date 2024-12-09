@@ -1,5 +1,5 @@
 ---
-title: Setup Development Environment  
+title: Setup Environment  
 project: accessories
 ---
 
