@@ -12,7 +12,11 @@ Welcome to the Accessories Wiki such will attempt to cover the API for using Acc
 
 ## Overview
 
-Accessories is a data-driven accessory mod for NeoForge and Fabric and is designed to be loader agnostic. This allows for more common code base than typically implementations. The API is based on the works of [Curios](https://github.com/TheIllusiveC4/Curios) and [Trinkets](https://github.com/emilyploszaj/trinkets), with credit going to both [TheIllusiveC4](https://github.com/TheIllusiveC4) and [emilyploszaj](https://github.com/emilyploszaj) for their work on accessory mods for Minecraft.
+Accessories is a data-driven accessory mod for NeoForge and Fabric and is designed to be loader agnostic. This allows for more common code base than typically implementations. The API is based on the works of [Curios](https://github.com/TheIllusiveC4/Curios) and [Trinkets](https://github.com/emilyploszaj/trinkets), 
+
+### Credit
+
+Thank you both [TheIllusiveC4](https://github.com/TheIllusiveC4) and [emilyploszaj](https://github.com/emilyploszaj) for their work on accessory mods for Minecraft. Combined with assistance of [Noaaan](https://github.com/Noaaan), [enjari](https://github.com/enjarai), and [bconlon](https://github.com/bconlon1) for reviewing the documentation provided here. 
 
 #### Why Accessories?
 
