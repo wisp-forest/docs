@@ -5,7 +5,7 @@ project: accessories
 
 # Slot Adjustments Methods
 
-Slots were designed with the potential for the given slot amount to be changeable if desired. Such can be accomplished with either using the above data format, the various `operation` types to adjust such, or by using the other methods provided.
+Slots were designed with the potential for the given slot amount to be changeable if desired. Such can be accomplished with either using the above data format, the various `operation` type's to adjust such, or by using the other methods provided.
 
 ## Attribute Modifier
 

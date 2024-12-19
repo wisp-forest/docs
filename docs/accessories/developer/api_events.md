@@ -46,9 +46,9 @@ Any event below can be implemented directly on an `Accessory` implementation or 
 
 An event allowing the ability to adjust if the entity should be able to walk on powdered snow.
 
-### [IsGazeDisguised]() {WIP: TODO ADD LINK}
+### [IsGazeDisguised](https://github.com/wisp-forest/accessories/blob/c41504c63f5c608e1e0ea249fae8b1a152c92f29/common/src/main/java/io/wispforest/accessories/api/events/extra/IsGazeDisguised.java#L20)
 
-An event allowing for the control over if the given looking `LivingEntity` sees the wearer entity as disguised preventing certain actions like being angered or allowing the creature to move.
+An event allowing for the control over if the given looking `LivingEntity` sees the wearer entity as disguised to prevent certain actions like being angered or allowing the creature to move.
 
 ### [FortuneAdjustment](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/events/extra/FortuneAdjustment.java#L18)
 

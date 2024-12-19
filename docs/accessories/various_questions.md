@@ -13,7 +13,7 @@ Any item can be equipped within a given slot but it does not mean such item will
 
 Such can be done but it is not recommend for Modders to take such drastic action unless really needing to do such since It may mess with other peoples mods ability to equip accessories. 
 
-Datapackers should also be cautious for similar reasons but for Modpack developers its understandable if they desire to rebalanced their pack to either condense slots or balance the amount of slots but do note that **some developers will lock** their Accessories to specific slots either by looking only in those slots or controlling functionality to work only in the given slot
+Datapackers should also be cautious for similar reasons but for Modpack developers its understandable if they desire to rebalance their pack to either condense slots or balance the amount of slots but do note that **some developers will lock** their Accessories to specific slots either by looking only in those slots or controlling functionality to work only in the given slot
 
 #### Does enchantments work with equipped accessories?
 
@@ -31,7 +31,7 @@ In the latest Releases for 1.21.2 and above, accessories has builtin support for
 
 #### Can I put Gliders like Elytra within a Accessory slot?
 
-In the latest Releases for 1.21.2 and above, accessories has builtin support for gliders but it is required that you enable such within the config to enable the feature. {WIP: MAYBE CUSTOM API IDK IF GOT AROUND TO SUCH}
+In the latest Releases for 1.21.2 and above, accessories has builtin support for gliders but it is required that you enable such within the config to enable the feature.
 
 #### Can I put Banners within a Accessory slot?
 
@@ -88,6 +88,6 @@ Some notable differences compared to the likes of Trinkets and Curios:
 
 #### Reason behind using owolib in the development of Accessory
 
-The main reason behind using owolib is down to useful API's it provides means that the development of Accessories is unhindered when it comes to UI, Serialization, Networking, and configuration. 
+The main reason behind using owolib is down to useful API's that it provides which means that the development of Accessories is unhindered when it comes to UI, Serialization, Networking, and configuration. 
 
-Such lib used to tits full extent besides minor core features. I decided to use such to keep development time down and allow for faster development of features instead of developing API that would be required to create a better experience. 
+Such lib is used to its full extent besides minor core features. I decided to use such to keep development time down and allow for faster development of features instead of developing API that would be required to create a better experience. 

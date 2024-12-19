@@ -7,11 +7,11 @@ It is required that each Slot created needs to be implicitly bound to the desire
 
 ## Data Pack Format
 
-To bind a slot to a given **EntityType**('s) you will need to create a `.json` file at the following location: `data/{replace_with_pack_namespace}/accessories/entity/`. This file will need to contain to required fields: `entities` and `slots`.
+To bind a slot to a given **EntityType** you will need to create a `.json` file at the following location: `data/{replace_with_pack_namespace}/accessories/entity/`. This file will need to contain to required fields: `entities` and `slots`.
 
 | <div style="width:102px">Field Keys</div> | Data Type | Description |
 |--|--|--|
-| `"entities"` | String[] | A list containing either specific locations of entity types or an entity type tag prefix with a hashtag |
+| `"entities"` | String[] | An list containing either specific locations of entity types or an entity type tag prefix with a hashtag |
 | `"slots"` | String[] | An list of all slot names to be available to the given entities targeted |
 
 The example below is what Accessories uses to bind the Builtin Slots to the defaulted entity targets:

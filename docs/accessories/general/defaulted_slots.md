@@ -3,9 +3,9 @@ title: Default Slots
 project: accessories
 ---
 
-By default some builtin slots are include for use by other modders to give a starting point of shared slots. This is done to prevent a flood of Slots with alternatives of the same concept leading to cluttered UI or introducing confusing equipment management. 
+By default some builtin slots are included for use by other modders to give a starting point of shared slots. This is done to prevent a flood of Slots with alternatives of the same concept leading to cluttered UI or introducing confusing equipment management. 
 
-Its best to try and use the available slots starting out unless your accessory item does not fit under the given slots below, then you can consider making your own {todo: link to such} or use the Unique Slot API {todo: link to such} if such functionality should not be shared with other mods.
+Its best to try and use the available slots starting out unless your accessory item does not fit under the given slots below, then you can consider [making your own](./slot_types.md#data-pack-format) or use the [Unique Slot API](./slot_types.md#unique-slot-api) if such functionality should not be shared with other mods.
 
 ## Default Implementations
 

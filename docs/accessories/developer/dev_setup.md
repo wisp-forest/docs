@@ -3,11 +3,11 @@ title: Setup Environment
 project: accessories
 ---
 
-The platforms that Accessories supports currently is both **Fabric** and **Neoforge** with support for mods that are multiplatform by offering a Common target. 
+The platforms that Accessories supports currently are both **Fabric** and **Neoforge** with support for mods that are multiplatform by offering a Common target. 
 
 === "Groovy"
 
-    To start you will need to add the the following mavens to your `build.gradle`:
+    To start you will need to add the following mavens to your `build.gradle`:
 
     ```groovy title="build.gradle"
         maven { url 'https://maven.wispforest.io/releases' }
@@ -15,7 +15,7 @@ The platforms that Accessories supports currently is both **Fabric** and **Neofo
         maven { url 'https://maven.fabricmc.net' }
     ```
 
-    After declaring such, you will need to add the dependency('s) within the `dependencies` block while also specifying the `accessories_version` within your `gradle.properties`:
+    After declaring such, you will need to add the dependency within the `dependencies` block while also specifying the `accessories_version` within your `gradle.properties`:
 
     === "Fabric"
         ```groovy title="build.gradle"
@@ -67,7 +67,7 @@ The platforms that Accessories supports currently is both **Fabric** and **Neofo
 
 === "Kotlin"
 
-    To start you will need to add the the following mavens to your `build.gradle`:
+    To start you will need to add the following mavens to your `build.gradle`:
 
     ```kotlin title="build.gradle.kts"
         maven("https://maven.wispforest.io/releases")
@@ -75,7 +75,7 @@ The platforms that Accessories supports currently is both **Fabric** and **Neofo
         maven("https://maven.fabricmc.net")
     ```
 
-    After declaring such, you will need to add the dependency('s) within the `dependencies` block while also specifying the `accessories_version` within your `gradle.properties`:
+    After declaring such, you will need to add the dependency within the `dependencies` block while also specifying the `accessories_version` within your `gradle.properties`:
 
     === "Fabric"
         ```kotlin title="build.gradle.kts"
@@ -126,4 +126,4 @@ The platforms that Accessories supports currently is both **Fabric** and **Neofo
         ```
 
 !!! tip
-    Recommend to get the latest version either from Modrinth, Curseforge or check the maven for latest dev builds {TODO: WIP ADD LINKS}
+    It is recommended to get the latest version either from Modrinth, Curseforge or check the [maven](https://maven.wispforest.io/#/releases/io/wispforest/accessories-common) for latest dev builds.

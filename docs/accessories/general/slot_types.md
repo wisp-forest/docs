@@ -3,14 +3,14 @@ title: Creating and Modifying Slots
 project: accessories
 ---
 
-If such information below is still leaving you with questions, you can look at each platform's test mod [[Fabric](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/fabric/src/testmod), [Neoforge](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/neoforge/src/testmod)] for starting points. You can also ask questions within the Discord {todo: add discord link} for more assistance.
+If such information below is still leaving you with questions, you can look at each platform's test mod [[Fabric](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/fabric/src/testmod), [Neoforge](https://github.com/wisp-forest/accessories/tree/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/neoforge/src/testmod)] for starting points. You can also ask questions within the [Discord](https://discord.gg/xrwHKktV2d) for more assistance.
 
 Creating a slot within Accessories requires you follow the two options available to you:
 - Datapack method: Allows for full ability to tweak Slot Properties and its bound Entities within `json` files loaded on server start
 - Programmatic method: More restrictive control over a given slot type using the Unique slot API
 
 ???+ tip "Notice of Datapackablity"
-    When using the Data Pack method it is recommend that you design your Mod with the ability to be adjusted by end users since much of accessories base system allows for items to be moved from one slot to another, remove your target slot, or even prevent a item from being equipped in any slot. 
+    When using the Data Pack method it is recommended that you design your Mod with the ability to be adjusted by end users since much of accessories base system allows for items to be moved from one slot to another, remove your target slot, or even prevent a item from being equipped in any slot. 
 
     Such maybe your intention to attempt some sense of balance but will lead to issues when Modpack makers are unable to balance based on other mods.
 
@@ -20,7 +20,7 @@ To create your own slot type or adjust an existing slot, you will need to need t
 
 **For Unique slots**: it is required that you have the namespace of the given slot within the folder structure as follows: `data/{replace_with_pack_namespace}/accessories/slot/{unqiue_slot_namespace_here}/`.
 
-Below is an example of the `back` slot file located within Accessories{todo: add link}:
+Below is an example of the `back` slot file located within Accessories [here](https://github.com/wisp-forest/accessories/blob/c41504c63f5c608e1e0ea249fae8b1a152c92f29/common/src/main/resources/data/accessories/accessories/slot/back.json):
 
 ```json
 {
@@ -35,7 +35,7 @@ Below is an example of the `back` slot file located within Accessories{todo: add
 | <div style="width:102px">Field Keys</div> | Data Type | Description |
 |--|--|--|
 | `"order"` | Integer | The order number to which the slot will appear within the Accessories Screen with lower being placed first and higher numbers being placed last |
-| `"amount"` | Integer | The number to which be used when calculating the base size of the given slot using the given operation's: `"set"`, `"add"`, or `"remove"` |
+| `"amount"` | Integer | The number to which will be used when calculating the base size of the given slot using the given operation's: `"set"`, `"add"`, or `"remove"` |
 | `"operation"` | String | The specific operation used in combination with the specified `amount` |
 | `"validators"` | String[] | The Id's (`ResourceLocation` / `Identifier`) of all predicates to be used for the given slot |
 | `"drop_rule"` | String | The specific rule used when attempting to drop the accessories: `"default"`, `"keep"`, `"drop"`, `"destroy"` |
@@ -44,7 +44,7 @@ Below is an example of the `back` slot file located within Accessories{todo: add
 ???+ note "Icon Location"
     It is recommended that the location for the icon follows the `assets/{replace_with_pack_namespace}/gui/slot/` as such has been set up to take any textures here and put them within the block atlas and if such is not followed it is up to the developer to add such texture to the block atlas for rendering to work
 
-To modify existing slots there is multiple methods to such:
+To modify existing slots there are multiple methods to such:
 
 - Modify Amount: Create a file with the same **same path** and **same name** with adjustments to amount either though the `add` or `remove` operation type
 - Replace File: Create a file with the **same namespace**, **same path**, and **same name** that you then adjust with the `replace` field set to `true` which will replace
@@ -54,7 +54,7 @@ To modify existing slots there is multiple methods to such:
 
 This API is the alternative method for creating a slot which comes with the benefits of being able to lock down various aspects of a slot like equability, which entity a slot is bound to, and prevent certain operations like resizing from occurring. 
 
-Its with this that you are primarily using Accessories backend as a common API target meaning you will need to implement your own screen to handle interacting with the slots if desired.
+It is with this that you are primarily using Accessories backend as a common API target meaning you will need to implement your own screen to handle interacting with the slots if desired.
 
 A breakdown of how such is to implement is below:
 

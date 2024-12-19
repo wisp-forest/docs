@@ -5,11 +5,11 @@ project: accessories
 
 ## General
 
-Below is the current set of available Data Components for ItemStacks that are supported with documentation about there function and format.
+Below is the current set of available Data Components for ItemStacks that are supported with documentation about their function and format.
 
 ### Attribute Modifiers
 
-Any ItemStack can have Attributes added onto such though the `accessories:attributes` item component with such being comprised of a list of attribute entries similar to Minecraft's default implementation. Below is an example of such:
+Any ItemStack can have Attributes added onto such through the `accessories:attributes` item component with such being comprised of a list of attribute entries similar to Minecraft's default implementation. Below is an example of such:
 
 ```JSON
 {
@@ -30,16 +30,16 @@ Any ItemStack can have Attributes added onto such though the `accessories:attrib
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"type"`| Refers to the attribute type to which should be adjusted with the given modifier data either registered or a slot attribute. |
+|`"type"`| Refers to the attribute type that should be adjusted with the given modifier data either registered or a slot attribute. |
 |`"id"`| The unique resource location to identify this modifier |
-|`"amount"`| The Amount of change from the modifier |
+|`"amount"`| The amount of change from the modifier |
 |`"operation"`| The type of calculation operation that should be performed out of the valid values. |
-|`"slot_name"`| The slot to which must be equipped for the effect to apply or `"any"` if it's based on where it can and can't be equipped |
-|`"is_stackable"`| Indicates that if the given `"id"` passed should be appended with slot information to allow for additional copies of the attribute to function together as a compounding effect |
+|`"slot_name"`| The slot to which the accessory must be equipped for the effect to apply. `"any"` can be used to allow for the attribute to be applied to whatever slot the given item can be equipped into. |
+|`"is_stackable"`| Indicates that the given `"id"` passed should be appended with slot information to allow for additional copies of the attribute to function together as a compounding effect |
 
 ### Slot Validation
 
-Any ItemStack can define invalid or valid slots to which it can be equipped within the `accessories:slot_validation` item component allowing you to add the ability to equip such within a slot or override current equability for an existing accessory.
+Any ItemStack can define invalid or valid slots to which it can be equipped using the `accessories:slot_validation` item component allowing you to add the ability to equip the accessory within a slot or override current equipability for an existing accessory.
 
 ```JSON
 {
@@ -56,12 +56,12 @@ Any ItemStack can define invalid or valid slots to which it can be equipped with
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"valid_slots"`| A array of string values of valid slots that such stack can be equipped into when attempted |
-|`"invalid_slots"`| A array of string values of invalid slots that such stack **can not** be equipped into when attempted |
+|`"valid_slots"`| An array of string values of valid slots that such stack can be equipped into when attempted |
+|`"invalid_slots"`| An array of string values of invalid slots that such stack **can not** be equipped into when attempted |
 
 ### Stack Size
 
-To adjust the Data driven components ability to stack, you can use this component to either use the stacks max size or use a overridden size instead but such size needs to be less than the stack size or such will be used instead.
+To adjust the data-driven components ability to stack, you can use this component to either use the stacks max size or use a overridden size instead but such size needs to be less than the stack size or that will be used instead.
 
 ```JSON
 {
@@ -74,7 +74,7 @@ To adjust the Data driven components ability to stack, you can use this componen
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"use_stack_size"`| Use the stacks given max size as the about allowed to stack to within Accessories |
+|`"use_stack_size"`| Use the stack's given max size as the amount allowed to stack to within Accessories |
 |`"size_override"`| The amount that the size should be overridden to instead of stack size |
 
 ### Accessory Nest
@@ -131,11 +131,11 @@ Accessories has a system to allow for nesting an Accessory within another Access
 |`"accessories"`| A list of `ItemStack`s that have various components and will be used to get Accessory info from when equipping the nest |
 
 !!! warning "Nest Equitability"
-    You will either need to add the Slot Validation component to the nest or add the given item the nest is made from to the given tag for the slot using the Tag Predicate for equipping
+    You will either need to add the Slot Validation component to the nest or add the given item that the nest is made from to the given tag for the slot using the Tag Predicate for equipping
 
 ## Rendering
 
-Below is the various components to adjust certain rendering aspects of Accessories.
+Below are the various components to adjust certain rendering aspects of Accessories.
 
 ### Rendering Override
 
@@ -152,12 +152,12 @@ Any ItemStack can have a component called `accessories:render_override` that all
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"default_render_override"`| A optional boolean value indicating if present that the default render should be used |
-|`"armor_render_override"`| A optional boolean value indicating if present that the armor render should be used |
+|`"default_render_override"`| An optional boolean value indicating if present that the default render should be used |
+|`"armor_render_override"`| An optional boolean value indicating if present that the armor render should be used |
 
 ### Rendering Transformations
 
-For any Accessory that use the Default renderer it is possible to use the provided Rendering Transforms component to adjust the positioning, rotation, and scale of the rendering to for instance wear a block as a hat or place a item on your arm. 
+For any Accessory that uses the Default renderer it is possible to use the provided Rendering Transforms component to adjust the positioning, rotation, and scale of the rendering to for instance wear a block as a hat or place a item on your arm. 
 
 ```JSON
 {
@@ -261,7 +261,7 @@ For any Accessory that use the Default renderer it is possible to use the provid
     }
     ```
 
-    The `"value"` will require a `ModelPart` in string format and either the positioning (`"raw_normal"`) `Vector` as discussed within Rendering API {TODO: WIP ADD LINK TO SUCH WITHIN DOCS} or a specific `Side` (`"side"`) to translate the rendering to for the given part.
+    The `"value"` will require a `ModelPart` in string format and either the positioning (`"raw_normal"`) `Vector` as discussed within [Rendering API](./rendering_api.md#transformation-methods) or a specific `Side` (`"side"`) to translate the rendering to for the given part.
 
 === "Matrix"
 
