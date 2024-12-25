@@ -3,7 +3,7 @@ title: Setup Environment
 project: accessories
 ---
 
-The platforms that Accessories supports currently are both **Fabric** and **Neoforge** with support for mods that are multiplatform by offering a Common target. 
+Accessories supports both **Fabric** and **Neoforge**, and also support mods that are multiplatform by offering a **Common** target. 
 
 === "Groovy"
 
@@ -126,4 +126,4 @@ The platforms that Accessories supports currently are both **Fabric** and **Neof
         ```
 
 !!! tip
-    It is recommended to get the latest version either from Modrinth, Curseforge or check the [maven](https://maven.wispforest.io/#/releases/io/wispforest/accessories-common) for latest dev builds.
+    It is recommended to get the latest version either from Modrinth, Curseforge or check the [Maven](https://maven.wispforest.io/#/releases/io/wispforest/accessories-common) for latest dev builds.

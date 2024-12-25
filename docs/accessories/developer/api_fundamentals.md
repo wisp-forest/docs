@@ -7,13 +7,13 @@ project: accessories
 
 You can either create an Accessory by implementing the `Accessory` interface or by extending the `AccessoryItem` which implements the `Accessory` interface. 
 
-The first requires that you register your custom `Accessory` to the given `Item` instance using the `AccessoryRegistry#register` method while the later `AccessoryItem` will register the accessory when the class is instantiated
+The first requires that you register your custom `Accessory` to the given `Item` using the `AccessoryRegistry#register` method. Using the `AccessoryItem` class will automatically register the accessory when the class is instantiated.
 
-This `Accessory` interface contains various functions that can be preformed like `tick`ing, controlling equipablity, listening to when equipment is changed, adding attribute modifiers dynamically or statically, adding custom tooltip info, and more.
+This `Accessory` interface contains various functions that can be performed. Some examples include `tick`ing, controlling equipability, listening to when equipment is changed, adding attribute modifiers (dynamically or statically), and adding custom tooltip info.
 
 ### Adding a Custom Accessory Renderer
 
-Creating a custom `Accessory` comes with the ability to add some rendering that is attached to the player. You can do such by creating a custom instance of `AccessoryRenderer` and registering such using the `AccessoriesRendererRegistry.registerRenderer` method. More information about the API available to developers can be found in the [rendering API section](./rendering_api.md).
+Creating a custom `Accessory` comes with the ability to add some rendering that is attached to the player. You can do so by creating a custom instance of `AccessoryRenderer` and registering it using the `AccessoriesRendererRegistry.registerRenderer` method. More information about the rendering API be found in the [rendering API section](./rendering_api.md).
 
 !!! warning "Default Rendering Behavior"
     By default as discussed within the Rendering API section of the docs, all Accessories will use `DefaultAccessoryRenderer` unless a custom `AccessoryRenderer` is registered or no renderer is registered using `AccessoriesRendererRegistry#registerNoRenderer`.
@@ -25,7 +25,7 @@ In cases where a Tag may not be the best solution or using Data Components on yo
 This is useful for dynamic accessory types that may have multiple iterations that would make it difficult to use a Item Tag without possible issues.
 
 !!! info "Entity Based Predicate"
-    With the release of 1.2.0, `EntityBasedPredicate` exists as a way to have entity context when evaluating if a given Accessory should be equipped within a given slot. It is recommend that this is used only if needed as it may be difficult to evaluate for things like crafting where the target entity may differ.
+    With the release of 1.2.0, `EntityBasedPredicate` exists as a way to have entity context when evaluating if a given Accessory should be equipped within a given slot. It is recommend that this is used only if needed, as it can be difficult to evaluate for cases like crafting where the target entity may differ.
 
 ### Accessing The Capability
 
