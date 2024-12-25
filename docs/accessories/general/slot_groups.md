@@ -9,7 +9,7 @@ Slot Groups are mainly a cosmetic system meant to wrap certain slots in specific
 
 To create a Slot group you will need to place a file 
 
-Such files should be placed within the `data/{replace_with_pack_namespace}/accessories/group/` with such `.json` file corresponding to the group name. Further updates may provide a trinket style screen depending on development issues with such. Below is details on the given format and an example of what such should look like:
+These files should be placed within the `data/{replace_with_pack_namespace}/accessories/group/` with the `.json` file corresponding to the group name. Below is an detailed example on the given format:
 
 ```json
 {

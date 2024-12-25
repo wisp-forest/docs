@@ -9,7 +9,7 @@ Below is the current set of available Data Components for ItemStacks that are su
 
 ### Attribute Modifiers
 
-Any ItemStack can have Attributes added onto such through the `accessories:attributes` item component with such being comprised of a list of attribute entries similar to Minecraft's default implementation. Below is an example of such:
+Any ItemStack can have Attributes added onto it with the `accessories:attributes` Item Component. It is composed from a list of attribute entries similar to Minecraft's default implementation. Below is an example:
 
 ```JSON
 {
@@ -39,7 +39,7 @@ Any ItemStack can have Attributes added onto such through the `accessories:attri
 
 ### Slot Validation
 
-Any ItemStack can define invalid or valid slots to which it can be equipped using the `accessories:slot_validation` item component allowing you to add the ability to equip the accessory within a slot or override current equipability for an existing accessory.
+Any ItemStack can define invalid or valid slots to which it can be equipped to using the `accessories:slot_validation` Item Component. Using it allows you to add to or override the equipability for an existing Accessory.
 
 ```JSON
 {
@@ -56,8 +56,8 @@ Any ItemStack can define invalid or valid slots to which it can be equipped usin
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"valid_slots"`| An array of string values of valid slots that such stack can be equipped into when attempted |
-|`"invalid_slots"`| An array of string values of invalid slots that such stack **can not** be equipped into when attempted |
+|`"valid_slots"`| An array of string values of valid slots that the stack can be equipped into |
+|`"invalid_slots"`| An array of string values of invalid slots that the stack **can not** be equipped into |
 
 ### Stack Size
 
@@ -79,7 +79,7 @@ To adjust the data-driven components ability to stack, you can use this componen
 
 ### Accessory Nest
 
-Accessories has a system to allow for nesting an Accessory within another Accessory which can only be used within code or by creating a ItemStack with the given Nest component. 
+Accessories has a system that allows for nesting an Accessory within another Accessory. This can only be done explicitly with the API (code), or when creating a new ItemStack that has the `nested_accessories` Data Component. Example: 
 
 ```JSON
 {
@@ -135,7 +135,7 @@ Accessories has a system to allow for nesting an Accessory within another Access
 
 ## Rendering
 
-Below are the various components to adjust certain rendering aspects of Accessories.
+This section covers the various components you can use to adjust certain rendering aspects of Accessories.
 
 ### Rendering Override
 
@@ -157,7 +157,7 @@ Any ItemStack can have a component called `accessories:render_override` that all
 
 ### Rendering Transformations
 
-For any Accessory that uses the Default renderer it is possible to use the provided Rendering Transforms component to adjust the positioning, rotation, and scale of the rendering to for instance wear a block as a hat or place a item on your arm. 
+For any Accessory that uses the default renderer: It is possible to use the `render_transformations` data component to adjust the positioning, rotation, and scale of the rendering. Some examples are wearing a block as a hat, or placing an item on your arm. 
 
 ```JSON
 {
@@ -195,7 +195,7 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` would be a vector of the offset being in the `x`, `y`, and `z` format.
+    The `"value"` should be a vector with the offset being in the `x`, `y`, and `z` format.
 
 === "Raw Rotation"
 
@@ -210,7 +210,7 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` would be a vector of the rotation being in the `x`, `y`, `z`, and `w` format.
+    The `"value"` should be a vector with the rotation being in the `x`, `y`, `z`, and `w` format.
 
 === "Axis Rotation"
 
@@ -228,7 +228,7 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` would be a structured format with a `Angle` (In **Degrees**) and an `Axis` vector in the `x`, `y`, and `z` format.
+    The `"value"` needs to be in the structured format with an `Angle` in **Degrees**, and an `Axis` vector in the `x`, `y`, and `z` format.
 
 === "Scale"
 
@@ -243,7 +243,7 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` would be a vector of the offset being in the `x`, `y`, and `z` format.
+    The `"value"` should be a vector with the offset being in the `x`, `y`, and `z` format.
 
 === "Transform To"
 
@@ -261,7 +261,7 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` will require a `ModelPart` in string format and either the positioning (`"raw_normal"`) `Vector` as discussed within [Rendering API](./rendering_api.md#transformation-methods) or a specific `Side` (`"side"`) to translate the rendering to for the given part.
+    The `"value"` requires a `ModelPart` in string format and either the positioning (`"raw_normal"`) `Vector` as discussed within [Rendering API](./rendering_api.md#transformation-methods) or a specific `Side` (`"side"`) to translate the rendering to for the given part.
 
 === "Matrix"
 
@@ -281,4 +281,4 @@ For any Accessory that uses the Default renderer it is possible to use the provi
     }
     ```
 
-    The `"value"` will be a list 16 long representing a 4x4 grid of values making the `Matrix`.
+    The `"value"` is a list of 16 doubles, representing the values of a 4x4 grid `Matrix`.

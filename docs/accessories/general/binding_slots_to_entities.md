@@ -11,8 +11,8 @@ To bind a slot to a given **EntityType** you will need to create a `.json` file 
 
 | <div style="width:102px">Field Keys</div> | Data Type | Description |
 |--|--|--|
-| `"entities"` | String[] | An list containing either specific locations of entity types or an entity type tag prefix with a hashtag |
-| `"slots"` | String[] | An list of all slot names to be available to the given entities targeted |
+| `"entities"` | String[] | A list containing either specific resource locations of Entity Types or an Entity Type Tag (prefixed with a hashtag `#`) |
+| `"slots"` | String[] | A list of all slot names to be available to the given entities |
 
 The example below is what Accessories uses to bind the Builtin Slots to the defaulted entity targets:
 

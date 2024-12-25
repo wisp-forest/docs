@@ -5,7 +5,7 @@ project: accessories
 
 # Slot Adjustments Methods
 
-Slots were designed with the potential for the given slot amount to be changeable if desired. Such can be accomplished with either using the above data format, the various `operation` type's to adjust such, or by using the other methods provided.
+Slots were designed with the potential for the given slot amount to be changeable. This can be accomplished either by using the data format through the various `operation` type's, or by using the other methods provided.
 
 ## Attribute Modifier
 
@@ -14,9 +14,9 @@ Accessories adds a system for adjusting a specific Slot types amount of slots gi
 
 ### Programmatic Method
 
-Within Accessories exists a programmatic way of adjusting slot amount similar in design to the data pack but using direct method calls found either on the `AccessoriesCapability` or the targeted `AccessoriesContainer` itself.
+Accessories provides a programmatic way of adjusting slot amounts, which is similar in design to the data pack method. The method calls for this are found either on the `AccessoriesCapability` or the targeted `AccessoriesContainer` itself.
 
-An example of adding and removing of additional ring slots are below using the capability within a Test Accessory:
+The following example shows how to add and remove additional ring slots, using the capability within a test Accessory:
 
 ```java
 public class RingIncreaser implements Accessory {
@@ -65,13 +65,13 @@ public class HatIncreaser implements Accessory {
 
 ### Data Component
 
-As outlined within the {insert link to itemstack components} you can add a Data component to a given ItemStack to adjust the amount when equipped
+As outlined within the {insert link to itemstack components} you can add a component to a given ItemStack to adjust the amount of equippable slots *when equipped*. This works through the XYZ attribute. 
 
 ## Config File
 
-Included within the Accessories Config file is the ability to adjust the slot amount for end users that want to tweak slot amount globally if they find such to not be at the desired level. I would recommend that you keep balance in mind but for the people who want to go crazy, such is an easy method of adjusting it to allow for your 100 ring setup if so desired.
+The Accessories config file allows you to adjust the slot amount globally. Keep in mind that changing the defaults can heavily change the balance of your game/modpack. You can go well above a hundred ring slots for example, although that would easily clutter up your Accessory screen. 
 
-Such file is located within the `./config/` folder directory within Minecraft instance under the file `accessories` in which the field for such is `"modifiers`" in the given format:
+The config file is located within the `./config/` folder within your Minecraft instance under the file `accessories`. You can then specify new slot amounts using the `"modifiers`" field in the given format:
 
 ```json
 {

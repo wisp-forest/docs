@@ -6,9 +6,9 @@ project: accessories
 To link a given item to a specific `AccessoryRenderer` you will need to register such within the `AccessoriesRendererRegistry` class. By **default** all accessory items that have no renderer registered will get the `DefaultAccessoryRenderer` which attempts to render the block/item on the player in a position where the slot is located on the entity. 
 
 !!! info "Default Accessory Rendering Behavior"
-    All default slots have implemented renderers for such but new slots will need to implement their own using the `DefaultAccessoryRenderer#registerHelper` method. More about the `DefaultAccessoryRenderer` can be found below.
+    All default slots have default renderers, but new slots will need to implement these on their own using the `DefaultAccessoryRenderer#registerHelper` method. More about the `DefaultAccessoryRenderer` can be found below.
 
-If you need a simple item rendering for your accessory than you could look at `SimpleAccessoryRenderer` as such requires you to just override the `align` method to transform the rendering to specific location on the entity.
+If you need simple item rendering for your Accessory, then you could look at `SimpleAccessoryRenderer`. It provides a `align` method, which lets you transform the rendering to your desired location on the entity.
 
 ## Transformation Methods
 
@@ -27,7 +27,7 @@ This method of transformation allows for the Accessories renderer to follow the 
 Furthermore you can use `transformToFace` to target specific faces of a given model part by passing the given `Side` which such will transform the rendering to the outside of the given models face.
 
 !!! info "First Person Rendering"
-    By default Accessories has the ability to render within the first person mainly on the humanoid entities arm by overriding [`shouldRenderInFirstPerson`](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/client/AccessoryRenderer.java#L76) method within your renderer.
+    Accessories supports rendering within first person. By default anything on the humanoid entities arms is rendered this way. You can set this yourself by overriding the [`shouldRenderInFirstPerson`](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/client/AccessoryRenderer.java#L76) method within your renderer.
 
 ## Default Renderer
 

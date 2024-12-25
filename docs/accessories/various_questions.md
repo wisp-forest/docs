@@ -5,67 +5,67 @@ project: accessories
 
 ## General
 
-#### Can I adjust where something is equipped to another slot?
+#### Can I change what slot something is equipped to?
 
-Any item can be equipped within a given slot but it does not mean such item will function as it would if not specifically designed for such. Accessories API only attempts to add the ability to store and retrieve items and due to minecraft limitations it is not possible to just extend the current system and hook into such.
+In theory you can do this, as you are able to modify an Accessory to be equippable in any slot. Due to limitations on both Minecrafts internal slot system, and Accessories API, there is no guarantee that an Accessory will *function* if you do so.
 
 #### Is it possible to remove a slot altogether?
 
-Such can be done but it is not recommend for Modders to take such drastic action unless really needing to do such since It may mess with other peoples mods ability to equip accessories. 
+Yes, although it is not recommended for either modders or datapackers to take such drastic action, since it can really mess with mods progression or functionality.
 
-Datapackers should also be cautious for similar reasons but for Modpack developers its understandable if they desire to rebalance their pack to either condense slots or balance the amount of slots but do note that **some developers will lock** their Accessories to specific slots either by looking only in those slots or controlling functionality to work only in the given slot
+It is understandable from a modpacking perspective that you would want to do this (condensing slots, rebalancing the pack, etc.). Do note that some developers might **lock their Accessories to their own slots**, meaning that restricting/removing these could fully break those items (and by extension mods). 
 
-#### Does enchantments work with equipped accessories?
+#### Do enchantments work with equipped Accessories?
 
 If the item is able to be enchanted with a given enchantment then it is possible for the such enchantment to work almost natively with the base equipment system found within Minecraft but some edge case may exists where the enchantment will not function properly if outside the scope of the API.
 
 ### Equipment
 
-#### Can I put modded items within a Accessory slot?
+#### Can I put modded items within an Accessory slot?
 
-In most cases the given mod needs to have implicit support for accessories before such item will work properly meaning that you will need to check with mod authors if you are unsure.
+In most cases the given mod needs to have implicit support for Accessories before the Item will function properly. We suggest that you check with mod authors if you are unsure.
 
-#### Can I put totems within a Accessory slot?
+#### Can I put Totems within an Accessory slot?
 
-In the latest Releases for 1.21.2 and above, accessories has builtin support for totems but it is required that you enable such within the config to enable the feature. For developers their are some API for handling certain aspects of totem logic if needed for compatibility or custom behavior.
+In the latest Releases for 1.21.2 and above, Accessories has builtin support for Totems. By default this is disabled, but you can enable the feature in the config. For developers, there exists some API for handling certain aspects of Totem logic if needed for compatibility or custom behavior.
 
-#### Can I put Gliders like Elytra within a Accessory slot?
+#### Can I put Gliders like Elytra within an Accessory slot?
 
-In the latest Releases for 1.21.2 and above, accessories has builtin support for gliders but it is required that you enable such within the config to enable the feature.
+In the latest Releases for 1.21.2 and above, Accessories has builtin support for Gliders. It is disabled by default, but you can enable the feature in the config.
 
-#### Can I put Banners within a Accessory slot?
+#### Can I put Banners in an Accessory slot?
 
-In the latest Releases for 1.21.2 and above, accessories has builtin support for banners and is enabled by default allowing you to equip them on your head!
+In the latest releases for 1.21.2 and above, Accessories has builtin support for Banners, which is enabled by default. It allows you to equip them on your head!
 
 ### Support
 
 #### Is there commands for adjusting the players slot amount?
 
-Currently such is planned within the future with full documentation about the commands within Accessories.
+No. This is planned for the future, with full documentation about the commands within Accessories.
 
 #### Is there support for mods that adjust entity models and do cool animations?
 
-There is a desire to have mods like [Figura](https://modrinth.com/mod/figura) be supported with custom models but such requires a good deal of effort to do properly and such is planned within the future.
+There is a desire to have mods like [Figura](https://modrinth.com/mod/figura) be supported with custom models but this requires a good deal of effort to do properly. This is planned for the future.
 
-Current support for [Entity Model Feature](https://modrinth.com/mod/entity-model-features) is provided by some compat code that seems to fix various issues found with other Accessories API like Trinkets or Curios.
+Currently support for [Entity Model Feature](https://modrinth.com/mod/entity-model-features) is provided by some compat code, which has fixed various issues found with other Accessories APIs like Trinkets or Curios.
 
 ### Compat Layers
 
 #### I tried using the Trinkets/Curios Compat layer and its crashing, what do I do?
 
-Make sure that both the compat layers and the Accessories version are up-to-date as the layers must be adjusted with the changes that may occur within Accessories. 
+Make sure that both the compat layers and the Accessories version are up-to-date. This is important as the layers need to be updated frequently to adjust for any changes that may occur within Accessories. 
 
-Other issues may be that a mod may be either using API that had not be implemented or accessing not public API provided by Trinkets and Curios that may not exists. 
+Other issues may be that a mod may be using API that isn't implemented, or accessing non-public API provided by Trinkets and Curios. 
 
-It may be possible to implement missing API but in some cases it may be down the the mod itself adding direct support for Accessories.
+It may be possible to implement/support missing API, but in some cases it might be easier if the mod itself adds direct support for Accessories.
 
 #### How do I go around adjusting slot amounts for mods using Trinkets/Curios Compat layer
 
-For mods adding slots though Curios API, its as easy as Accessories as all that is needed is either adjust such though the Datapack method for curios system or Accessories Config. 
+For mods adding slots though Curios API it is easy. All you need to do is to adjust it through the Curious datapack method, or via the Accessories config. 
 
-Trinkets can be adjust either using the Datapack method or the Accessories config method but may require adjusted format with such looking something like this `trinket_group_{slot_group_name_here}-{slot_name_here}`.
+Trinkets can be adjust either using a datapack or through the Accessories config. You might require to adjust the format of the slot identifier to something like `trinket_group_{slot_group_name_here}-{slot_name_here}` in order for it to work properly.
 
-This is due to Trinkets API using groups as logical paths meaning the name of the slot within Accessories requires the group be combined within the slot name to prevent issues.
+This is due to Trinkets API using groups as logical paths, meaning the name of the slot within Accessories requires the group name to be combined with the slot name to prevent issues.
 
 ## Developer
 
@@ -74,20 +74,23 @@ This is due to Trinkets API using groups as logical paths meaning the name of th
 Some notable differences compared to the likes of Trinkets and Curios:
 
 ##### Mod Development
-- Fully Multiloader support for platforms like **Fabric** and **Neoforge**
+- Full Multiloader support for both major platforms (**Fabric** and **Neoforge**)
 - Fully programmatic method for creating unique slots
-- Support for Nested Accessories within themselves
+- Support for Nested Accessories (Accessories within Accessories)
+- Expansive support for ModelPart targeting, with support for EMF
 
 ##### Gameplay
 - Multiple different screen variants depending on the desired style of play
 - Full support for Data Driven Accessories
-- Expansive support for Model part targeting with support for EMF
+- Supports Cosmetic Armor/Accessories out-of-the-box
+- Additional toggleable features for equipping Banners as Accessories (on your head!)
+- Additional toggleable features for equipping Totems or Gliders as Accessories
 
 ##### Performance
 - Implement caching to alleviate bottle necks with querying Accessory inventories
 
-#### Reason behind using owolib in the development of Accessory
+#### Reason behind using owo-lib in the development of Accessory
 
-The main reason behind using owolib is down to useful API's that it provides which means that the development of Accessories is unhindered when it comes to UI, Serialization, Networking, and configuration. 
+The main reason behind using owo-lib is down to its useful API's that leads to the development of Accessories being unhindered when it comes to UI, serialization, networking, and configuration. 
 
-Such lib is used to its full extent besides minor core features. I decided to use such to keep development time down and allow for faster development of features instead of developing API that would be required to create a better experience. 
+The library is used to its full extent, apart from some minor core features. I decided to use it to keep development time down and allow for quicker implementation of features instead of developing and maintaining all that API from scratch. All of this is done to create a better experience for players. 
