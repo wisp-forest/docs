@@ -1,5 +1,5 @@
 ---
-title: Common Asked Questions
+title: FAQ (Frequently Asked Questions)
 project: accessories
 ---
 

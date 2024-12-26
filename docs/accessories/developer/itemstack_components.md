@@ -30,12 +30,15 @@ Any ItemStack can have Attributes added onto it with the `accessories:attributes
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"type"`| Refers to the attribute type that should be adjusted with the given modifier data either registered or a slot attribute. |
+|`"type"`| Refers to the attribute type that should be adjusted with the given modifier data. This can either be a slot attribute or a registered slot. |
 |`"id"`| The unique resource location to identify this modifier |
 |`"amount"`| The amount of change from the modifier |
 |`"operation"`| The type of calculation operation that should be performed out of the valid values. |
-|`"slot_name"`| The slot to which the accessory must be equipped for the effect to apply. `"any"` can be used to allow for the attribute to be applied to whatever slot the given item can be equipped into. |
-|`"is_stackable"`| Indicates that the given `"id"` passed should be appended with slot information to allow for additional copies of the attribute to function together as a compounding effect |
+|`"slot_name"`| Specify a slot to add a strict requirement to where the accessory must be equipped for the effect to apply. Use `"any"` to allow for the attribute to be applied to whatever slot the given item can be equipped into. |
+|`"is_stackable"`| Allows for additional copies of the attribute to function together as a compounding effect |
+
+!!! note "Stacking Attributes"
+    If the given attribute entry is desired to be stacked with other equipped accessory it may be good to use `"is_stackable"` which indicates that the given `"id"` passed should be appended with slot information to allow.
 
 ### Slot Validation
 
@@ -139,7 +142,7 @@ This section covers the various components you can use to adjust certain renderi
 
 ### Rendering Override
 
-Any ItemStack can have a component called `accessories:render_override` that allows for an item to have its render use the default variant if desired as it's funny... that's it
+Any ItemStack can have a component called `accessories:render_override` that allows for an item either not have the default renderer or force an item to use the default renderer instead of its registered render for the funny if desired.
 
 ```JSON
 {

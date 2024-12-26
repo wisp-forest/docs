@@ -1,5 +1,5 @@
 ---
-title: Creating Slot Groupings
+title: Creating Slot Groups
 project: accessories
 ---
 
