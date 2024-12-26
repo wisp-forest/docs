@@ -6,9 +6,11 @@ project: accessories
 To link a given item to a specific `AccessoryRenderer` you will need to register such within the `AccessoriesRendererRegistry` class. By **default** all accessory items that have no renderer registered will get the `DefaultAccessoryRenderer` which attempts to render the block/item on the player in a position where the slot is located on the entity. 
 
 !!! info "Default Accessory Rendering Behavior"
-    All default slots have default renderers, but new slots will need to implement these on their own using the `DefaultAccessoryRenderer#registerHelper` method. More about the `DefaultAccessoryRenderer` can be found below.
+    All default slots have default renderers, but new slots will need to implement these on their own using the `DefaultAccessoryRenderer#registerHelper` method. Such helper is just a generic helper to transform the renderer to the slots location on the entity.
 
-If you need simple item rendering for your Accessory, then you could look at `SimpleAccessoryRenderer`. It provides a `align` method, which lets you transform the rendering to your desired location on the entity.
+The only way for one to disable the Default Rendering for a given Accessory is by using the `AccessoriesRendererRegistry#registerNoRenderer` or adjusting the Data Component if actively toggled on. Furthermore the given default Render can be manipulated using the [`AccessoryRenderTransformations` data component](./itemstack_components.md#transformations) for use with Data driven Accessories.
+
+If you need simple item rendering for your Accessory, then you could look at [`SimpleAccessoryRenderer`](https://github.com/wisp-forest/accessories/blob/1.21.4/common/src/main/java/io/wispforest/accessories/api/client/SimpleAccessoryRenderer.java). It provides a `align` method, which lets you transform the rendering to your desired location on the entity.
 
 ## Transformation Methods
 
@@ -28,11 +30,3 @@ Furthermore you can use `transformToFace` to target specific faces of a given mo
 
 !!! info "First Person Rendering"
     Accessories supports rendering within first person. By default anything on the humanoid entities arms is rendered this way. You can set this yourself by overriding the [`shouldRenderInFirstPerson`](https://github.com/wisp-forest/accessories/blob/fa06f044f5c7486b26a8c0774f7ca3edbd256cad/common/src/main/java/io/wispforest/accessories/api/client/AccessoryRenderer.java#L76) method within your renderer.
-
-## Default Renderer
-
-As stated above that Accessories provides a default rendering for items that have yet to registered. This can be manipulated using the [`AccessoryRenderTransformations` data component](./itemstack_components.md#transformations) for use with Data driven Accessories.
-
-New slots will need to implement their own using the `DefaultAccessoryRenderer#registerHelper` method for the Default renderer to render anything which is just a generic helper to transform the renderer to the slots location on the entity.
-
-The only way for one to disable the Default Rendering for a given Accessory is by using the `AccessoriesRendererRegistry#registerNoRenderer` or adjusting the Data Component if actively toggled on

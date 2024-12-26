@@ -3,8 +3,7 @@ title: Default Slots
 project: accessories
 ---
 
-By default Accessories provides builtin slots for use by other modders to give a starting point of shared slots. This is done to prevent a flood of slots with alternatives of the same concept, which leads to a cluttered UI and 
- confusing equipment management. 
+By default Accessories provides builtin slots for use by other modders to give a starting point of shared slots. This is done to prevent a flood of slots with alternatives of the same concept, which leads to a cluttered UI and confusing equipment management. 
 
 We recommend you to try and use the available slots starting out unless your Accessory item does not fit under the default slots. For that, we suggest you consider [making your own through data](./slot_types.md#data-pack-format) or by using the [Unique Slot API](./slot_types.md#unique-slot-api).
 

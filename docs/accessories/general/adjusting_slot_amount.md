@@ -65,7 +65,7 @@ public class HatIncreaser implements Accessory {
 
 ### Data Component
 
-As outlined within the {insert link to itemstack components} you can add a component to a given ItemStack to adjust the amount of equippable slots *when equipped*. This works through the XYZ attribute. 
+As outlined within the [`accessories:attributes`](../developer/itemstack_components.md#attribute-modifiers) Item Component you can add such to a given ItemStack to adjust the amount of equippable slots *when the accessory is equipped*.
 
 ## Config File
 
