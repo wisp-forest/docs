@@ -14,7 +14,7 @@ If you need simple item rendering for your Accessory, then you could look at `Si
 
 Accessories provides some helper methods to assist with transforming your `AccessoryRenderer` to various locations on the body with the primary method being `transformToModelPart` which will transform the given `PoseStack` (`MatrixStack`) to a given location on the targeted `ModelPart`. 
 
-Two methods exist for this. The first method transforms the `PoseStack` (`MatrixStack`) to the center of the `ModelPart` while the other allows for more control on the positioning on the `x`, `y`, and `z` axis by providing a number between `-1` and `1` as explained below:
+Two overloads exist for this. The first method transforms the `PoseStack` (`MatrixStack`) to the center of the `ModelPart` while the other allows for more control on the positioning on the `x`, `y`, and `z` axis by providing a number between `-1` and `1` as explained below:
 
 | Axis | Negative Values | Positive Values |
 |--|--|--|

@@ -64,7 +64,7 @@ Any ItemStack can define invalid or valid slots to which it can be equipped to u
 
 ### Stack Size
 
-To adjust the data-driven components ability to stack, you can use this component to either use the stacks max size or use a overridden size instead but such size needs to be less than the stack size or that will be used instead.
+This Data Component allows you to adjust the max stack size of an Item for a single Accessory Slot. This can be useful in cases where you want to only allow equipping a specific amount of items int it (E.G. heart containers, or consumables). Note that your size override must be **smaller** than the max stack size of the Item. 
 
 ```JSON
 {
@@ -133,8 +133,8 @@ Accessories has a system that allows for nesting an Accessory within another Acc
 |--|--|
 |`"accessories"`| A list of `ItemStack`s that have various components and will be used to get Accessory info from when equipping the nest |
 
-!!! warning "Nest Equitability"
-    You will either need to add the Slot Validation component to the nest or add the given item that the nest is made from to the given tag for the slot using the Tag Predicate for equipping
+!!! warning "Nest Equipability"
+    Make sure to remember the equipability of your nest. If your Nested Accessory needs to change its equipability dynamically, you might want to add the Slot Validation component to the nest. Alternatively, just using a tag or Tag Predicate is fine.
 
 ## Rendering
 
@@ -142,7 +142,7 @@ This section covers the various components you can use to adjust certain renderi
 
 ### Rendering Override
 
-Any ItemStack can have a component called `accessories:render_override` that allows for an item either not have the default renderer or force an item to use the default renderer instead of its registered render for the funny if desired.
+Any equippable ItemStack (or Accessory) can have a component called `accessories:render_override`, which allows you to force enable/disable the default renderer or the armor renderer.
 
 ```JSON
 {
@@ -155,8 +155,8 @@ Any ItemStack can have a component called `accessories:render_override` that all
 
 | <div style="width:118px">Field</div> | Usage |
 |--|--|
-|`"default_render_override"`| An optional boolean value indicating if present that the default render should be used |
-|`"armor_render_override"`| An optional boolean value indicating if present that the armor render should be used |
+|`"default_render_override"`| An optional boolean value indicating if the default render should be used |
+|`"armor_render_override"`| An optional boolean value indicating if the armor render should be used |
 
 ### Rendering Transformations
 

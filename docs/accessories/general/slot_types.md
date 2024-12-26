@@ -54,7 +54,7 @@ To modify existing slots there are multiple methods to such:
 
 This API is the alternative method for creating a slot which comes with the benefits of being able to lock down various aspects of a slot like equipability, which Entity a slot is bound to, and prevents certain operations like resizing from occurring. 
 
-It is with this that you are primarily using Accessories backend as a common API target meaning you will need to implement your own screen to handle interacting with the slots if desired.
+Note that unique slots will not show up in the main Accessory Screen. Wit this you get the freedom to implement your own custom screen/system using Accessories as your backend/API target to interact with inventory.
 
 A breakdown of how such is to implement is below:
 
