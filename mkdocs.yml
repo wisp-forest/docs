@@ -70,6 +70,9 @@ extra:
       accessories:
           repo: https://github.com/wisp-forest/accessories
           name: Accessories
+      limelight:
+          repo: https://github.com/wisp-forest/limelight
+          name: Limelight
 
 extra_css:
     - overrides.css
@@ -187,10 +190,26 @@ nav:
         - alloy-forgery/defining-a-forge.md
     - Accessories: 
         - accessories/home.md
-        - accessories/slot_types.md
-        - accessories/binding_slots_to_entities.md
-        - accessories/binding_accessories_to_slots.md
-        - accessories/slot_groups.md
-        - accessories/api_events.md
-        - accessories/itemstack_components.md
-        - accessories/rendering_api.md
+        - accessories/faq.md
+        - General:
+            - accessories/general/slot_types.md
+            - accessories/general/defaulted_slots.md
+            - accessories/general/binding_accessories_to_slots.md
+            - accessories/general/binding_slots_to_entities.md
+            - accessories/general/slot_groups.md
+            - accessories/general/adjusting_slot_amount.md
+        - Developer:
+            - accessories/developer/dev_setup.md
+            - accessories/developer/api_fundamentals.md
+            - accessories/developer/rendering_api.md
+            - accessories/developer/api_events.md
+            - accessories/developer/itemstack_components.md
+    - Limelight:
+        - limelight/index.md
+        - Configuring:
+            - limelight/configuring/adding_wikis.md
+        - Extending:
+            - limelight/extending/setup.md
+            - limelight/extending/defining_extensions.md
+            - limelight/extending/providing_results.md
+            - limelight/extending/adding_wiki_sources.md
