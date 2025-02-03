@@ -23,11 +23,11 @@ The grid layout component arranges its children in a grid with a specified numbe
 **Example (Code-driven):**
 
 ```java
-Containers.grid(2, 2)
-    .child(Components.label(Text.literal("Cell 1")))
-    .child(Components.label(Text.literal("Cell 2")))
-    .child(Components.label(Text.literal("Cell 3")))
-    .child(Components.label(Text.literal("Cell 4")))
+Containers.grid(Sizing.content(), Sizing.content(), 2, 2)
+    .child(Components.label(Text.literal("Cell 1")), 0, 0)
+    .child(Components.label(Text.literal("Cell 2")), 0, 1)
+    .child(Components.label(Text.literal("Cell 3")), 1, 0)
+    .child(Components.label(Text.literal("Cell 4")), 1, 1)
     .padding(Insets.of(10))
     .surface(Surface.PANEL)
     .horizontalAlignment(HorizontalAlignment.CENTER)

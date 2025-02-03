@@ -19,8 +19,8 @@ The checkbox component represents a toggleable checkbox. It can display text alo
 **Example (Code-driven):**
 
 ```java
-Components.checkbox(Text.literal("Option"), true)
-    .active(false)
+Components.checkbox(Text.literal("Option"))
+    .checked(false)
 ```
 
 **Example (Data-driven):**

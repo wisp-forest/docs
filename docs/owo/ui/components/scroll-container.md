@@ -26,12 +26,16 @@ The scroll container component creates a scrollable area for its child component
 **Example (Code-driven):**
 
 ```java
-Containers.verticalScroll(Sizing.fill(100), Sizing.content())
+Containers.verticalScroll(Sizing.content(), Sizing.fill(15), Containers.verticalFlow(Sizing.content(), Sizing.content())
     .child(Components.label(Text.literal("Item 1")))
     .child(Components.label(Text.literal("Item 2")))
-    .child(Components.label(Text.literal("Item 3")))
-    .scrollbarThiccness(10)
-    .scrollbarColor(0xff0000)
+    .child(Components.label(Text.literal("Item 2.1")))
+    .child(Components.label(Text.literal("Item 2.2")))
+    .child(Components.label(Text.literal("Item 2.3")))
+    .child(Components.label(Text.literal("Item 2.4")))
+    .child(Components.label(Text.literal("Item 3"))))
+    .scrollbarThiccness(4)
+    .scrollbar(ScrollContainer.Scrollbar.vanilla())
     .padding(Insets.of(10))
     .surface(Surface.PANEL)
 ```

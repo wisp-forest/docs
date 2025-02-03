@@ -19,8 +19,8 @@ The slider component represents a draggable slider for selecting a value within 
 **Example (Code-driven):**
 
 ```java
-Components.slider(0.5)
-    .text(Text.literal("Volume"))
+Components.slider(Sizing.fill(50))
+    .message(s -> Text.literal("Volume"))
     .active(true)
 ```
 

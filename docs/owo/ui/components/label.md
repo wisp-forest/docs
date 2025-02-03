@@ -24,7 +24,7 @@ The label component is used to display text on the screen. It supports various t
 
 ```java
 Components.label(Text.literal("Hello, World!"))
-    .color(0xffffff)
+    .color(Color.ofRgb(0xffffff))
     .shadow(true)
     .horizontalTextAlignment(HorizontalAlignment.CENTER)
     .verticalTextAlignment(VerticalAlignment.CENTER)

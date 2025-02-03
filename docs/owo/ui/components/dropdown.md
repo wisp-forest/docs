@@ -23,12 +23,12 @@ The dropdown component creates a dropdown menu with various entries such as butt
 **Example (Code-driven):**
 
 ```java
-Components.dropdown()
+Components.dropdown(Sizing.content())
     .button(Text.literal("Option 1"), button -> {
         // Handle button click event
     })
-    .checkbox(Text.literal("Option 2"), false)
-    .nested(Text.literal("Submenu"), submenu -> {
+    .checkbox(Text.literal("Option 2"), false, ignored -> {})
+    .nested(Text.literal("Submenu"), Sizing.content(), submenu -> {
         submenu.button(Text.literal("Submenu Option"), button -> {
             // Handle submenu button click event
         });

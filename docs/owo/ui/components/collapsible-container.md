@@ -23,7 +23,7 @@ The collapsible container component allows you to create a collapsible section t
 **Example (Code-driven):**
 
 ```java
-Containers.collapsible(Text.literal("Collapsible Section"), true)
+Containers.collapsible(Sizing.content(), Sizing.content(), Text.literal("Collapsible Section"), true)
     .child(Components.label(Text.literal("Content")))
     .padding(Insets.of(10))
     .surface(Surface.PANEL)
