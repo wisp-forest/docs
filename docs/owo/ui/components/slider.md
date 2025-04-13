@@ -31,5 +31,9 @@ Components.slider(Sizing.fill(50))
     <text>Volume</text>
     <value>0.5</value>
     <active>true</active>
+    <sizing>
+        <horizontal method="fill">20</horizontal>
+        <vertical method="fixed">10</vertical>
+    </sizing>
 </slider>
 ```

@@ -33,7 +33,7 @@ Components.dropdown(Sizing.content())
             // Handle submenu button click event
         });
     })
-    .closeWhenNotHovered(true)
+    .closeWhenNotHovered(false)
     .padding(Insets.of(5))
     .surface(Surface.TOOLTIP)
 ```
@@ -42,7 +42,7 @@ Components.dropdown(Sizing.content())
 
 ```xml
 <dropdown>
-    <close-when-not-hovered>true</close-when-not-hovered>
+    <close-when-not-hovered>false</close-when-not-hovered>
     <entries>
         <button>
             <text>Option 1</text>

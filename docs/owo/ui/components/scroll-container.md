@@ -44,17 +44,24 @@ Containers.verticalScroll(Sizing.content(), Sizing.fill(15), Containers.vertical
 
 ```xml
 <scroll direction="vertical">
-    <children>
-        <label>
-            <text>Item 1</text>
-        </label>
-        <label>
-            <text>Item 2</text>
-        </label>
-        <label>
-            <text>Item 3</text>
-        </label>
-    </children>
+    <!-- Any component as child. We recommend a flow layout-->
+    <flow-layout direction="vertical">
+        <children>
+            <label>
+                <text>Item 1</text>
+            </label>
+            <label>
+                <text>Item 2</text>
+            </label>
+            <label>
+                <text>Item 3</text>
+            </label>
+        </children>
+        <sizing>
+            <vertical method="fill">20</vertical>
+            <horizontal method="fill">25</horizontal>
+        </sizing>
+    </flow-layout>
     <scrollbar-thiccness>10</scrollbar-thiccness>
     <scrollbar-color>#ff0000</scrollbar-color>
     <padding>
@@ -63,5 +70,9 @@ Containers.verticalScroll(Sizing.content(), Sizing.fill(15), Containers.vertical
     <surface>
         <panel/>
     </surface>
+    <sizing>
+        <vertical method="fill">50</vertical>
+        <horizontal method="fill">50</horizontal>
+    </sizing>
 </scroll>
 ```
