@@ -150,6 +150,17 @@ nav:
           - owo/ui/component-basics.md
           - owo/ui/layout-basics.md
           - owo/ui/utility-components.md
+          - owo/ui/components/index.md
+          - owo/ui/components/button.md
+          - owo/ui/components/checkbox.md
+          - owo/ui/components/collapsible-container.md
+          - owo/ui/components/dropdown.md
+          - owo/ui/components/flow-layout.md
+          - owo/ui/components/grid-layout.md
+          - owo/ui/components/label.md
+          - owo/ui/components/scroll-container.md
+          - owo/ui/components/slider.md
+          - owo/ui/components/templates.md
     - Lavender:
         - lavender/setup.md
         - lavender/getting-started.md
