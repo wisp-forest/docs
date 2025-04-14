@@ -34,13 +34,34 @@ Then, declare the dependency inside your `dependencies` block and as well as the
 === "build.gradle (Neoforge)"
     ```groovy 
     dependencies {
-        // Moddev Projects - Neoforge
+        // Vanilla/Moddev Projects - Neoforge
         implementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
-        accessTransformer "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        accessTransformers "io.wispforest:owo-lib-neoforge:${project.owo_version}"
         interfaceInjectionData "io.wispforest:owo-lib-neoforge:${project.owo_version}"
 
         // Arch Loom Projects - Neoforge
         modImplementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+
+        // Required due to issues with Arch Loom and JIJ within neo. May require bumping the version every once and awhile.
+        forgeRuntimeLibrary("io.wispforest:endec:0.1.8")
+        forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.4")
+        forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.5")
+        forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.5")
+        forgeRuntimeLibrary("blue.endless:jankson:1.2.2")
+    }
+    ```
+
+=== "build.gradle (Common)"
+    ```groovy 
+    dependencies {
+        // Moddev Projects - Neoforge
+        compileOnly "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        accessTransformer "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        interfaceInjectionData "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+
+        // Arch Loom Projects - Neoforge
+        // Don't worry about loading issues as it will only be present to get the arch interface injection and Access Widener 
+        modImplementation "io.wispforest:owo-lib-fabric:${project.owo_version}" 
     }
     ```
 
