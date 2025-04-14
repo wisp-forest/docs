@@ -36,7 +36,7 @@ Then, declare the dependency inside your `dependencies` block and as well as the
     dependencies {
         // Vanilla/Moddev Projects - Neoforge
         implementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
-        accessTransformer "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        accessTransformers "io.wispforest:owo-lib-neoforge:${project.owo_version}"
         interfaceInjectionData "io.wispforest:owo-lib-neoforge:${project.owo_version}"
 
         // Arch Loom Projects - Neoforge
