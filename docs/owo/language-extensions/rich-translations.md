@@ -34,7 +34,7 @@ For demonstrating the basics, let's change the name of the Echo Shard. We want t
 
 This yields the following result:
 
-![echo shard tooltip example](../assets/owo/echo-shard-tooltip.png){ width=300 }
+![echo shard tooltip example](../../assets/owo/echo-shard-tooltip.png){ width=300 }
 
 Let's continue by also altering the Recovery Compass to say that it's made of Echo Shards. To do this, we do a normal translation and refer to the echo shard's translation via the `translate` object.
 
@@ -61,7 +61,7 @@ Let's continue by also altering the Recovery Compass to say that it's made of Ec
 
 This produces this nice tooltip, with the Echo Shard's name conveniently embedded
 
-![recovery compass tooltip example](../assets/owo/recovery-compass-tooltip.png)
+![recovery compass tooltip example](../../assets/owo/recovery-compass-tooltip.png)
 
 ### Translatable Text Parameters
 As you probably know, a translatable text can have parameters - defined in standard translations via format specifiers like `%s`. This is not available to us when writing a rich translation, thus we must use owo's equivalent - the replacing text content, specified by an `index` object in the JSON. To demonstrate this, let's spice up the warning that get when deleting a world - it contains a parameter for the name of the world to delete.
@@ -82,4 +82,4 @@ As you probably know, a translatable text can have parameters - defined in stand
 1. Here we employ the `index` object. The number you specify is the index of the parameter passed into the translatable text constructor. It accepts style options like any other text component, as demonstrated by the gold color.
 
 The final result looks like this:
-![delete world warning screen](../assets/owo/deleting-froge-noooooo.png){ .docs-image }
+![delete world warning screen](../../assets/owo/deleting-froge-noooooo.png){ .docs-image }
