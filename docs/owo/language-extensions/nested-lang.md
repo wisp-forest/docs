@@ -234,8 +234,8 @@ Nested keys work perfectly with [Rich Translations](rich-translations.md), for e
         { "text": "Shard", "color": "#0096FF" }
     ],
     "item.minecraft.recovery_compass": [
-        "", // (1)
-        { "text": "Recovery Compass", "color": "yellow" }, // (2)
+        "",
+        { "text": "Recovery Compass", "color": "yellow" },
         " made of ",
         { "translate": "item.minecraft.echo_shard" }
     ]
