@@ -187,3 +187,86 @@ can be written as:
 ```
 
 *When using both a prefix and suffix you must either put a space or a starting index*
+
+## Nested Nesting
+
+Nested Keys can also be nested, for example:
+
+```json title="en_us.json"
+{
+  ...
+  "item.modid...": {
+    "firstItem": "First Item",
+    "secondItem": "Second Item",
+    "secondItem.tooltip...": [
+      "This is the first line of the tooltip",
+      "This is the second line of the tooltip",
+      "This is the third line of the tooltip"
+    ]
+  },
+  ...
+}
+```
+
+This will produce the following keys:
+
+```json title="en_us.json"
+{
+  ...
+  "item.modid.firstItem": "First Item",
+  "item.modid.secondItem": "Second Item",
+  "item.modid.secondItem.tooltip.1": "This is the first line of the tooltip",
+  "item.modid.secondItem.tooltip.2": "This is the second line of the tooltip",
+  "item.modid.secondItem.tooltip.3": "This is the third line of the tooltip"
+  ...
+}
+```
+
+## Rich Translations
+
+Nested keys work perfectly with [Rich Translations](rich-translations.md), for example this:
+
+```json title="en_us.json"
+{
+    ...
+    "item.minecraft.echo_shard": [
+        "Echo ",
+        { "text": "Shard", "color": "#0096FF" }
+    ],
+    "item.minecraft.recovery_compass": [
+        "", // (1)
+        { "text": "Recovery Compass", "color": "yellow" }, // (2)
+        " made of ",
+        { "translate": "item.minecraft.echo_shard" }
+    ]
+    ...
+}
+```
+
+can be simplified to:
+
+```json title="en_us.json"
+{
+    ...
+    "item.minecraft...": {
+      "echo_shard": [
+        "Echo ",
+        { "text": "Shard", "color": "#0096FF" }
+      ],
+      "recovery_compass": [
+        "",
+        { "text": "Recovery Compass", "color": "yellow" },
+        " made of ",
+        { "translate": "item.minecraft.echo_shard" }
+      ]
+    },
+    ...
+}
+```
+
+## Notes
+
+1. Nested Keys are flattened during language loading so they will not affect performance.
+2. If nested keys somehow cause an issue with your language file you can add `"owo:disable_nested_lang": true` anywhere in the file to disable the feature for that file.
+
+<sub><sup>This page was brought to you by chyzman</sup></sub>
