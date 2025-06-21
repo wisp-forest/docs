@@ -24,24 +24,45 @@ Then, declare the dependency inside your `dependencies` block and as well as the
     ```groovy 
     dependencies {
         modImplementation "io.wispforest:owo-lib:${project.owo_version}"
+        // Optional Utility Module, More info below
+        // You still need to depend on owolib within your Fabric Mod Json (FMJ) as documented in Fabric Wiki [here](https://wiki.fabricmc.net/documentation:fabric_mod_json)
+        // and declaring your dependency on owolib on sites your upload your mod i.e. Modrinth or Curseforge
         include "io.wispforest:owo-sentinel:${project.owo_version}"
     }
     ```
 
-    !!! hint ""
-        As you can see, this example also includes `owo-sentinel`. sentinel is a super tiny mod which is designed to be Jar-in-Jar'd by mods that depend on owo. If a player then installs your mod without installing owo, sentinel will prevent their game from launching and instead open a window warning them that owo is required. It gives them the option to automatically install owo or open owo's page so they can do it manually
+    !!! hint "owo-sentinel Explanation"
+        owo-sentinel is a super tiny mod which is designed to be Jar-in-Jar'd by mods that depend on owo. If a player then installs your mod **without** installing owo, sentinel will prevent their game from launching and instead open a window warning them that owo is required. This means if owo is present sentinel will do **nothing**.
+
+        ![owo-sentinel example popup](../assets/owo/owo-sentinel-open.png){ .center-image .docs-image style="max-width: 45%;" }
+        
+        It gives them the **option** to either of the following:
+
+        - Automatically install owo using Modrinth as a source and selecting the latest version of owolib for the given Minecraft version.
+
+        ![owo-sentinel example popup](../assets/owo/owo-sentinel-installing.png){ .center-image .docs-image style="max-width: 45%;" }
+
+        - Open a sub window with information about what sentinel is and an optional button to open github repo to download the lib else where if desired.
+
+        ![owo-sentinel example popup](../assets/owo/owo-sentinel-info.png){ .center-image .docs-image style="max-width: 45%;" }
+
+        - Closes sentinel without doing any operation and stops the current java process to which spawn it.
+        
+        Such code for this can be found within the owo-lib repo [here](https://github.com/wisp-forest/owo-lib/tree/1.21.5/owo-sentinel).
+
+        ### Dependency Declaration requirement:
+        You as a developer still needs to declare your dependency on owolib within your Fabric Mod Json (FMJ) and any platform you upload on your mod if possible! sentinel just acts as a verification step for people who forget to install dependency outside of launchers who handle dependencies and when downloading mods from sites like Modrinth or Curseforge allowing for the quicker resolution of missing owolib if desired.
 
 === "build.gradle (Neoforge)"
     ```groovy 
     dependencies {
-        // Vanilla/Moddev Projects - Neoforge
+        // Moddev Projects - Neoforge
         implementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
         accessTransformers "io.wispforest:owo-lib-neoforge:${project.owo_version}"
         interfaceInjectionData "io.wispforest:owo-lib-neoforge:${project.owo_version}"
 
         // Arch Loom Projects - Neoforge
         modImplementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
-
         // Required due to issues with Arch Loom and JIJ within neo. May require bumping the version every once and awhile.
         forgeRuntimeLibrary("io.wispforest:endec:0.1.8")
         forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.4")
@@ -56,7 +77,7 @@ Then, declare the dependency inside your `dependencies` block and as well as the
     dependencies {
         // Moddev Projects - Neoforge
         compileOnly "io.wispforest:owo-lib-neoforge:${project.owo_version}"
-        accessTransformer "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+        accessTransformers "io.wispforest:owo-lib-neoforge:${project.owo_version}"
         interfaceInjectionData "io.wispforest:owo-lib-neoforge:${project.owo_version}"
 
         // Arch Loom Projects - Neoforge
