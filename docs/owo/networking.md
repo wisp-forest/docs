@@ -8,9 +8,10 @@ project: owo
 Networking can be quite the hassle to set up and maintain when using only the tools provided to you by Minecraft and Fabric API. owo, however, includes an easy-to-use networking stack which is quick to set up and even easier to maintain while still keeping high performance.
 
 ## Concepts
-owo's networking API comprises of two core systems - the `OwoNetChannel`, which handles all networking, and the mostly self-contained `PacketBufSerializer`, which takes care of serializing objects into packet buffers. 
+owo's networking API comprises of two core systems - the `OwoNetChannel`, which handles all networking, and `Endec` the serialization framework, which takes care of serializing objects into packet buffers. 
 
-For safety reasons, using a channel in your mod will enable owo's handshaking procedure. This verifies that the channel layout on both server and client is identical, to prevent possible crashes or malformed data received, if one side is encoding differently than the other expects.
+!!! note "Owo Handshake"
+    When using a channel in your mod, owo's handshaking will be enabled for validation purposes. Such a feature is only active within development environment and verifies that the channel layout on both server and client is identical, to prevent possible crashes or malformed data received, if one side is encoding differently than the other expects.
 
 ## Implementation
 
@@ -120,4 +121,25 @@ Once you obtained a handle, you can use it to send a packet:
 === "Client Example"
     ```java
     MyModInitializer.MY_CHANNEL.clientHandle().send(new MyPacket(1, "this", new Identifier("is", "podge")));
+    ```
+
+### Registering Custom Endec's
+
+There may be a point where a given message may contain object types that can not easily be reflectively built using the `ReflectiveEndecBuilder` meaning you may need to register custom `Endec`'s. This can be accomplished by calling your channels `addEndecs(...)` which allows for the ability to modify the channels builder by calling `register(...)` with the your custom `Endec`s.
+
+=== "Registration Example"
+    ```java
+        public record MyPacket(int index, String name, Identifier target, @Nullable List<String> additionalNames) {
+            public static final StructEndec<MyPacket> ENDEC = StructEndecBuilder.of(
+                Endec.INT.fieldOf("index", MyPacket::index),
+                Endec.STRING.fieldOf("name", MyPacket::name),
+                MinecraftEndecs.IDENTIFIER.fieldOf("target", MyPacket::target),
+                Endec.STRING.listOf().nullableOf().fieldOf("additional_names", MyPacket::additionalNames),
+                MyPacket::new
+            );
+        }
+
+        MyModInitializer.MY_CHANNEL.addEndecs(builder -> {
+            builder.register(MyPacket.ENDEC, MyPacket.class);
+        });
     ```
