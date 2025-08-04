@@ -63,12 +63,21 @@ Then, declare the dependency inside your `dependencies` block and as well as the
 
         // Arch Loom Projects - Neoforge
         modImplementation "io.wispforest:owo-lib-neoforge:${project.owo_version}"
+    
         // Required due to issues with Arch Loom and JIJ within neo. May require bumping the version every once and awhile.
-        forgeRuntimeLibrary("io.wispforest:endec:0.1.8")
-        forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.4")
-        forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.5")
-        forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.5")
         forgeRuntimeLibrary("blue.endless:jankson:1.2.2")
+
+        // For versions greater than or equal to 1.21.4
+        forgeRuntimeLibrary("io.wispforest:endec:0.1.9")
+        forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.5")
+        forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.6")
+        forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.6")
+
+        // For versions less than or equal to 1.21.1
+        forgeRuntimeLibrary("io.wispforest:endec:0.1.5.1")
+        forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.2")
+        forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.3.1")
+        forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.3.1")
     }
     ```
 
