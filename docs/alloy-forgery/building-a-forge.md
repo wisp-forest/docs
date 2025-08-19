@@ -5,7 +5,7 @@ project: alloy-forgery
 
 *Up to date as of 2.0.22*
 
-You can currently make an Alloy Forge out of 5 materials: Bricks, Stone Bricks, Blackstone, Deepslate, and End Stone. Alloy Forges are dynamically generated. You can add more of these through data, which is explained [on this page.](../defining-a-forge.md)
+You can currently make an Alloy Forge out of 5 materials: Bricks, Stone Bricks, Blackstone, Deepslate, and End Stone. Alloy Forges are dynamically generated. You can add more of these through data, which is explained [on this page.](defining-a-forge.md)
 
 The basic shape of a forge looks like this:  
 ![an image showing how to construct an Alloy Forge in 3 steps. Layer one is a 3x3 base. Layer two is the forge controller block in the front, and one block on each side, leaving the corners and the middle empty. Step three is the same as step two, but with a block instead of a controller](../assets/alloy-forgery/forge_structure.png)
@@ -39,7 +39,7 @@ A forge can by default be fueled by vanilla materials. Currently they accept the
 - Blaze Rods 
 - Lava Bucket
 
-For more information on how to add recipes and fuels, [go to this page.](../adding-recipes-and-fuels.md)  
+For more information on how to add recipes and fuels, [go to this page.](adding-recipes-and-fuels.md)  
 
 ## Automation  
 As of Alloy Forgery 2.0.0 automation has been improved. You can now finally use hoppers to automate alloy forging.

@@ -17,7 +17,9 @@ To enable config sync, simply apply the `@Sync` annotation to the option you wan
  - `Option.SyncMode.OVERRIDE_CLIENT`: Send the server's value to the client and temporarily override the client's value. Enabling `OVERRIDE_CLIENT` implies `INFORM_SERVER`
 
 !!! info "Option Serialization"
-    To send your config's value over the network, owo's networking stack is employed - specifically the `PacketBufSerializer` system. It *should* support all commonly used types out-of-the box, yet it is not impossible to think of a situation where you may need a custom serializer. For those cases, simply call `PacketBufSerializer.register(...)` **before** you load your config and provide the necessary code.
+    To send your config's value over the network, owo's networking stack is employed - specifically the `Endec` serialization framework . It *should* support all commonly used types out-of-the box, yet it is not impossible to think of a situation where you may need a custom `Endec`. 
+
+    For those cases, you can add your custom `Endec` by adding to your Config instance's `ReflectiveEndecBuilder` within the `createAndLoad` method by passing a custom `BuilderConsumer`. Such allows your to add your custom `Endec` by calling the `ReflectiveEndecBuilder.register(...)` method.
 
 ### Detached Options
 When a client-side option gets overridden by the server, it enters the so-called "detached" state. In this state, it is essentially a dangling container for a value without any relation to its backing field. It will not get serialized when the config gets saved and any attempt made at modifying its value will fail. Should the player open the config screen while on a server, the option will appear as "managed by the server" and cannot be edited.
