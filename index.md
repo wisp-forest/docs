@@ -13,19 +13,37 @@ hero:
       text: API Examples
       link: /api-examples
   image:
-    src: assets/wf-header.png
+    src: wf-header.png
 
 features:
   - title: oωo-lib
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
     link: /owo/setup
     icon:
-      src: assets/owo/icon.png
-    linkText: Setup
+      src: owo-icon.png
+    linkText: Documentation
   - title: Isometric Renders
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
     link: /isometric-renders/home
     icon:
-      src: assets/isometric-renders/icon.png
+      src: isometric-renders-icon.png
+    linkText: Documentation
+  - title: Numismatic Overhaul
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /numismatic-overhaul/home
+    icon:
+      src: numismatic-overhaul-icon.png
+    linkText: Documentation
+  - title: Lavender
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /lavender/setup
+    icon:
+      src: lavender-icon.png
+    linkText: Documentation
+  - title: Accessories
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    link: /accessories/home
+    icon:
+      src: accessories-icon.png
     linkText: Documentation
 ---

@@ -9,6 +9,8 @@ const mcfunction = JSON.parse(readFileSync('mcfunction-grammar.json', 'utf-8'));
 export default defineConfig({
   title: "Wisp Forest Docs",
   description: "Here at Wisp Forest© we employ Wisp Tech Support™ magic, which solves your problem when you ask",
+  cleanUrls: true,
+  base: "/next/",
   markdown: {
     math: true,
     shikiSetup(shiki) {
@@ -20,7 +22,7 @@ export default defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'icon', href: '/assets/favicon.png' }]
+    ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
@@ -89,6 +91,44 @@ export default defineConfig({
                 { text: 'Templates', link: '/owo/ui/components/templates.md', },
               ]
             },
+          ]
+        },
+      ],
+      '/numismatic-overhaul/': [
+        { text: 'Home', link: '/numismatic-overhaul/home' },
+        { text: 'Shops', link: '/numismatic-overhaul/shop' },
+        { text: 'Villager Trade Data Format', link: '/numismatic-overhaul/trades' },
+      ],
+      '/lavender/': [
+        { text: 'Setup', link: '/lavender/setup' },
+        { text: 'Getting Started', link: '/lavender/getting-started' },
+        { text: 'Metadata Format', link: '/lavender/metadata-format' },
+        { text: 'Markdown Syntax', link: '/lavender/markdown-syntax' },
+        { text: 'Structures', link: '/lavender/structures' },
+        { text: 'Writing Extensions', link: '/lavender/writing-extensions' },
+      ],
+      '/accessories/': [
+        { text: 'Home', link: '/accessories/home' },
+        { text: 'FAQ', link: '/accessories/faq' },
+        {
+          text: 'General',
+          items: [
+            { text: 'Creating and Modifying Slots', link: '/accessories/general/slot_types', },
+            { text: 'Default Slots', link: '/accessories/general/defaulted_slots', },
+            { text: 'Adjusting Accessory Equipablity', link: '/accessories/general/binding_accessories_to_slots', },
+            { text: 'Binding Slots to Entities', link: '/accessories/general/binding_slots_to_entities', },
+            { text: 'Creating Slot Groups', link: '/accessories/general/slot_groups', },
+            { text: 'Adjusting Slot Amount', link: '/accessories/general/adjusting_slot_amount', },
+          ]
+        },
+        {
+          text: 'Developer',
+          items: [
+            { text: 'Setup Environment', link: '/accessories/developer/dev_setup', },
+            { text: 'API Fundamentals', link: '/accessories/developer/api_fundamentals', },
+            { text: 'Rendering API Breakdown', link: '/accessories/developer/rendering_api', },
+            { text: 'Available API Events', link: '/accessories/developer/api_events', },
+            { text: 'ItemStack Data Components', link: '/accessories/developer/itemstack_components', },
           ]
         },
       ],

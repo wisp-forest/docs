@@ -15,6 +15,11 @@ kbd {
     margin-right: auto;
 }
 
+.center-image {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 iconify-icon {
     display: inline-block;
     width: 1em;
