@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" type="text/css"?><svg
+   id="graph-47"
+   width="1089.8899"
+   class="flowchart"
+   style="overflow:hidden;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);-webkit-user-drag:none"
+   role="graphics-document document"
+   aria-roledescription="flowchart-v2"
+   height="287.29114"
+   version="1.1"
+   sodipodi:docname="config-sync-flow.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <defs
+     id="defs93" />
+  <sodipodi:namedview
+     id="namedview91"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.56958333"
+     inkscape:cx="54.42575"
+     inkscape:cy="23.701536"
+     inkscape:window-width="1920"
+     inkscape:window-height="1020"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="graph-47" />
+  <g
+     id="viewport-20250906232902081"
+     class="svg-pan-zoom_viewport"
+     transform="matrix(1.2803171,0,0,1.2803171,-10.242537,-7.6818998)">
+    <style
+       id="style2">#graph-47{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;fill:#ccc;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#graph-47 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#graph-47 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#graph-47 .error-icon{fill:#a44141;}#graph-47 .error-text{fill:#ddd;stroke:#ddd;}#graph-47 .edge-thickness-normal{stroke-width:1px;}#graph-47 .edge-thickness-thick{stroke-width:3.5px;}#graph-47 .edge-pattern-solid{stroke-dasharray:0;}#graph-47 .edge-thickness-invisible{stroke-width:0;fill:none;}#graph-47 .edge-pattern-dashed{stroke-dasharray:3;}#graph-47 .edge-pattern-dotted{stroke-dasharray:2;}#graph-47 .marker{fill:lightgrey;stroke:lightgrey;}#graph-47 .marker.cross{stroke:lightgrey;}#graph-47 svg{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:16px;}#graph-47 p{margin:0;}#graph-47 .label{font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;color:#ccc;}#graph-47 .cluster-label text{fill:#F9FFFE;}#graph-47 .cluster-label span{color:#F9FFFE;}#graph-47 .cluster-label span p{background-color:transparent;}#graph-47 .label text,#graph-47 span{fill:#ccc;color:#ccc;}#graph-47 .node rect,#graph-47 .node circle,#graph-47 .node ellipse,#graph-47 .node polygon,#graph-47 .node path{fill:#1f2020;stroke:#ccc;stroke-width:1px;}#graph-47 .rough-node .label text,#graph-47 .node .label text,#graph-47 .image-shape .label,#graph-47 .icon-shape .label{text-anchor:middle;}#graph-47 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#graph-47 .rough-node .label,#graph-47 .node .label,#graph-47 .image-shape .label,#graph-47 .icon-shape .label{text-align:center;}#graph-47 .node.clickable{cursor:pointer;}#graph-47 .root .anchor path{fill:lightgrey!important;stroke-width:0;stroke:lightgrey;}#graph-47 .arrowheadPath{fill:lightgrey;}#graph-47 .edgePath .path{stroke:lightgrey;stroke-width:2.0px;}#graph-47 .flowchart-link{stroke:lightgrey;fill:none;}#graph-47 .edgeLabel{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#graph-47 .edgeLabel p{background-color:hsl(0, 0%, 34.4117647059%);}#graph-47 .edgeLabel rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#graph-47 .labelBkg{background-color:rgba(87.75, 87.75, 87.75, 0.5);}#graph-47 .cluster rect{fill:hsl(180, 1.5873015873%, 28.3529411765%);stroke:rgba(255, 255, 255, 0.25);stroke-width:1px;}#graph-47 .cluster text{fill:#F9FFFE;}#graph-47 .cluster span{color:#F9FFFE;}#graph-47 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;font-size:12px;background:hsl(20, 1.5873015873%, 12.3529411765%);border:1px solid rgba(255, 255, 255, 0.25);border-radius:2px;pointer-events:none;z-index:100;}#graph-47 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#ccc;}#graph-47 rect.text{fill:none;stroke-width:0;}#graph-47 .icon-shape,#graph-47 .image-shape{background-color:hsl(0, 0%, 34.4117647059%);text-align:center;}#graph-47 .icon-shape p,#graph-47 .image-shape p{background-color:hsl(0, 0%, 34.4117647059%);padding:2px;}#graph-47 .icon-shape rect,#graph-47 .image-shape rect{opacity:0.5;background-color:hsl(0, 0%, 34.4117647059%);fill:hsl(0, 0%, 34.4117647059%);}#graph-47 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#graph-47 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#graph-47 :root{--mermaid-font-family:&quot;trebuchet ms&quot;,verdana,arial,sans-serif;}</style>
+    <g
+       id="g87">
+      <marker
+         id="graph-47_flowchart-v2-pointEnd"
+         class="marker flowchart-v2"
+         viewBox="0 0 10 10"
+         refX="5"
+         refY="5"
+         markerUnits="userSpaceOnUse"
+         markerWidth="8"
+         markerHeight="8"
+         orient="auto">
+        <path
+           d="M 0,0 10,5 0,10 Z"
+           class="arrowMarkerPath"
+           style="stroke-width:1;stroke-dasharray:1, 0"
+           id="path4" />
+      </marker>
+      <marker
+         id="graph-47_flowchart-v2-pointStart"
+         class="marker flowchart-v2"
+         viewBox="0 0 10 10"
+         refX="4.5"
+         refY="5"
+         markerUnits="userSpaceOnUse"
+         markerWidth="8"
+         markerHeight="8"
+         orient="auto">
+        <path
+           d="m 0,5 10,5 V 0 Z"
+           class="arrowMarkerPath"
+           style="stroke-width:1;stroke-dasharray:1, 0"
+           id="path7" />
+      </marker>
+      <marker
+         id="graph-47_flowchart-v2-circleEnd"
+         class="marker flowchart-v2"
+         viewBox="0 0 10 10"
+         refX="11"
+         refY="5"
+         markerUnits="userSpaceOnUse"
+         markerWidth="11"
+         markerHeight="11"
+         orient="auto">
+        <circle
+           cx="5"
+           cy="5"
+           r="5"
+           class="arrowMarkerPath"
+           style="stroke-width:1;stroke-dasharray:1, 0"
+           id="circle10" />
+      </marker>
+      <marker
+         id="graph-47_flowchart-v2-circleStart"
+         class="marker flowchart-v2"
+         viewBox="0 0 10 10"
+         refX="-1"
+         refY="5"
+         markerUnits="userSpaceOnUse"
+         markerWidth="11"
+         markerHeight="11"
+         orient="auto">
+        <circle
+           cx="5"
+           cy="5"
+           r="5"
+           class="arrowMarkerPath"
+           style="stroke-width:1;stroke-dasharray:1, 0"
+           id="circle13" />
+      </marker>
+      <marker
+         id="graph-47_flowchart-v2-crossEnd"
+         class="marker cross flowchart-v2"
+         viewBox="0 0 11 11"
+         refX="12"
+         refY="5.1999998"
+         markerUnits="userSpaceOnUse"
+         markerWidth="11"
+         markerHeight="11"
+         orient="auto">
+        <path
+           d="m 1,1 9,9 m 0,-9 -9,9"
+           class="arrowMarkerPath"
+           style="stroke-width:2;stroke-dasharray:1, 0"
+           id="path16" />
+      </marker>
+      <marker
+         id="graph-47_flowchart-v2-crossStart"
+         class="marker cross flowchart-v2"
+         viewBox="0 0 11 11"
+         refX="-1"
+         refY="5.1999998"
+         markerUnits="userSpaceOnUse"
+         markerWidth="11"
+         markerHeight="11"
+         orient="auto">
+        <path
+           d="m 1,1 9,9 m 0,-9 -9,9"
+           class="arrowMarkerPath"
+           style="stroke-width:2;stroke-dasharray:1, 0"
+           id="path19" />
+      </marker>
+      <g
+         class="root"
+         id="g85">
+        <g
+           class="clusters"
+           id="g22" />
+        <g
+           class="edgePaths"
+           id="g28">
+          <path
+             d="m 115.125,121.793 h 11.505 c 11.505,0 34.516,0 56.943,0.079 22.427,0.078 44.271,0.235 55.193,0.314 l 10.922,0.078"
+             id="L_A_B_0"
+             class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+             marker-end="url(#graph-47_flowchart-v2-pointEnd)" />
+          <path
+             d="m 404.464,91.007 11.473,-6.136 c 11.474,-6.135 34.421,-18.405 55.617,-24.54 21.196,-6.136 40.641,-6.136 50.364,-6.136 h 9.723"
+             id="L_B_C_0"
+             class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+             marker-end="url(#graph-47_flowchart-v2-pointEnd)" />
+          <path
+             d="m 628.031,54.195 h 8.214 c 8.213,0 24.64,0 36.354,0 11.714,0 18.714,0 22.214,0 h 3.5"
+             id="L_C_E_0"
+             class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+             marker-end="url(#graph-47_flowchart-v2-pointEnd)" />
+          <path
+             d="m 404.464,153.579 11.473,5.969 c 11.474,5.968 34.421,17.906 52.237,23.874 17.816,5.969 30.5,5.969 36.843,5.969 h 6.342"
+             id="L_B_D_0"
+             class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link"
+             marker-end="url(#graph-47_flowchart-v2-crossEnd)" />
+        </g>
+        <g
+           class="edgeLabels"
+           id="g46">
+          <g
+             class="edgeLabel"
+             transform="translate(184.15625,121.79297)"
+             id="g32">
+            <g
+               class="label"
+               transform="translate(-44.03125,-12)"
+               id="g30">
+              <foreignObject
+                 width="88.0625"
+                 height="24">
+                <xhtml:div
+                   class="labelBkg"
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="edgeLabel">
+                    <xhtml:p>Send values</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="edgeLabel"
+             transform="translate(473.30469,54.195312)"
+             id="g36">
+            <g
+               class="label"
+               transform="translate(-10.226563,-12)"
+               id="g34">
+              <foreignObject
+                 width="20.453125"
+                 height="24">
+                <xhtml:div
+                   class="labelBkg"
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="edgeLabel">
+                    <xhtml:p>No</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="edgeLabel"
+             id="g40">
+            <g
+               class="label"
+               id="g38">
+              <foreignObject
+                 width="0"
+                 height="0">
+                <xhtml:div
+                   class="labelBkg"
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="edgeLabel" />
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="edgeLabel"
+             transform="translate(473.30469,189.39062)"
+             id="g44">
+            <g
+               class="label"
+               transform="translate(-13.054688,-12)"
+               id="g42">
+              <foreignObject
+                 width="26.109375"
+                 height="24">
+                <xhtml:div
+                   class="labelBkg"
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="edgeLabel">
+                    <xhtml:p>Yes</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g
+           class="nodes"
+           id="g83">
+          <g
+             class="node default"
+             id="flowchart-A-0"
+             transform="translate(61.5625,121.79297)">
+            <rect
+               class="basic label-container"
+               x="-53.5625"
+               y="-27"
+               width="107.125"
+               height="54"
+               id="rect48" />
+            <g
+               class="label"
+               transform="translate(-23.5625,-12)"
+               id="g52">
+              <rect
+                 id="rect50"
+                 width="0"
+                 height="0"
+                 x="0"
+                 y="0" />
+              <foreignObject
+                 width="47.125"
+                 height="24">
+                <xhtml:div
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="nodeLabel">
+                    <xhtml:p>Server</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="node default"
+             id="flowchart-B-1"
+             transform="translate(344.21875,121.79297)">
+            <polygon
+               points="91.03125,-182.0625 0,-91.03125 91.03125,0 182.0625,-91.03125 "
+               class="label-container"
+               transform="translate(-90.53125,91.03125)"
+               id="polygon55" />
+            <g
+               class="label"
+               transform="translate(-52.03125,-24)"
+               id="g59">
+              <rect
+                 id="rect57"
+                 width="0"
+                 height="0"
+                 x="0"
+                 y="0" />
+              <foreignObject
+                 width="104.0625"
+                 height="48">
+                <xhtml:div
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="nodeLabel">
+                    <xhtml:p>Unrecoverable<xhtml:br />
+Mismatch?</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="node default"
+             id="flowchart-C-3"
+             transform="translate(581.83594,54.195312)">
+            <circle
+               class="basic label-container"
+               style="stroke:#00ffab !important;stroke-width:4px !important"
+               r="46.195312"
+               cx="0"
+               cy="0"
+               id="circle62" />
+            <g
+               class="label"
+               transform="translate(-38.695312,-12)"
+               id="g66">
+              <rect
+                 id="rect64"
+                 width="0"
+                 height="0"
+                 x="0"
+                 y="0" />
+              <foreignObject
+                 width="77.390625"
+                 height="24">
+                <xhtml:div
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="nodeLabel">
+                    <xhtml:p>Connected</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="node default"
+             id="flowchart-E-6"
+             transform="translate(780.78906,54.195312)">
+            <rect
+               class="basic label-container"
+               x="-78.476562"
+               y="-39"
+               width="156.95312"
+               height="78"
+               id="rect69" />
+            <g
+               class="label"
+               transform="translate(-48.476562,-24)"
+               id="g73">
+              <rect
+                 id="rect71"
+                 width="0"
+                 height="0"
+                 x="0"
+                 y="0" />
+              <foreignObject
+                 width="96.953125"
+                 height="48">
+                <xhtml:div
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="nodeLabel">
+                    <xhtml:p>Respond with <xhtml:br />
+ local values</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+          <g
+             class="node default"
+             id="flowchart-D-8"
+             transform="translate(581.83594,189.39062)">
+            <rect
+               class="basic label-container"
+               style="stroke:#ff4949 !important;stroke-width:4px !important"
+               x="-70.476562"
+               y="-39"
+               width="140.95312"
+               height="78"
+               id="rect76" />
+            <g
+               class="label"
+               transform="translate(-40.476562,-24)"
+               id="g80">
+              <rect
+                 id="rect78"
+                 width="0"
+                 height="0"
+                 x="0"
+                 y="0" />
+              <foreignObject
+                 width="80.953125"
+                 height="48">
+                <xhtml:div
+                   style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+                  <xhtml:span
+                     class="nodeLabel">
+                    <xhtml:p>Connection <xhtml:br />
+  aborted</xhtml:p>
+                  </xhtml:span>
+                </xhtml:div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

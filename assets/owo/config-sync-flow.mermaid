@@ -1,0 +1,8 @@
+graph LR
+  A[Server] -->|Send values| B{Unrecoverable<br>Mismatch?};
+  B -->|No| C((Connected));
+  style C stroke:#00FFAB,stroke-width:4px
+
+  C --> E[Respond with <br> local values];
+  B --x|Yes| D[Connection <br>  aborted]; 
+  style D stroke:#FF4949,stroke-width:4px
