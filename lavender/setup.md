@@ -1,7 +1,9 @@
----
-title: Setup
-project: lavender
----
+# Setup
+
+<script setup>
+    import { insertVersion } from '../components/version_cache.ts';
+    insertVersion('wisp-forest', 'lavender', '.language-properties');
+</script>
 
 ::: tip Work-in-progress
 The Lavender documentation is still being written and not quite complete yet. In places where an article here is still missing, feel free to refer to Lavender's Javadoc where present or simply ask for help on [our Discord](https://discord.gg/xrwHKktV2d)

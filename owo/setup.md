@@ -1,5 +1,10 @@
 # Setup
 
+<script setup>
+    import { insertVersion } from '../components/version_cache.ts';
+    insertVersion('wisp-forest', 'owo-lib', '.language-properties');
+</script>
+
 To add oωo to you project, begin by including our maven in the repositories block of your `build.gradle`
 
 ```groovy title="build.gradle"
