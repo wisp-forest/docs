@@ -8,41 +8,44 @@ hero:
     - theme: brand
       text: Wisp Forest GitHub
       link: https://github.com/wisp-forest
-    - theme: alt
-      text: API Examples
-      link: /api-examples
   image:
     src: wf-header.png
 
 features:
   - title: oωo-lib
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: A general utility, GUI and config library for modding on Fabric and Quilt
     link: /owo/setup
     icon:
       src: owo-icon.png
     linkText: Documentation
   - title: Isometric Renders
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Generates clean, adjustable isometric screenshots of game objects directly in-game
     link: /isometric-renders/home
     icon:
       src: isometric-renders-icon.png
     linkText: Documentation
   - title: Numismatic Overhaul
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: Terraria-style currency in Minecraft
     link: /numismatic-overhaul/home
     icon:
       src: numismatic-overhaul-icon.png
     linkText: Documentation
   - title: Lavender
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: A modern Guidebook API and alternative to Patchouli
     link: /lavender/setup
     icon:
       src: lavender-icon.png
     linkText: Documentation
   - title: Accessories
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+    details: An extendable and data-driven Accessory Mod for Minecraft
     link: /accessories/home
     icon:
       src: accessories-icon.png
+    linkText: Documentation
+  - title: Alloy Forgery
+    details: Forge some alloys
+    link: /alloy-forgery/home
+    icon:
+      src: alloy-forgery-icon.png
     linkText: Documentation
 ---

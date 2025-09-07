@@ -192,6 +192,13 @@ export default defineConfig({
           ]
         },
       ],
+      '/alloy-forgery/': [
+        { text: 'Home', link: '/alloy-forgery/home' },
+        { text: 'Adding Recipes and Fuels', link: '/alloy-forgery/adding-recipes-and-fuels' },
+        { text: 'How to build a Forge', link: '/alloy-forgery/building-a-forge' },
+        { text: 'Recipe Adaptation', link: '/alloy-forgery/recipe-adaptation' },
+        { text: 'Defining new Forges though Data', link: '/alloy-forgery/defining-a-forge' },
+      ],
     },
 
     search: {
@@ -199,7 +206,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/wisp-forest/docs' }
+      { icon: 'discord', link: 'https://discord.gg/xrwHKktV2d' },
+      { icon: 'github', link: 'https://github.com/wisp-forest/docs' },
     ]
   }
 })
