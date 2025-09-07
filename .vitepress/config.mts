@@ -59,6 +59,9 @@ export default defineConfig({
   ],
 
   transformHead(ctx) {
+    const entryDir = ctx.pageData.filePath.split('/')[0];
+    if (!(entryDir in ogMeta)) return [];
+
     const headData: HeadConfig[] = [];
     headData.push(['meta', { property: 'og:site_name', content: ctx.siteData.title }]);
 
@@ -68,17 +71,14 @@ export default defineConfig({
       headData.push(['meta', { property: 'og:title', content: 'Home' }]);
     }
 
-    const entryDir = ctx.pageData.filePath.split('/')[0];
-    if (entryDir in ogMeta) {
-      const { icon, description } = ogMeta[entryDir];
+    const { icon, description } = ogMeta[entryDir];
 
-      headData.push(['meta', { property: 'og:description', content: description }]);
-      headData.push(['meta', { property: 'og:image', content: `https://docs.wispforest.io${ctx.siteData.base}${icon}` }]);
+    headData.push(['meta', { property: 'og:description', content: description }]);
+    headData.push(['meta', { property: 'og:image', content: `https://docs.wispforest.io${ctx.siteData.base}${icon}` }]);
 
-      if ('color' in ogMeta[entryDir]) {
-        const { color } = ogMeta[entryDir];
-        headData.push(['meta', { property: 'theme-color', content: color }]);
-      }
+    if ('color' in ogMeta[entryDir]) {
+      const { color } = ogMeta[entryDir];
+      headData.push(['meta', { property: 'theme-color', content: color }]);
     }
 
     return headData;
