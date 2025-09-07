@@ -1,0 +1,23 @@
+kbd {
+    box-shadow: 0 .1rem 0 .1rem var(--vp-c-bg-alt);
+    background-color: var(--vp-c-gray-soft);
+    border-radius: 3px;
+    margin: 0 .1em;
+    overflow-wrap: break-word;
+    padding: .2em .2em;
+    font-weight: 600;
+}
+
+.docs-image {
+    border-radius: 10px;
+    margin: 10px 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+iconify-icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+}
