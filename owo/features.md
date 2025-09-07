@@ -51,19 +51,19 @@ The `TagInjector` system allows you to inject entries into tags at runtime. Ther
 The `OfflineDataLookup` and `OfflineAdvancementLookup` interfaces enable easily querying and/or modifying the NBT and Advancement data of offline players. As everything in oωo, the API surface is non-verbose to use and usually does not require more than a single method call.
 
 
-## [UI Framework](./ui/index.md)
+## [UI Framework](ui/index.md)
 
 <VersionMarker version="^0.8.0" />
 
-owo-ui is a declarative UI framework that helps with building dynamic screens quickly and easily. It strives to be highly embeddable, performant and, most of all, super easy to use. More information pertaining to it features and capabilities can be found within [UI section](./ui/index.md)
+owo-ui is a declarative UI framework that helps with building dynamic screens quickly and easily. It strives to be highly embeddable, performant and, most of all, super easy to use. More information pertaining to it features and capabilities can be found within [UI section](ui/index.md)
 
-## [Configuration](./config/index.md)
+## [Configuration](config/index.md)
 
 <VersionMarker version="^0.8.0" />
 
-oωo provides a highly flexible annotation-driven configuration system. It aims to be simple yet powerful and offers a wide range of customizability and features as discussed within the [Config section](./config/index.md)
+oωo provides a highly flexible annotation-driven configuration system. It aims to be simple yet powerful and offers a wide range of customizability and features as discussed within the [Config section](config/index.md)
 
 ## Endec
 <VersionMarker version="^0.12.0" />
 
-[endec](https://github.com/wisp-forest/endec) is a format-agnostic serialization framework inspired by Rust's [serde](https://serde.rs) library and the Codec API from Mojang's [DataFixerUpper](https://github.com/mojang/datafixerupper). More information on its features and implementation details can be found within the (WIP: Planned addition) [Endec Section]()
+[endec](https://github.com/wisp-forest/endec) is a format-agnostic serialization framework inspired by Rust's [serde](https://serde.rs) library and the Codec API from Mojang's [DataFixerUpper](https://github.com/mojang/datafixerupper). More information on its features and implementation details can be found within the [Endec Section](endec.md)
