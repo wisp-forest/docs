@@ -1,9 +1,42 @@
 import { readFileSync } from 'fs';
 import kbd from 'markdown-it-kbd';
-import { defineConfig } from 'vitepress';
+import { defineConfig, HeadConfig } from 'vitepress';
 import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
 
 const mcfunction = JSON.parse(readFileSync('mcfunction-grammar.json', 'utf-8'));
+
+const ogMeta = {
+  'owo': {
+    icon: 'owo-icon.png',
+    description: 'oωo-lib Documentation',
+    color: '#3955e5'
+  },
+  'lavender': {
+    icon: 'lavender-icon.png',
+    description: 'Lavender Documentation',
+    color: '#9887d7'
+  },
+  'accessories': {
+    icon: 'accessories-icon.png',
+    description: 'Accessories Documentation',
+    color: '#ec1616'
+  },
+  'isometric-renders': {
+    icon: 'isometric-renders-icon.png',
+    description: 'Isometric Renders Documentation',
+    color: '#00e3be'
+  },
+  'numismatic-overhaul': {
+    icon: 'numismatic-overhaul-icon.png',
+    description: 'Numismatic Overhaul Documentation',
+    color: '#e3c451'
+  },
+  'index.md': {
+    icon: 'icon.png',
+    description: 'Here at Wisp Forest© we employ Wisp Tech Support™ magic, which solves your problem when you ask',
+    color: '#aaeaf9'
+  },
+};
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -24,6 +57,33 @@ export default defineConfig({
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
+
+  transformHead(ctx) {
+    const headData: HeadConfig[] = [];
+    headData.push(['meta', { property: 'og:site_name', content: ctx.siteData.title }]);
+
+    if (ctx.pageData.filePath != 'index.md') {
+      headData.push(['meta', { property: 'og:title', content: ctx.pageData.title }]);
+    } else {
+      headData.push(['meta', { property: 'og:title', content: 'Home' }]);
+    }
+
+    const entryDir = ctx.pageData.filePath.split('/')[0];
+    if (entryDir in ogMeta) {
+      const { icon, description } = ogMeta[entryDir];
+
+      headData.push(['meta', { property: 'og:description', content: description }]);
+      headData.push(['meta', { property: 'og:image', content: `https://docs.wispforest.io${ctx.siteData.base}${icon}` }]);
+
+      if ('color' in ogMeta[entryDir]) {
+        const { color } = ogMeta[entryDir];
+        headData.push(['meta', { property: 'theme-color', content: color }]);
+      }
+    }
+
+    return headData;
+  },
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
