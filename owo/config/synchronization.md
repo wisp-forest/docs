@@ -14,7 +14,9 @@ To enable config sync, simply apply the `@Sync` annotation to the option you wan
  - `Option.SyncMode.OVERRIDE_CLIENT`: Send the server's value to the client and temporarily override the client's value. Enabling `OVERRIDE_CLIENT` implies `INFORM_SERVER`
 
 ::: info Option Serialization
-To send your config's value over the network, owo's networking stack is employed - specifically the `PacketBufSerializer` system. It *should* support all commonly used types out-of-the box, yet it is not impossible to think of a situation where you may need a custom serializer. For those cases, simply call `PacketBufSerializer.register(...)` **before** you load your config and provide the necessary code.
+To send your config's value over the network, owo's networking stack is employed - specifically the `Endec` serialization framework . It *should* support all commonly used types out-of-the box, yet it is not impossible to think of a situation where you may need a custom `Endec`. 
+
+For those cases, you can add your custom `Endec` by adding to your Config instance's `ReflectiveEndecBuilder` within the `createAndLoad` method by passing a custom `BuilderConsumer`. This allows you to add your custom `Endec` by calling the `ReflectiveEndecBuilder.register(...)` method.
 :::
 
 ### Detached Options

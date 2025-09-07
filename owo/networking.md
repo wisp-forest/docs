@@ -5,7 +5,7 @@
 Networking can be quite the hassle to set up and maintain when using only the tools provided to you by Minecraft and Fabric API. owo, however, includes an easy-to-use networking stack which is quick to set up and even easier to maintain while still keeping high performance.
 
 ## Concepts
-owo's networking API comprises of two core systems - the `OwoNetChannel`, which handles all networking, and the mostly self-contained `PacketBufSerializer`, which takes care of serializing objects into packet buffers. 
+owo's networking API comprises of two core systems - the `OwoNetChannel`, which handles all networking, and the `Endec` serialization framework, which takes care of serializing objects into packet buffers. 
 
 For safety reasons, using a channel in your mod will enable owo's handshaking procedure. This verifies that the channel layout on both server and client is identical, to prevent possible crashes or malformed data received, if one side is encoding differently than the other expects.
 
@@ -97,8 +97,9 @@ You might also wonder what the two parameters in the handler represent. It's qui
 
 In order to send a packet via an `OwoNetChannel`, you need what we call a `Handle`. This is an object bound to a certain target, with a `send` method which sends packets to that target. To bind and obtain a `Handle`, use either the `clientHandler()` or any of the `serverHandle(...)` methods. A handle is always named after where it is sending *from*, thus a `ServerHandle` sends *from* the server *to* the client and vice-versa.
 
-!!! attention
-    The server and client handles are re-used. Each channel stores exactly one handle of each kind and binds it every time you request it via any of the methods. This means you *cannot* store a handle for later usage - it is not in any way guaranteed to still be bound to the same target and could thus cause all kinds of weird and undefined behavior.
+::: danger Attention
+The server and client handles are re-used. Each channel stores exactly one handle of each kind and binds it every time you request it via any of the methods. This means you *cannot* store a handle for later usage - it is not in any way guaranteed to still be bound to the same target and could thus cause all kinds of weird and undefined behavior.
+:::
 
 Once you obtained a handle, you can use it to send a packet:
 
@@ -117,3 +118,23 @@ MyModInitializer.MY_CHANNEL.serverHandle(blockEntity).send(new MyPacket(1, "this
 MyModInitializer.MY_CHANNEL.clientHandle().send(new MyPacket(1, "this", new Identifier("is", "podge")));
 ```
 :::
+
+### Registering Custom Endec
+
+There may be a point where a given message may contain object types that cannot be reflectively built using the `ReflectiveEndecBuilder`. In this case, you need to register custom `Endec`(s). This can be accomplished by calling the channel's `addEndecs(...)` method, which accepts a callback that can register additional `Endec`s to the channel's endec builder.
+
+```java
+public record MyPacket(int index, String name, Identifier target, @Nullable List<String> additionalNames) {
+    public static final StructEndec<MyPacket> ENDEC = StructEndecBuilder.of(
+        Endec.INT.fieldOf("index", MyPacket::index),
+        Endec.STRING.fieldOf("name", MyPacket::name),
+        MinecraftEndecs.IDENTIFIER.fieldOf("target", MyPacket::target),
+        Endec.STRING.listOf().nullableOf().fieldOf("additional_names", MyPacket::additionalNames),
+        MyPacket::new
+    );
+}
+
+MyModInitializer.MY_CHANNEL.addEndecs(builder -> {
+    builder.register(MyPacket.ENDEC, MyPacket.class);
+});
+```

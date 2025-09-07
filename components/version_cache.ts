@@ -23,4 +23,3 @@ export const insertVersion = async (owner: string, repo: string, selector: strin
         element.innerHTML = element.innerHTML.replaceAll("...", version);
     }
 });
-

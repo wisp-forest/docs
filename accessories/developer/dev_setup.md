@@ -32,22 +32,30 @@ dependencies {
 #### Multiloader
 
 ::: code-group
-```groovy [Common - Arch]
+```groovy [Common - Arch Loom]
 dependencies {
     modImplementation("io.wispforest:accessories-common:${project.accessories_version}")
 }
 ```
 
-```groovy [Neoforge - Arch]
+```groovy [Neoforge - Arch Loom]
 dependencies {
     modImplementation("io.wispforest:accessories-neoforge:${project.accessories_version}")
 
     // Required due to issues with JIJ dependency resolving in arch or something
     forgeRuntimeLibrary("blue.endless:jankson:1.2.2")
+
+    // For versions greater than or equal to 1.21.4
     forgeRuntimeLibrary("io.wispforest:endec:0.1.9")
-    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.5")
+    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.6")
     forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.6")
-    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.6")
+    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.5")
+
+    // For versions less than or equal to 1.21.1
+    forgeRuntimeLibrary("io.wispforest:endec:0.1.5.1")
+    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.3.1")
+    forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.3.1")
+    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.2")
 }
 ```
 
@@ -93,22 +101,30 @@ dependencies {
 #### Multiloader
 
 ::: code-group
-```kotlin [Common - Arch]
+```kotlin [Common - Arch Loom]
 dependencies {
     modImplementation("io.wispforest:accessories-common:${properties["accessories_version"]}")
 }
 ```
 
-```kotlin [Neoforge - Arch]
+```kotlin [Neoforge - Arch Loom]
 dependencies {
     modImplementation("io.wispforest:accessories-neoforge:${properties["accessories_version"]}")
 
     // Required due to issues with JIJ dependency resolving in arch or something
     forgeRuntimeLibrary("blue.endless:jankson:1.2.2")
+
+    // For versions greater than or equal to 1.21.4
     forgeRuntimeLibrary("io.wispforest:endec:0.1.9")
-    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.5")
+    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.6")
     forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.6")
-    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.6")
+    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.5")
+
+    // For versions less than or equal to 1.21.1
+    forgeRuntimeLibrary("io.wispforest:endec:0.1.5.1")
+    forgeRuntimeLibrary("io.wispforest.endec:gson:0.1.3.1")
+    forgeRuntimeLibrary("io.wispforest.endec:jankson:0.1.3.1")
+    forgeRuntimeLibrary("io.wispforest.endec:netty:0.1.2")
 }
 ```
 

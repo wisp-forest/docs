@@ -8,8 +8,7 @@ oωo offers a flexible system for automatically registering a class' fields into
 ## Networking 
 <VersionMarker version="^0.4.0" />
 
-oωo provides a fully-featured network serialization system. Built around `OwoNetChannel` and the `PacketBufSerializer` framework, packet data is automatically (de-)serialized and the corresponding handlers invoked without the need of keeping track of Identifiers or channel associations - everything is derived from the data class. Packet contents are defined
-as Java `record`s, making it highly ergonomic. The serialization backend fully supports serializers for custom types and all channel-layout related data is synced between client and server making it so an incompatible server cannot be joined.
+oωo provides a fully-featured network serialization system. Built around `OwoNetChannel` and the `Endec` framework, packet data is automatically (de-)serialized and the corresponding handlers invoked without the need of keeping track of Identifiers or channel associations - everything is derived from the data class. Packet contents are defined as Java `record`s, making it highly ergonomic. The serialization backend fully supports serializers for custom types and, in development, all channel-layout related data is synced between client and server making it so you cannot forget to register a handler on one side.
 
 ## [Item Groups](item-groups.md)
 <VersionMarker version="^0.2.0" />
@@ -24,7 +23,7 @@ oωo provides two main systems for handling particles. Primarily there's a clien
 ## Debug/Dev Features
 <VersionMarker version="^0.3.0" />
 
-When in a development environment, oωo's debug mode is automatically enabled which adds a host of features like commands for damaging/healing the player or dumping information about game objects, automatically disabled weather and daylight cycle and a few more.
+When in a development environment, oωo's debug mode is automatically enabled which adds a host of features like commands for damaging/healing the player or dumping information about game objects, automatically **disabled weather and daylight cycle** and a few more.
 
 ## Moddata
 <VersionMarker version="^0.3.0" />
@@ -50,3 +49,21 @@ The `TagInjector` system allows you to inject entries into tags at runtime. Ther
 <VersionMarker version="^0.5.0" />
 
 The `OfflineDataLookup` and `OfflineAdvancementLookup` interfaces enable easily querying and/or modifying the NBT and Advancement data of offline players. As everything in oωo, the API surface is non-verbose to use and usually does not require more than a single method call.
+
+
+## [UI Framework](./ui/index.md)
+
+<VersionMarker version="^0.8.0" />
+
+owo-ui is a declarative UI framework that helps with building dynamic screens quickly and easily. It strives to be highly embeddable, performant and, most of all, super easy to use. More information pertaining to it features and capabilities can be found within [UI section](./ui/index.md)
+
+## [Configuration](./config/index.md)
+
+<VersionMarker version="^0.8.0" />
+
+oωo provides a highly flexible annotation-driven configuration system. It aims to be simple yet powerful and offers a wide range of customizability and features as discussed within the [Config section](./config/index.md)
+
+## Endec
+<VersionMarker version="^0.12.0" />
+
+[endec](https://github.com/wisp-forest/endec) is a format-agnostic serialization framework inspired by Rust's [serde](https://serde.rs) library and the Codec API from Mojang's [DataFixerUpper](https://github.com/mojang/datafixerupper). More information on its features and implementation details can be found within the (WIP: Planned addition) [Endec Section]()
