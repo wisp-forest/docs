@@ -12,7 +12,7 @@ const render = meta != null && 'repo' in meta
 
 <template>
     <div v-if="render" class="repo-link">
-        <a :href="`https://github.com/${meta.repo}`">
+        <a :href="`https://github.com/${meta.repo}`" target="_blank" rel="noreferrer">
             <Icon class="gh-icon" icon="mdi:github" size="2em" />
             <div class="details">
                 <div>
