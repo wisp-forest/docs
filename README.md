@@ -23,7 +23,10 @@ For the time being this flag is required because [`vitepress-plugin-tabs`](https
 
 For more details, check [the VitePress documentation](https://vitepress.dev/reference/cli).
 
+**Adding pages**: If you add a new page to a project's documentation, be sure to add it to the sidebar in [`config.mts`](.vitepress/config.mts) as well
+
 ### Adding Documentation for a new Project
 - Add a new directory for the project's documentation
 - Add a `feature` entry to the frontmatter of [`index.md`](index.md) along with the project's icon file in `public`, named like `<project>-icon.png`
 - Tell the site about the project's icon, description, repository URL and color by adding a respective entry to [`meta.ts`](components/meta.ts)
+- Set up the sidebar for the project in [`config.mts`](.vitepress/config.mts)
