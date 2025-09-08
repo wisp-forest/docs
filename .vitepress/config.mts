@@ -56,7 +56,7 @@ export default defineConfig({
   },
 
   themeConfig: {
-    logo: 'icon-header.png',
+    logo: '/icon-header.png',
 
     // nav: [
     //   { text: 'Home', link: '/' },
