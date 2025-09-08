@@ -8,6 +8,9 @@ hero:
     - theme: brand
       text: Wisp Forest GitHub
       link: https://github.com/wisp-forest
+    - theme: alt
+      text: Legacy Documentation
+      link: https://docs.wispforest.io/legacy/
   image:
     src: wf-header.png
 

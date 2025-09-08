@@ -11,7 +11,6 @@ export default defineConfig({
   title: "Wisp Forest Docs",
   description: "Here at Wisp Forest© we employ Wisp Tech Support™ magic, which solves your problem when you ask",
   cleanUrls: true,
-  base: "/next/",
   markdown: {
     math: true,
     shikiSetup(shiki) {
@@ -23,10 +22,10 @@ export default defineConfig({
     },
   },
   head: [
-    ['link', { rel: 'icon', href: '/next/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   sitemap: {
-    hostname: 'https://docs.wispforest.io/next/'
+    hostname: 'https://docs.wispforest.io/'
   },
   lastUpdated: true,
 
