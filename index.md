@@ -18,18 +18,6 @@ features:
     icon:
       src: owo-icon.png
     linkText: Documentation
-  - title: Isometric Renders
-    details: Generates clean, adjustable isometric screenshots of game objects directly in-game
-    link: /isometric-renders/home
-    icon:
-      src: isometric-renders-icon.png
-    linkText: Documentation
-  - title: Numismatic Overhaul
-    details: Terraria-style currency in Minecraft
-    link: /numismatic-overhaul/home
-    icon:
-      src: numismatic-overhaul-icon.png
-    linkText: Documentation
   - title: Lavender
     details: A modern Guidebook API and alternative to Patchouli
     link: /lavender/setup
@@ -41,6 +29,18 @@ features:
     link: /accessories/home
     icon:
       src: accessories-icon.png
+    linkText: Documentation
+  - title: Isometric Renders
+    details: Generates clean, adjustable isometric screenshots of game objects directly in-game
+    link: /isometric-renders/home
+    icon:
+      src: isometric-renders-icon.png
+    linkText: Documentation
+  - title: Numismatic Overhaul
+    details: Terraria-style currency in Minecraft
+    link: /numismatic-overhaul/home
+    icon:
+      src: numismatic-overhaul-icon.png
     linkText: Documentation
   - title: Alloy Forgery
     details: Forge some alloys
