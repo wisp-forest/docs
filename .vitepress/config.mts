@@ -28,6 +28,7 @@ export default defineConfig({
   sitemap: {
     hostname: 'https://docs.wispforest.io/next/'
   },
+  lastUpdated: true,
 
   transformHead(ctx) {
     const entryDir = ctx.pageData.filePath.split('/')[0];
