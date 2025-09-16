@@ -83,6 +83,7 @@ export default defineConfig({
         { text: 'Networking', link: '/owo/networking' },
         { text: 'Endecs', link: '/owo/endec' },
         { text: 'Rich Translations', link: '/owo/rich-translations' },
+        { text: 'Nested Translations', link: '/owo/nested-lang' },
         { text: 'System Properties', link: '/owo/system-properties' },
         { text: 'RenderDoc Integration', link: '/owo/renderdoc' },
         {
