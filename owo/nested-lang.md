@@ -144,8 +144,8 @@ This is far too much text to have to write out 10 times, so instead you can use 
 ```
 :::
 
-::: Note
-An empty string key `""` will strip any trailing non alphanumeric characters from the prefix, in this case the trailing period.
+::: info Note
+An empty string key `""` will strip any trailing non-alphanumeric characters from the prefix, in this case the trailing period.
 :::
 
 By default, the indexing will start at 1, but you may specify a different starting index by adding a number after the key, like so:
