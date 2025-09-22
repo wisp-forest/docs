@@ -25,13 +25,32 @@ When writing language files, you tend to have a lot of repeated text. For exampl
 ```
 :::
 
-That alone has 10 instances of `item.modid.`. Owo provides a way to reduce this repetition by allowing you to nest translations. Instead of writing out the entire path of each and every key, you can simply write the first shared part of the key in an object followed by `..` then put the rest of the keys inside like so:
+That alone has 10 instances of `item.modid.`. Owo provides a way to reduce this repetition by allowing you to nest translations. Instead of writing out the entire path of each and every key, you can simply write the first shared part of the key in an object followed by `..` (or `{}`) then put the rest of the keys inside like so:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid...": {
+        "firstItem": "First Item",
+        "secondItem": "Second Item",
+        "thirdItem": "Third Item",
+        "fourthItem": "Fourth Item",
+        "fifthItem": "Fifth Item",
+        "sixthItem": "Sixth Item",
+        "seventhItem": "Seventh Item",
+        "eighthItem": "Eighth Item",
+        "ninthItem": "Ninth Item",
+        "tenthItem": "Tenth Item"
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.{}": {
         "firstItem": "First Item",
         "secondItem": "Second Item",
         "thirdItem": "Third Item",
@@ -51,11 +70,30 @@ That alone has 10 instances of `item.modid.`. Owo provides a way to reduce this 
 
 If you want to be even crazier you can provide a prefix **and** a suffix, like so:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid... ..Item": {
+        "first": "First Item",
+        "second": "Second Item",
+        "third": "Third Item",
+        "fourth": "Fourth Item",
+        "fifth": "Fifth Item",
+        "sixth": "Sixth Item",
+        "seventh": "Seventh Item",
+        "eighth": "Eighth Item",
+        "ninth": "Ninth Item",
+        "tenth": "Tenth Item"
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.{}Item": {
         "first": "First Item",
         "second": "Second Item",
         "third": "Third Item",
@@ -75,11 +113,30 @@ If you want to be even crazier you can provide a prefix **and** a suffix, like s
 
 You can also provide only a suffix, like so:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "..Item": {
+        "item.modid.first": "First Item",
+        "item.modid.second": "Second Item",
+        "item.modid.third": "Third Item",
+        "item.modid.fourth": "Fourth Item",
+        "item.modid.fifth": "Fifth Item",
+        "item.modid.sixth": "Sixth Item",
+        "item.modid.seventh": "Seventh Item",
+        "item.modid.eighth": "Eighth Item",
+        "item.modid.ninth": "Ninth Item",
+        "item.modid.tenth": "Tenth Item"
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "{}Item": {
         "item.modid.first": "First Item",
         "item.modid.second": "Second Item",
         "item.modid.third": "Third Item",
@@ -121,13 +178,35 @@ Certain situations may call for indexed lists of keys, for example:
 
 This is far too much text to have to write out 10 times, so instead you can use the array syntax:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid.overlyToolTippedItem...": {
       "": "Overly Tool Tipped Item",
       "tooltip...": [
+        "This is the first line of the tooltip",
+        "This is the second line of the tooltip",
+        "This is the third line of the tooltip",
+        "This is the fourth line of the tooltip",
+        "This is the fifth line of the tooltip",
+        "This is the sixth line of the tooltip",
+        "This is the seventh line of the tooltip",
+        "This is the eighth line of the tooltip",
+        "This is the ninth line of the tooltip",
+        "This is the tenth line of the tooltip"
+      ]
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.overlyToolTippedItem.{}": {
+      "": "Overly Tool Tipped Item",
+      "tooltip.{}": [
         "This is the first line of the tooltip",
         "This is the second line of the tooltip",
         "This is the third line of the tooltip",
@@ -150,11 +229,26 @@ An empty string key `""` will strip any trailing non-alphanumeric characters fro
 
 By default, the indexing will start at 1, but you may specify a different starting index by adding a number after the key, like so:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid.overlyToolTippedItem.tooltip...5": [
+        "This is the fifth line of the tooltip",
+        "This is the sixth line of the tooltip",
+        "This is the seventh line of the tooltip",
+        "This is the eighth line of the tooltip",
+        "This is the ninth line of the tooltip",
+        "This is the tenth line of the tooltip"
+    ]
+}
+```
+== Brackets
+```json [em.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.overlyToolTippedItem.tooltip.{5}": [
         "This is the fifth line of the tooltip",
         "This is the sixth line of the tooltip",
         "This is the seventh line of the tooltip",
@@ -183,11 +277,26 @@ When using a prefix and suffix you specify the start index in the middle of the 
 
 can be written as:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid.overlyToolTippedItem...5...tooltip": [
+        "This is the fifth line of the tooltip",
+        "This is the sixth line of the tooltip",
+        "This is the seventh line of the tooltip",
+        "This is the eighth line of the tooltip",
+        "This is the ninth line of the tooltip",
+        "This is the tenth line of the tooltip"
+    ]
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.overlyToolTippedItem.{5}.tooltip": [
         "This is the fifth line of the tooltip",
         "This is the sixth line of the tooltip",
         "This is the seventh line of the tooltip",
@@ -205,18 +314,38 @@ can be written as:
 
 Nested Keys can also be nested, for example:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid...": {
       "firstItem": "First Item",
-      "secondItem": "Second Item",
-      "secondItem.tooltip...": [
-        "This is the first line of the tooltip",
-        "This is the second line of the tooltip",
-        "This is the third line of the tooltip"
-      ]
+      "secondItem...": {
+        "": "Second Item",
+        "tooltip...": [
+          "This is the first line of the tooltip",
+          "This is the second line of the tooltip",
+          "This is the third line of the tooltip"
+        ]
+      }
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid.{}": {
+      "firstItem": "First Item",
+      "secondItem": {
+        "": "Second Item",
+        "tooltip.{}": [
+          "This is the first line of the tooltip",
+          "This is the second line of the tooltip",
+          "This is the third line of the tooltip"
+        ]
+      }
     }
 }
 ```
@@ -259,7 +388,8 @@ Nested keys work perfectly with [Rich Translations](rich-translations.md), for e
 
 can be simplified to:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
@@ -274,7 +404,25 @@ can be simplified to:
         " made of ",
         { "translate": "item.minecraft.echo_shard" }
       ]
-    },
+    }
+}
+```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.minecraft.{}": {
+      "echo_shard": [
+        "Echo ",
+        { "text": "Shard", "color": "#0096FF" }
+      ],
+      "recovery_compass": [
+        "",
+        { "text": "Recovery Compass", "color": "yellow" },
+        " made of ",
+        { "translate": "item.minecraft.echo_shard" }
+      ]
+    }
 }
 ```
 :::
@@ -283,16 +431,28 @@ can be simplified to:
 
 If you want you may also escape characters from the outer affixes by using slashes (`/`). For example:
 
-::: code-group
+::: tabs
+== Dots
 ```json [en_us.json]
 {
     "owo:nested_lang": true,
     "item.modid.....": {
         "//firstItem": "Oops I added too many periods, conveniently i can escape them so this key becomes item.modid.firstItem",
-        "secondItem": "This key is doomed to be item.modid...secondItem",
+        "secondItem": "This key is doomed to be item.modid...secondItem"
     }
 }
 ```
+== Brackets
+```json [en_us.json]
+{
+    "owo:nested_lang": true,
+    "item.modid...{}": {
+        "//firstItem": "Oops I added too many periods, conveniently i can escape them so this key becomes item.modid.firstItem",
+        "secondItem": "This key is doomed to be item.modid...secondItem"
+    }
+}
+```
+:::
 
 ## Notes
 
