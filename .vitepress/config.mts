@@ -130,6 +130,9 @@ export default defineConfig({
         { text: 'Shops', link: '/numismatic-overhaul/shop' },
         { text: 'Villager Trade Data Format', link: '/numismatic-overhaul/trades' },
       ],
+      '/braid/': [
+        { text: 'Home', link: '/braid/home' },
+      ],
       '/lavender/': [
         { text: 'Setup', link: '/lavender/setup' },
         { text: 'Getting Started', link: '/lavender/getting-started' },

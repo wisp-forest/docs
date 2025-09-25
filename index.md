@@ -27,6 +27,12 @@ features:
     icon:
       src: lavender-icon.png
     linkText: Documentation
+  - title: braid-ui
+    details: An modern, lightweight, experimental UI framework for desktop and Minecraft
+    link: /braid/home
+    icon:
+      src: braid-icon.png
+    linkText: Documentation
   - title: Accessories
     details: An extendable and data-driven Accessory Mod for Minecraft
     link: /accessories/home

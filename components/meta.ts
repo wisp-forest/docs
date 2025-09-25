@@ -35,6 +35,12 @@ export const projectMeta = {
         repo: 'wisp-forest/alloy-forgery',
         color: '#412121'
     },
+    'braid': {
+        icon: 'braid-icon.png',
+        description: 'braid-ui Documentation',
+        repo: 'gliscowo/braid_ui',
+        color: '#a986ff'
+    },
     'index.md': {
         icon: 'icon.png',
         description: 'Here at Wisp Forest© we employ Wisp Tech Support™ magic, which solves your problem when you ask',
