@@ -55,10 +55,6 @@ export default defineConfig({
     return headData;
   },
 
-  transformHtml(ctx) {
-    console.log(ctx);
-  },
-
   themeConfig: {
     logo: '/icon-header.png',
 
