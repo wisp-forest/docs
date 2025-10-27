@@ -21,6 +21,7 @@ export default defineConfig({
       md.use(tabsMarkdownPlugin);
     },
   },
+  srcExclude: ['README.md'],
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
