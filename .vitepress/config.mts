@@ -136,6 +136,7 @@ export default defineConfig({
         { text: 'Comparison to owo-ui', link: '/braid/comparison-to-owo-ui' },
         { text: 'Setting up Hot Reloading', link: '/braid/hot-reloading' },
         { text: 'Getting Started', link: '/braid/getting-started' },
+        { text: 'Layout', link: '/braid/layout' },
       ],
       '/lavender/': [
         { text: 'Setup', link: '/lavender/setup' },

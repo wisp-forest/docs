@@ -1,6 +1,6 @@
 ![the braid logo](../assets/braid/icon.svg){ .center-image width=200px }
 
-braid is a modern, reactive UI framework for Desktop and Minecraft, written in [Dart](https://dart.dev) and Java respectively. Its core concepts are strongly inspired by library like [React](https://react.dev) and especially [Flutter](https://flutter.dev).
+braid is a modern, reactive UI framework for Desktop and Minecraft, written in [Dart](https://dart.dev) and Java respectively. Its core concepts are strongly inspired by libraries like [React](https://react.dev) and especially [Flutter](https://flutter.dev).
 
 The development of braid was prompted by the desire to address a number of important shortcomings in owo-ui (owo-lib's [legacy UI framework](../owo/ui/index.md)). Over time, it has grown into a fully-fledged and flexible but also convenient library built on modern principles.
 
