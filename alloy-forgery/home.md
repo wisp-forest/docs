@@ -5,11 +5,17 @@ project: alloy-forgery
 
 # Alloy Forgery
 
-Alloy Forgery is a mod all about forging metals. 
+Alloy Forgery is a mod all about blasting ores and forging alloys. 
 
-If you are a player looking for info on how to make an Alloy Forge, see the ["Building a Forge"](building-a-forge.md) section. We recommend a mod like Roughly Enough Items or EMI to view alloy recipes. 
+**Note:** This documentation is up-to-date as of Alloy Forgery 3.0.0. For older versions, we suggest seeing the [legacy documentation](https://docs.wispforest.io/legacy/alloy-forgery/home/ "Click here to go to the legacy Alloy Forgery documentation.").
 
-By default, Alloy Forgery provides no new materials, but it does provide recipes for smelting ores into extra ingots. It also supports a handful of mods out of the box, [which you can see here.](https://github.com/wisp-forest/alloy-forgery/tree/1.20/src/main/resources/data/alloy_forgery/recipes/compat)
+## Overview
 
-Furthermore, if you need any assistance on finding out how to create a Datapack in general, you can see Datapack Tutorial for help with such.
+TODO - Summary of playing Alloy Forgery. Something like
 
+- Collect materials
+- Create Forge Controller
+- Build multiblock
+- Smelt ores
+
+By default, Alloy Forgery provides no new materials, but it does provide recipes for smelting ores into extra ingots. It also supports a handful of mods out of the box, [which you can see here.](https://github.com/wisp-forest/alloy-forgery/tree/1.21.10-multiloader/fabric/src/generated/resources/data/alloy_forgery/recipe/compat)

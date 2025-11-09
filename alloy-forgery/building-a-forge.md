@@ -1,13 +1,10 @@
-# How to build a Forge
+# Building an Alloy Forge
 
 *Up to date as of 2.0.22*
 
-You can currently make an Alloy Forge out of 5 materials: Bricks, Stone Bricks, Blackstone, Deepslate, and End Stone. Alloy Forges are dynamically generated. You can add more of these through data, which is explained [on this page.](defining-a-forge.md)
-
-The basic shape of a forge looks like this:  
+The shape of an Alloy Forge is mostly freeform. The basic shape of a forge looks like this:  
 ![an image showing how to construct an Alloy Forge in 3 steps. Layer one is a 3x3 base. Layer two is the forge controller block in the front, and one block on each side, leaving the corners and the middle empty. Step three is the same as step two, but with a block instead of a controller](../assets/alloy-forgery/forge_structure.png)
-
-It has a 3x3 bottom, and is shaped like a chimney. You can put more blocks around it, even covering the top.  
+As long as you build the basic shape, you can expand and build onto it in any way you'd like. Feel free to fill in the chimney, or add extra blocks on the corners. These don't need to respect the required material(s) for the Forge to be valid. 
 
 ## Forge Controller  
 
@@ -31,8 +28,9 @@ Mods and modpacks can add their own Alloy Forges, but by default you can make a 
 
 A forge can by default be fueled by vanilla materials. Currently they accept the following list:
 
-- Coal and Blocks of Coal
+- Coal
 - Charcoal 
+- Blocks of Coal
 - Blaze Rods 
 - Lava Bucket
 
