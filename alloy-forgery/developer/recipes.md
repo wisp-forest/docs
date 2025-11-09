@@ -1,4 +1,7 @@
 # Creating a recipe
+
+TODO - This is out-of-date as of 1.21.4. Update the data structures. 
+
 When creating an Alloy Forge recipe you want to use the `alloy_forgery:forging` type.  
 The recipe can be placed anywhere under `data/<namespace>/recipes` in your data.  
 Here is an example of a recipe:  
@@ -137,35 +140,3 @@ The initial Item ID here is the input to be replaced. Supported settings:
 | `count` | Custom stack counts (optional) |
 
 In the lower example, the initial item (copper ore) is what is being checked for, and the second item (sand) is returned once the recipe completes.
-
-# Adding new fuels  
-Alloy Forgery loads fuel from a specific folder in data. The path is `data/<namespace>/alloy_forge_fuels`, and in here you put your fuel definition. A fuel file does not require a specific name, and can hold multiple different fuels. Currently, we only support items for fuels, tags are not accepted. An example is provided below: 
-
-```JSON
-{
-  "fuels": [
-    {
-      "item": "minecraft:lava_bucket",
-      "return_item": "minecraft:bucket",
-      "fuel": 24000
-    },
-    {
-      "item": "minecraft:coal",
-      "fuel": 1000
-    },
-    {
-      "item": "minecraft:charcoal",
-      "fuel": 1000
-    },
-    {
-      "item": "minecraft:blaze_rod",
-      "fuel": 2000
-    },
-    {
-      "item": "minecraft:coal_block",
-      "fuel": 9000
-    }
-  ]
-}
-```  
-The special field `return_item` is optional, and is intended for when you want to do something similar to returning an empty bucket after using a lava bucket with the forge.

@@ -165,10 +165,16 @@ export default defineConfig({
       ],
       '/alloy-forgery/': [
         { text: 'Home', link: '/alloy-forgery/home' },
-        { text: 'Adding Recipes and Fuels', link: '/alloy-forgery/adding-recipes-and-fuels' },
-        { text: 'How to build a Forge', link: '/alloy-forgery/building-a-forge' },
-        { text: 'Recipe Adaptation', link: '/alloy-forgery/recipe-adaptation' },
-        { text: 'Defining new Forges though Data', link: '/alloy-forgery/defining-a-forge' },
+        { text: 'Building an Alloy Forge', link: '/alloy-forgery/building-a-forge' },
+        { text: 'Recipe Adapters', link: '/alloy-forgery/recipe-adapters' },
+        {
+          text: 'Developer',
+          items: [
+            { text: 'Quick Start', link: '/alloy-forgery/developer/quick-start', },
+            { text: 'Adding Recipes', link: '/alloy-forgery/developer/recipes' },
+            { text: 'Adding Fuels', link: '/alloy-forgery/developer/fuels' },
+          ]
+        },
       ],
     },
 
