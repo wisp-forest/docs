@@ -24,7 +24,7 @@ public class SimpleCounter extends StatefulWidget {
 ```
 
 Now there are a few things to unpack, let's go through them in order:
-- Our `SimpleCounter` is a `StatefulWidget` - this, along with its stateless counterpart (`StatelessWidget`) is the most common type of widget you'll find yourself authoring. We pick the stateful variant here because our counter must certainly keep track of some state (ie. the current count it's on) in order to be useful.
+- Our `SimpleCounter` is a `StatefulWidget` - this, along with its stateless counterpart (`StatelessWidget`) is the most common type of widget you'll find yourself authoring. We pick the stateful variant here because our counter must certainly keep track of some state (i.e. the current count it's on) in order to be useful.
 
   Now, we *cannot* simply store this state on the widget itself because, as part of braid's central design, widgets themselves are generally short-lived - they get used until the next time their parent's or ancestor's `build` method is called and then replaced. Thus, if we stored our count state on the widget, it would be reset the next time the an ancestor of the widget rebuilds.
 
@@ -32,9 +32,9 @@ Now there are a few things to unpack, let's go through them in order:
 
 - The inner `State` class which holds the long-lived state of our part of the UI contains the actual `build` method of our new counter widget. This is where we must return more widgets to describe to braid what the counter is supposed to look like and what it is supposed to do. That too is an important part of braid's design - UIs are built by composition, combining existing widgets into new widgets where they work together to create a fully-fledged UI component, an abstraction or some low-level library concept.
 
-  The `build` method also always receives a `BuildContext` parameter which is an abstract representation of the location in the widget tree at which the widget is being (re)built. We won't need this for now, but it's a surprise tool that will helps us later.
+  The `build` method also always receives a `BuildContext` parameter which is an abstract representation of the location in the widget tree at which the widget is being (re)built. We won't need this for now, but it's a surprise tool that will help us later.
 
-  Furthermore, the state also has a bunch of lifecycle hooks like `init`, `didUpdateWidget` and `dispose`, which get called by the library and are of vital importance for reacting properly to configuration changes (ie. widget changes) induced by the parent.
+  Furthermore, the state also has a bunch of lifecycle hooks like `init`, `didUpdateWidget` and `dispose`, which get called by the library and are of vital importance for reacting properly to configuration changes (i.e. widget changes) induced by the parent.
 
 Very well then, we can get started with adding our first actual widgets into the build method, like so:
 ```java
@@ -130,23 +130,23 @@ public Widget build(BuildContext context) {
 
 The button takes two arguments:
 - The first is rather self-explanatory: a `Text` object which will be displayed on the button. We directly use the `count` variable we added to state earlier - this is possible because, as you remember, braid simply re-runs the entire `build` method whenever your state changes.
-- The second is a callback which will be invoked whenver the button is clicked - this where we want to actually perform the counting logic. To do that, we invoke `setState` to notify the framework that we're about to mutate the state and increment the count variable in the closure which we must pass to it.
+- The second is a callback which will be invoked whenever the button is clicked - this where we want to actually perform the counting logic. To do that, we invoke `setState` to notify the framework that we're about to mutate the state and increment the count variable in the closure which we must pass to it.
 
   Using `setState` here is of absolutely vital importance - without it, the framework would be none the wiser and would never rebuild our widget. You can easily try this yourself: increment count without using `setState`. You'll find that the count displayed by the button doesn't update.
 
-  As a rule of thumb, whenver a piece of your state is used by the build method, you must use `setState` when mutating it. It is convention to only wrap the actual field updates in the call to `setState` to make it clear to readers which state is being mutated and when.
+  As a rule of thumb, whenever a piece of your state is used by the build method, you must use `setState` when mutating it. It is convention to only wrap the actual field updates in the call to `setState` to make it clear to readers which state is being mutated and when.
 
 Next, assuming you have [set up the braid reload agent](hot-reloading.md), hot reload your code - the button will immediately appear. If not, either hot reload or restart your game and then reopen your screen.
 
 ![a screenshot of the previous ui with the new button](../assets/braid/simple_counter_2.png){ .docs-image }
 
-You can find the finished code of this section in `SimpleCounter.java`.
+You can find the complete code of this section in `SimpleCounter.java`.
 
 ## Modularizing the Counter
 
-Having built a basic widget and already introduced a lot of important basics, we'll move on to exploring some other techniques tools provided by the library. To motivate this, imagine you wanted to add more functionality to the counter - ie. returning more widgets from its build method. You could of course simply make a bigger and bigger build method - this, however, is generally not ideal since it can have a negative impact on performance.
+Having built a basic widget and already introduced a lot of important basics, we'll move on to exploring some other techniques tools provided by the library. To motivate this, imagine you wanted to add more functionality to the counter - i.e. returning more widgets from its build method. You could of course simply make a bigger and bigger build method - this, however, is generally not ideal since it can have a negative impact on performance.
 
-With a widget as simple as the counter we've built this is obvioulsy not a concern (and generally, always remember to not optimize prematurely), but with more complicated build methods it can be unnecessarily expensive to re-run the entire thing and thus rebuild everything just because a single value changed somewhere. All of the layout-related widgets for example (like the `Center` and `Padding`) are not concerned with the current state of the counter and thus have no reason to be re-built each time.
+With a widget as simple as the counter we've built this is obviously not a concern (and generally, always remember to not optimize prematurely), but with more complicated build methods it can be unnecessarily expensive to re-run the entire thing and thus rebuild everything just because a single value changed somewhere. All of the layout-related widgets for example (like the `Center` and `Padding`) are not concerned with the current state of the counter and thus have no reason to be re-built each time.
 
 Instead, it'd be nice if we could extract just the parts which need rebuilding (in this case, just the button) and have it still function correctly. To better demonstrate this process of sharing state between multiple widgets, we'll also display the count separately using a new widget.
 
@@ -307,3 +307,9 @@ new Column(
 
 The `Flexible` widget can only be used inside a row, column or raw `Flex` widget and tells the parent to divide the space which remains after laying out all non-flexible children between the flexible ones. You could also make just one of the buttons flexible to see this in action. Either way, with these changes we have the desired result:
 ![the finished shared counter widget](../assets/braid/shared_counter_3.png){ .docs-image }
+
+You can find the complete code of this section in `SharedCounter.java`.
+
+## Further Reading
+
+While this tutorial has ideally given you a good grasp of the essentials required to write UIs with braid, there is a lot more to the library that you might want to read about. Here are a few important pointers, but don't forget to also check the sidebar:

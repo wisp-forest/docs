@@ -9,12 +9,12 @@ public Component createCounter(int startFrom) {
     var counterLabel = Components.label(Text.literal(String.valueOf(count.intValue())));
     var counterButton = Components.button(Text.literal("count"), button -> {
         count.add(1);
-        couterLabel.setText(Text.literal(String.valueOf(count.intValue())));
+        counterLabel.setText(Text.literal(String.valueOf(count.intValue())));
     });
 
     return Containers.verticalFlow(Sizing.content(), Sizing.content())
-        .addChild(counterLabel)
-        .addChild(counterButton)
+        .child(counterLabel)
+        .child(counterButton)
         .horizontalAlignment(HorizontalAlignment.CENTER)
         .verticalAlignment(VerticalAlignment.CENTER);
 }
@@ -58,7 +58,7 @@ public class Counter extends StatefulWidget {
 :::
 
 Besides the obvious fact that the braid version is less terse and thus takes up more visual space, this immediately highlights a two very important differences:
-- There is no funtional distinction between widgets provided by the library (like `Center` or `MessageButton`) and new widgets authored by the user (like `Counter`). This means that there is clear way to package reusable components of a UI, unlike owo-ui where this concept of a "component made up of other components" doesn't really exist
+- There is no functional distinction between widgets provided by the library (like `Center` or `MessageButton`) and new widgets authored by the user (like `Counter`). This means that there is clear way to package reusable components of a UI, unlike owo-ui where this concept of a "component made up of other components" doesn't really exist
 
 - For owo-ui, it being a retained-mode framework, the user is responsible for managing the lifecycle of their components and keeping the state of the UI in sync with the state of the data it represents (by manually tracking `count` and applying it to the label when necessary). For braid, because all dependencies of the `build` method are encapsulated clearly in the surrounding `WidgetState`, the library can simply re-run the build method when a state change happens (caused by the call to `setState`). This encodes the current data (the state's fields) into a format the library understands (a widget tree), which it can then apply to the underlying widget instances to automatically synchronize the UI.
 
