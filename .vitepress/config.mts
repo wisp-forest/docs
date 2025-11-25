@@ -137,6 +137,7 @@ export default defineConfig({
         { text: 'Setting up Hot Reloading', link: '/braid/hot-reloading' },
         { text: 'Getting Started', link: '/braid/getting-started' },
         { text: 'Layout', link: '/braid/layout' },
+        { text: 'Intrinsic Layout', link: '/braid/intrinsic-layout' },
       ],
       '/lavender/': [
         { text: 'Setup', link: '/lavender/setup' },
