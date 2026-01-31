@@ -1,18 +1,12 @@
 # Rich Translations
 
-When owo is installed, a number of modifications are made to the translation engine which enable the use of **Text Components** inside translation files. In order to declare a rich translation, use an array instead of string, like so:
+When configured to do so, owo-lib can parse some translation files in a special way which allows for the use of **Text Components**. You can look up the relevant vanilla JSON format [on the Minecraft wiki](https://minecraft.wiki/w/Raw_JSON_text_format).
 
-::: code-group
-```json [en_us.json]
-{
-    ...
-    "some.translation.key": [...],
-    ...
-}
-```
-:::
+## Setup
 
-You can now populate this array with JSON conforming to Minecraft's text component format, which you can look up [on the wiki](https://minecraft.wiki/w/Raw_JSON_text_format).
+Before you can use Rich Translations, you need to enable it in 1 of 2 ways:
+1. Enable oωo's [Json5 Data Loading](json5.md) and use a `.json5` file.
+2. Add a key `owo:rich_translations` or `owo:extended_lang` with the value `true` or `1` anywhere in your translation file (at the top level).
 
 ## Basic Example
 For demonstrating the basics, let's change the name of the Echo Shard. We want the word "Shard" to be <span style="color: #0096FF;">of this blue color</span>, which is achieved by the following simple JSON:

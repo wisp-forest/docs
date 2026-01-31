@@ -1,8 +1,8 @@
-import {readFileSync} from 'fs';
+import { readFileSync } from 'fs';
 import kbd from 'markdown-it-kbd';
-import {defineConfig, HeadConfig} from 'vitepress';
-import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs';
-import {projectMeta} from '../components/meta.ts';
+import { defineConfig, HeadConfig } from 'vitepress';
+import { tabsMarkdownPlugin } from 'vitepress-plugin-tabs';
+import { projectMeta } from '../components/meta.ts';
 
 const mcfunction = JSON.parse(readFileSync('mcfunction-grammar.json', 'utf-8'));
 
@@ -23,7 +23,7 @@ export default defineConfig({
   },
   srcExclude: ['README.md'],
   head: [
-    ['link', {rel: 'icon', href: '/favicon.ico'}]
+    ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   sitemap: {
     hostname: 'https://docs.wispforest.io/'
@@ -35,22 +35,22 @@ export default defineConfig({
     if (!(entryDir in projectMeta)) return [];
 
     const headData: HeadConfig[] = [];
-    headData.push(['meta', {property: 'og:site_name', content: ctx.siteData.title}]);
+    headData.push(['meta', { property: 'og:site_name', content: ctx.siteData.title }]);
 
     if (ctx.pageData.filePath != 'index.md') {
-      headData.push(['meta', {property: 'og:title', content: ctx.pageData.title}]);
+      headData.push(['meta', { property: 'og:title', content: ctx.pageData.title }]);
     } else {
-      headData.push(['meta', {property: 'og:title', content: 'Home'}]);
+      headData.push(['meta', { property: 'og:title', content: 'Home' }]);
     }
 
-    const {icon, description} = projectMeta[entryDir];
+    const { icon, description } = projectMeta[entryDir];
 
-    headData.push(['meta', {property: 'og:description', content: description}]);
-    headData.push(['meta', {property: 'og:image', content: `https://docs.wispforest.io${ctx.siteData.base}${icon}`}]);
+    headData.push(['meta', { property: 'og:description', content: description }]);
+    headData.push(['meta', { property: 'og:image', content: `https://docs.wispforest.io${ctx.siteData.base}${icon}` }]);
 
     if ('color' in projectMeta[entryDir]) {
-      const {color} = projectMeta[entryDir];
-      headData.push(['meta', {property: 'theme-color', content: color}]);
+      const { color } = projectMeta[entryDir];
+      headData.push(['meta', { property: 'theme-color', content: color }]);
     }
 
     return headData;
@@ -60,7 +60,7 @@ export default defineConfig({
     logo: '/icon-header.png',
 
     nav: [
-      {text: 'Wisp Forest Maven', link: 'https://maven.wispforest.io/#/'},
+      { text: 'Wisp Forest Maven', link: 'https://maven.wispforest.io/#/' },
     ],
 
     outline: 'deep',
@@ -71,77 +71,76 @@ export default defineConfig({
 
     sidebar: {
       '/isometric-renders/': [
-        {text: 'Home', link: '/isometric-renders/home'},
-        {text: '/isorender', link: '/isometric-renders/slash_isorender'},
-        {text: 'Options', link: '/isometric-renders/options'},
+        { text: 'Home', link: '/isometric-renders/home' },
+        { text: '/isorender', link: '/isometric-renders/slash_isorender' },
+        { text: 'Options', link: '/isometric-renders/options' },
       ],
       '/owo/': [
         {
           items: [
-            {text: 'Setup', link: '/owo/setup'},
-            {text: 'Features', link: '/owo/features'},
-            {text: 'Registration', link: '/owo/registration'},
-            {text: 'Item Groups', link: '/owo/item-groups'},
-            {text: 'Networking', link: '/owo/networking'},
-            {text: 'Endecs', link: '/owo/endec'},
-            {text: 'System Properties', link: '/owo/system-properties'},
-            {text: 'RenderDoc Integration', link: '/owo/renderdoc'},
+            { text: 'Setup', link: '/owo/setup' },
+            { text: 'Features', link: '/owo/features' },
+            { text: 'Registration', link: '/owo/registration' },
+            { text: 'Item Groups', link: '/owo/item-groups' },
+            { text: 'Networking', link: '/owo/networking' },
+            { text: 'Endecs', link: '/owo/endec' },
+            { text: 'System Properties', link: '/owo/system-properties' },
+            { text: 'RenderDoc Integration', link: '/owo/renderdoc' },
           ]
         },
         {
           text: 'Data Extensions',
-          link: 'owo/config/index',
           items: [
-            {text: 'JSON5', link: '/owo/data-extensions/json5'},
-            {text: 'Rich Translations', link: '/owo/data-extensions/rich-translations'},
-            {text: 'Nested Lang', link: '/owo/data-extensions/nested-lang'},
-            {text: 'Recipe Remainders', link: '/owo/data-extensions/recipe-remainders'}
+            { text: 'JSON5', link: '/owo/data-extensions/json5' },
+            { text: 'Rich Translations', link: '/owo/data-extensions/rich-translations' },
+            { text: 'Nested Lang', link: '/owo/data-extensions/nested-lang' },
+            { text: 'Recipe Remainders', link: '/owo/data-extensions/recipe-remainders' }
           ]
         },
         {
           text: 'Config',
           link: '/owo/config/index',
           items: [
-            {text: 'Getting Started', link: '/owo/config/getting-started'},
-            {text: 'Constraints', link: '/owo/config/constraints'},
-            {text: 'Annotations', link: '/owo/config/annotations'},
-            {text: 'Synchronization', link: '/owo/config/synchronization'},
-            {text: 'Options', link: '/owo/config/options'},
+            { text: 'Getting Started', link: '/owo/config/getting-started' },
+            { text: 'Constraints', link: '/owo/config/constraints' },
+            { text: 'Annotations', link: '/owo/config/annotations' },
+            { text: 'Synchronization', link: '/owo/config/synchronization' },
+            { text: 'Options', link: '/owo/config/options' },
           ]
         },
         {
           text: 'UI',
           link: '/owo/ui/index',
           items: [
-            {text: 'Getting Started', link: '/owo/ui/getting-started'},
-            {text: 'owo-ui Academy', link: '/owo/ui/academy'},
-            {text: 'Component Basics', link: '/owo/ui/component-basics'},
-            {text: 'Layout Basics', link: '/owo/ui/layout-basics'},
-            {text: 'Utility Components', link: '/owo/ui/utility-components'},
+            { text: 'Getting Started', link: '/owo/ui/getting-started' },
+            { text: 'owo-ui Academy', link: '/owo/ui/academy' },
+            { text: 'Component Basics', link: '/owo/ui/component-basics' },
+            { text: 'Layout Basics', link: '/owo/ui/layout-basics' },
+            { text: 'Utility Components', link: '/owo/ui/utility-components' },
             {
               text: 'owo-ui components',
               link: '/owo/ui/components/index',
               collapsed: true,
               items: [
-                {text: 'Button', link: '/owo/ui/components/button',},
-                {text: 'Checkbox', link: '/owo/ui/components/checkbox',},
-                {text: 'Collapsible Container', link: '/owo/ui/components/collapsible-container',},
-                {text: 'Dropdown', link: '/owo/ui/components/dropdown',},
-                {text: 'Flow Layout', link: '/owo/ui/components/flow-layout',},
-                {text: 'Grid Layout', link: '/owo/ui/components/grid-layout',},
-                {text: 'Label', link: '/owo/ui/components/label',},
-                {text: 'Scroll Container', link: '/owo/ui/components/scroll-container',},
-                {text: 'Slider', link: '/owo/ui/components/slider',},
-                {text: 'Templates', link: '/owo/ui/components/templates',},
+                { text: 'Button', link: '/owo/ui/components/button', },
+                { text: 'Checkbox', link: '/owo/ui/components/checkbox', },
+                { text: 'Collapsible Container', link: '/owo/ui/components/collapsible-container', },
+                { text: 'Dropdown', link: '/owo/ui/components/dropdown', },
+                { text: 'Flow Layout', link: '/owo/ui/components/flow-layout', },
+                { text: 'Grid Layout', link: '/owo/ui/components/grid-layout', },
+                { text: 'Label', link: '/owo/ui/components/label', },
+                { text: 'Scroll Container', link: '/owo/ui/components/scroll-container', },
+                { text: 'Slider', link: '/owo/ui/components/slider', },
+                { text: 'Templates', link: '/owo/ui/components/templates', },
               ]
             },
           ]
         },
       ],
       '/numismatic-overhaul/': [
-        {text: 'Home', link: '/numismatic-overhaul/home'},
-        {text: 'Shops', link: '/numismatic-overhaul/shop'},
-        {text: 'Villager Trade Data Format', link: '/numismatic-overhaul/trades'},
+        { text: 'Home', link: '/numismatic-overhaul/home' },
+        { text: 'Shops', link: '/numismatic-overhaul/shop' },
+        { text: 'Villager Trade Data Format', link: '/numismatic-overhaul/trades' },
       ],
       '/braid/': [
         { text: 'Home', link: '/braid/home' },
@@ -152,44 +151,44 @@ export default defineConfig({
         { text: 'Intrinsic Layout', link: '/braid/intrinsic-layout' },
       ],
       '/lavender/': [
-        {text: 'Setup', link: '/lavender/setup'},
-        {text: 'Getting Started', link: '/lavender/getting-started'},
-        {text: 'Metadata Format', link: '/lavender/metadata-format'},
-        {text: 'Markdown Syntax', link: '/lavender/markdown-syntax'},
-        {text: 'Structures', link: '/lavender/structures'},
-        {text: 'Writing Extensions', link: '/lavender/writing-extensions'},
+        { text: 'Setup', link: '/lavender/setup' },
+        { text: 'Getting Started', link: '/lavender/getting-started' },
+        { text: 'Metadata Format', link: '/lavender/metadata-format' },
+        { text: 'Markdown Syntax', link: '/lavender/markdown-syntax' },
+        { text: 'Structures', link: '/lavender/structures' },
+        { text: 'Writing Extensions', link: '/lavender/writing-extensions' },
       ],
       '/accessories/': [
-        {text: 'Home', link: '/accessories/home'},
-        {text: 'FAQ', link: '/accessories/faq'},
+        { text: 'Home', link: '/accessories/home' },
+        { text: 'FAQ', link: '/accessories/faq' },
         {
           text: 'General',
           items: [
-            {text: 'Creating and Modifying Slots', link: '/accessories/general/slot_types',},
-            {text: 'Default Slots', link: '/accessories/general/defaulted_slots',},
-            {text: 'Adjusting Accessory Equipablity', link: '/accessories/general/binding_accessories_to_slots',},
-            {text: 'Binding Slots to Entities', link: '/accessories/general/binding_slots_to_entities',},
-            {text: 'Creating Slot Groups', link: '/accessories/general/slot_groups',},
-            {text: 'Adjusting Slot Amount', link: '/accessories/general/adjusting_slot_amount',},
+            { text: 'Creating and Modifying Slots', link: '/accessories/general/slot_types', },
+            { text: 'Default Slots', link: '/accessories/general/defaulted_slots', },
+            { text: 'Adjusting Accessory Equipablity', link: '/accessories/general/binding_accessories_to_slots', },
+            { text: 'Binding Slots to Entities', link: '/accessories/general/binding_slots_to_entities', },
+            { text: 'Creating Slot Groups', link: '/accessories/general/slot_groups', },
+            { text: 'Adjusting Slot Amount', link: '/accessories/general/adjusting_slot_amount', },
           ]
         },
         {
           text: 'Developer',
           items: [
-            {text: 'Setup Environment', link: '/accessories/developer/dev_setup',},
-            {text: 'API Fundamentals', link: '/accessories/developer/api_fundamentals',},
-            {text: 'Rendering API Breakdown', link: '/accessories/developer/rendering_api',},
-            {text: 'Available API Events', link: '/accessories/developer/api_events',},
-            {text: 'ItemStack Data Components', link: '/accessories/developer/itemstack_components',},
+            { text: 'Setup Environment', link: '/accessories/developer/dev_setup', },
+            { text: 'API Fundamentals', link: '/accessories/developer/api_fundamentals', },
+            { text: 'Rendering API Breakdown', link: '/accessories/developer/rendering_api', },
+            { text: 'Available API Events', link: '/accessories/developer/api_events', },
+            { text: 'ItemStack Data Components', link: '/accessories/developer/itemstack_components', },
           ]
         },
       ],
       '/alloy-forgery/': [
-        {text: 'Home', link: '/alloy-forgery/home'},
-        {text: 'Adding Recipes and Fuels', link: '/alloy-forgery/adding-recipes-and-fuels'},
-        {text: 'How to build a Forge', link: '/alloy-forgery/building-a-forge'},
-        {text: 'Recipe Adaptation', link: '/alloy-forgery/recipe-adaptation'},
-        {text: 'Defining new Forges though Data', link: '/alloy-forgery/defining-a-forge'},
+        { text: 'Home', link: '/alloy-forgery/home' },
+        { text: 'Adding Recipes and Fuels', link: '/alloy-forgery/adding-recipes-and-fuels' },
+        { text: 'How to build a Forge', link: '/alloy-forgery/building-a-forge' },
+        { text: 'Recipe Adaptation', link: '/alloy-forgery/recipe-adaptation' },
+        { text: 'Defining new Forges though Data', link: '/alloy-forgery/defining-a-forge' },
       ],
     },
 
@@ -198,8 +197,8 @@ export default defineConfig({
     },
 
     socialLinks: [
-      {icon: 'discord', link: 'https://discord.gg/xrwHKktV2d'},
-      {icon: 'github', link: 'https://github.com/wisp-forest/docs'},
+      { icon: 'discord', link: 'https://discord.gg/xrwHKktV2d' },
+      { icon: 'github', link: 'https://github.com/wisp-forest/docs' },
     ]
   }
 })
