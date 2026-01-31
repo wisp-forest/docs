@@ -57,4 +57,4 @@ Currently custom NBT data is not supported!
 
 The given recipe will now return our declared Remainders when crafted:
 
-![Remainder Example](../assets/owo/remainders-example.gif){ .docs-image .center-image }
+![Remainder Example](../../assets/owo/remainders-example.gif){ .docs-image .center-image }
