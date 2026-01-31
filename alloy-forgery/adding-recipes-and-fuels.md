@@ -109,7 +109,7 @@ Overrides allow changing the output item depending on the tier of the Forge. Acc
 ## Recipe Remainders
 <VersionMarker version="2.0.17+ and owo-lib 0.8.0+" />
 
-Due to Vanilla's very generic recipe remainders, you can use owo's [Recipe Specific Remainders](../owo/recipe-remainders.md) instead, allowing for fully customizable recipe remainders, or use the built-in global remainder system loaded through the `data/<namespace>/forge_remainder` folder.
+Due to Vanilla's very generic recipe remainders, you can use owo's [Recipe Specific Remainders](../owo/data-extensions/recipe-remainders.md) instead, allowing for fully customizable recipe remainders, or use the built-in global remainder system loaded through the `data/<namespace>/forge_remainder` folder.
 
 A example for global Alloy Forgery remainders is below:
 ```JSON
