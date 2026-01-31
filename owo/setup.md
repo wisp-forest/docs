@@ -10,6 +10,9 @@ To add oωo to you project, begin by including our maven in the repositories blo
 ```groovy title="build.gradle"
 repositories {
     maven { url 'https://maven.wispforest.io/releases/' }
+
+    // since owo 0.13.0, jitpack is required for kdl4j
+    maven { url 'https://jitpack.io' }
 }
 ```
 
