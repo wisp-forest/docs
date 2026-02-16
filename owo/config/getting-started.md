@@ -56,7 +56,7 @@ public class MyModInitializer implements ModInitializer {
 ```
 
 ::: info Note for `Eclipse` and `VS Code` IDE users.
-If you are using one of this IDE's, you will need to do some additional configuration to get the generated class to register.
+If you are using one of these IDE's, you will need to do some additional configuration to get the generated class to register.
 In your build.gradle, add the following:
 ##### Eclipse:
 ```groovy
