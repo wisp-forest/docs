@@ -55,15 +55,21 @@ public class MyModInitializer implements ModInitializer {
 }
 ```
 
-::: info Note for Eclipse IDE users
-If you are using Eclipse IDE, you will need to do some additional configuration to get the generated class to register.
+::: info Note for `Eclipse` and `VS Code` IDE users.
+If you are using one of these IDE's, you will need to do some additional configuration to get the generated class to register.
 In your build.gradle, add the following:
+##### Eclipse:
 ```groovy
 sourceSets.main.java.srcDirs += [ 'src/main/generatedJava' ]
 compileJava.options.generatedSourceOutputDirectory = file("${projectDir}/src/main/generatedJava/<your config class package>")
 ```
+##### VS Code:
+```groovy
+sourceSets.main.java.srcDirs += [ 'build/generated/sources/annotationProcessor/java/main' ]
+compileJava.options.generatedSourceOutputDirectory = file("${projectDir}/build/generated/sources/annotationProcessor/java/main/<your config class package>")
+```
 
-This will ensure that the generated class ends up the correct directory, and  that it gets picked up by Eclipse. Just make sure to replace `<your config class package>` with the path of your `ConfigModel`'s package. For example if your `ConfigModel` class is at: `com.example.config.MyConfigModel`, you would use `com/example/config`.
+This will ensure that the generated class ends up the correct directory, and  that it gets picked up by your IDE. Just make sure to replace `<your config class package>` with the path of your `ConfigModel`'s package. For example if your `ConfigModel` class is at: `com.example.config.MyConfigModel`, you would use `com/example/config`.
 :::
 
 And that's it! You can now use your config values everywhere.
