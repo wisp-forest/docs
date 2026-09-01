@@ -23,6 +23,9 @@ Then, declare the dependency inside your `dependencies` block and as well as the
 === "build.gradle (Fabric)"
     ```groovy 
     dependencies {
+        // For >= 26.1
+        implementation "io.wispforest:owo-lib:${project.owo_version}"
+        // For < 26.1
         modImplementation "io.wispforest:owo-lib:${project.owo_version}"
         include "io.wispforest:owo-sentinel:${project.owo_version}"
     }
